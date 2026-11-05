@@ -1,26 +1,59 @@
 // 이 경로 아래의 파일명과 확장자는 사용 중인 img 폴더와 일치해야 합니다.
-const base = 'img/ChatGPT 이미지 2026년 11월 5일 오후 ';
+
+const base = "dessert-map/img/ChatGPT 이미지 2026년 11월 5일 오후 ";
 
 // x, y: 지도 이미지 위 핑 시작 위치(%)
 // vx, vy: 사진이 각 나라에서 퍼져 나가는 방사형 방향 (왼쪽/위 = 음수)
 const desserts = [
-  { country: 'USA · Nicaragua', name: 'Tres Leches', file: '03_46_10-2.png', x: 32, y: 56, vx: -1.15, vy: -0.10 },
-  { country: 'Mexico', name: 'Churros', file: '03_46_11-3.png', x: 32, y: 62, vx: -1.05, vy: 0.18 },
-  { country: 'Brazil', name: 'Brigadeiro', file: '03_46_13-4.png', x: 38, y: 70, vx: -0.82, vy: 0.85 },
-  { country: 'Chile', name: 'Milhojas', file: '03_46_14-5.png', x: 38, y: 82, vx: -0.45, vy: 1.15 },
-  { country: 'Canada', name: 'Butter Tart', file: '03_46_16-6.png', x: 33, y: 48, vx: -0.72, vy: -1.02 },
-  { country: 'China', name: 'Mooncake', file: '03_46_18-7.png', x: 65, y: 55, vx: 1.02, vy: -0.18 },
-  { country: 'Japan & Korea', name: 'Wagashi & Yakgwa', file: '03_46_19-8.png', x: 70, y: 59, vx: 1.22, vy: 0.28 }
+  {
+    country: "USA · Nicaragua",
+    name: "Tres Leches",
+    file: "03_46_10-2.png",
+    x: 32,
+    y: 56,
+    vx: -1.15,
+    vy: -0.1,
+  },
+  { country: "Mexico", name: "Churros", file: "03_46_11-3.png", x: 32, y: 62, vx: -1.05, vy: 0.18 },
+  {
+    country: "Brazil",
+    name: "Brigadeiro",
+    file: "03_46_13-4.png",
+    x: 38,
+    y: 70,
+    vx: -0.82,
+    vy: 0.85,
+  },
+  { country: "Chile", name: "Milhojas", file: "03_46_14-5.png", x: 38, y: 82, vx: -0.45, vy: 1.15 },
+  {
+    country: "Canada",
+    name: "Butter Tart",
+    file: "03_46_16-6.png",
+    x: 33,
+    y: 48,
+    vx: -0.72,
+    vy: -1.02,
+  },
+  { country: "China", name: "Mooncake", file: "03_46_18-7.png", x: 65, y: 55, vx: 1.02, vy: -0.18 },
+  {
+    country: "Japan & Korea",
+    name: "Wagashi & Yakgwa",
+    file: "03_46_19-8.png",
+    x: 70,
+    y: 59,
+    vx: 1.22,
+    vy: 0.28,
+  },
 ];
 
-const section = document.querySelector('#origin');
-const pointLayer = document.querySelector('#originPoints');
-const card = document.querySelector('#dessertCard');
-const photo = document.querySelector('#dessertPhoto');
-const country = document.querySelector('#dessertCountry');
-const nameText = document.querySelector('#dessertName');
-const progressFill = document.querySelector('#progressFill');
-const progressText = document.querySelector('#progressText');
+const section = document.querySelector("#origin");
+const pointLayer = document.querySelector("#originPoints");
+const card = document.querySelector("#dessertCard");
+const photo = document.querySelector("#dessertPhoto");
+const country = document.querySelector("#dessertCountry");
+const nameText = document.querySelector("#dessertName");
+const progressFill = document.querySelector("#progressFill");
+const progressText = document.querySelector("#progressText");
 
 const clamp = (n, min = 0, max = 1) => Math.min(max, Math.max(min, n));
 const smooth = (t) => t * t * (3 - 2 * t);
@@ -34,18 +67,18 @@ desserts.forEach(({ file }) => {
 
 // 1. 지도 위의 노란색 핑 생성
 const markers = desserts.map((dessert, index) => {
-  const point = document.createElement('span');
-  point.className = 'map-point';
+  const point = document.createElement("span");
+  point.className = "map-point";
   point.style.left = `${dessert.x}%`;
   point.style.top = `${dessert.y}%`;
-  point.style.setProperty('--delay', `${index * -0.3}s`);
+  point.style.setProperty("--delay", `${index * -0.3}s`);
   pointLayer.appendChild(point);
   return point;
 });
 
 let previousIndex = -1;
 let ticking = false;
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function render() {
   ticking = false;
@@ -70,7 +103,7 @@ function render() {
   }
 
   markers.forEach((marker, i) => {
-    marker.classList.toggle('active', i === index);
+    marker.classList.toggle("active", i === index);
   });
 
   // 4. 사진이 지도 위 점에서 확대 → 잠시 표시 → 방사형으로 퇴장
@@ -91,12 +124,12 @@ function render() {
   card.style.opacity = String(opacity);
 
   card.style.transform = reduceMotion.matches
-    ? 'translate(-50%, -50%) scale(1)'
+    ? "translate(-50%, -50%) scale(1)"
     : `translate(-50%, -50%) translate3d(${dx}px, ${dy}px, 0) rotate(${rotation * (intro + outro * 0.5)}deg) scale(${scale})`;
 
-  card.setAttribute('aria-hidden', opacity <= 0.01 ? 'true' : 'false');
+  card.setAttribute("aria-hidden", opacity <= 0.01 ? "true" : "false");
   progressFill.style.width = `${progress * 100}%`;
-  progressText.textContent = `${String(progress === 0 ? 0 : index + 1).padStart(2, '0')} / 07`;
+  progressText.textContent = `${String(progress === 0 ? 0 : index + 1).padStart(2, "0")} / 07`;
 }
 
 function requestRender() {
@@ -105,6 +138,6 @@ function requestRender() {
   window.requestAnimationFrame(render);
 }
 
-window.addEventListener('scroll', requestRender, { passive: true });
-window.addEventListener('resize', requestRender);
+window.addEventListener("scroll", requestRender, { passive: true });
+window.addEventListener("resize", requestRender);
 render();

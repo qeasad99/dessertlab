@@ -1,22 +1,18 @@
 /* ========== 기본 ========== */
-* {
+
+/* 세계지도 영역에만 스타일 적용 */
+.origin-scroll,
+.origin-scroll * {
   box-sizing: border-box;
 }
-html {
-  scroll-behavior: auto;
-}
-body {
-  margin: 0;
-  background: #fbf4e7;
-  color: #351822;
+
+.origin-scroll {
+  height: 800vh;
+  position: relative;
   font-family: Georgia, "Times New Roman", serif;
+  color: #351822;
 }
 
-/* ========== 세계지도 고정 스크롤 섹션 ========== */
-.origin-scroll {
-  height: 800vh; /* 사진 7장: 스크롤 길이를 줄이거나 늘리려면 여기 수정 */
-  position: relative;
-}
 .origin-sticky {
   position: sticky;
   top: 0;
