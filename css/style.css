@@ -49,6 +49,13 @@ header .menu_icon {
 header img {
   width: 250px;
 }
+header .menu li:hover {
+  color: #f8eecc;
+  border-bottom: 1px solid white;
+}
+header .menu_icon li:hover {
+  color: #f8eecc;
+}
 /* con03 */
 .con03 {
   width: 1200px;
@@ -144,4 +151,10 @@ footer .footer_bottom_txt p:first-child {
 footer .footer_bottom_txt p:nth-of-type(2) {
   text-align: right;
   font-size: 12px;
+}
+footer .footer_menu li:hover {
+  color: #f8eecc;
+}
+footer .footer_icon li:hover {
+  color: #f8eecc;
 }
