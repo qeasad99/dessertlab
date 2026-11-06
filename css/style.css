@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 ul {
   list-style: none;
 }
@@ -26,7 +27,9 @@ header {
   padding: 10px 10px;
   position: fixed;
   z-index: 10;
-  top: 0;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 header h1 {
@@ -52,6 +55,7 @@ header img {
   width: 1200px;
   position: relative;
   background-color: #f4e9e3;
+  margin: 0px auto;
 }
 .con03 video {
   width: 100%;
@@ -88,6 +92,7 @@ footer img {
   width: 280px;
 }
 footer {
+  margin: 0px auto;
   width: 1200px;
   background-color: #2d1b24;
 }

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ko">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,6 +22,17 @@
       rel="stylesheet"
       href="css/style.css
     "
+    />
+    
+    <link rel="stylesheet" href="style.css" class="css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dessert-map/css/style.css" />
+     <script src="js/jquery-4.0.0.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="dessert-map/js/script.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Keania+One&family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
     />
   </head>
   <body>
@@ -74,7 +86,66 @@
         <a href="#"> <div class="exploremore">Explore More →</div></a>
       </div>
     </div>
-    <!-- footer -->
+   
+
+  </head>
+
+  
+    <div id="visual">
+      <div class="bg">
+        <p>DESSERT ARTISTRY</p>
+        <p>SWEET ILLUSION</p>
+      </div>
+      <div class="wrap">
+        <ul class="picture">
+          <li><img src="img/crape.jpg" /></li>
+          <li><img src="img/cupcake.jpg" /></li>
+          <li><img src="img/chocolate.jpg" /></li>
+          <li><img src="img/cake.jpg" /></li>
+        </ul>
+        <div class="rotate">
+          <img src="img/perfect_circle_four_dots_transparent.png" />
+        </div>
+      </div>
+      <div class="txt">
+        <h2>DESSERT LAB</h2>
+        <p>TASTE THE EXTRAORDINARY</p>
+      </div>
+    </div>
+
+    <!-- 세계 디저트 지도 섹션 시작 -->
+    <section class="origin-scroll" id="origin" aria-label="세계의 대표 디저트 여행">
+      <div class="origin-sticky">
+        <div class="origin-frame" id="originFrame">
+          <img
+            class="origin-map"
+            src="dessert-map/img/ChatGPT 이미지 2026년 11월 5일 오후 03_46_08-1.png"
+            alt="Country of origin 세계지도"
+          />
+
+          <div class="origin-points" id="originPoints" aria-hidden="true"></div>
+
+          <article class="dessert-card" id="dessertCard" aria-hidden="true">
+            <img id="dessertPhoto" src="" alt="" />
+
+            <div class="dessert-info">
+              <span class="dessert-country" id="dessertCountry"></span>
+              <strong class="dessert-name" id="dessertName"></strong>
+            </div>
+          </article>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+          <span>SCROLL TO EXPLORE</span>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span id="progressText">00 / 07</span>
+        </div>
+      </div>
+    </section>
+    <!-- 세계 디저트 지도 섹션 종료 -->
+      <!-- footer -->
     <footer>
       <div class="footer_top">
         <div class="footer_logo">
