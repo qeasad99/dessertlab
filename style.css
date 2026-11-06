@@ -30,7 +30,7 @@ a {
 }
 .bg p:nth-of-type(2) {
   text-align: right;
-  margin-right: -50px;
+  margin-right: -170px;
   padding-top: 170px;
 }
 
@@ -83,14 +83,18 @@ a {
   height: 100%;
 }
 .txt {
-  font-size: 50px;
   color: #2c191e;
   text-align: center;
   position: absolute;
-  top: 620px;
+  top: 600px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+}
+.txt h2 {
+  font-family: "Libre Bodoni", serif;
+  letter-spacing: 5px;
+  font-size: 100px;
 }
 .txt p {
   font-size: 30px;
