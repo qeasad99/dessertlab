@@ -49,6 +49,9 @@ header .menu_icon {
 header img {
   width: 250px;
 }
+header .menu li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
 header .menu li:hover {
   color: #f8eecc;
   border-bottom: 1px solid white;
