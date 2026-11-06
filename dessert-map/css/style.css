@@ -1,221 +1,143 @@
-/* ========== 기본 ========== */
-
-/* 세계지도 영역에만 스타일 적용 */
-.origin-scroll,
-.origin-scroll * {
+* {
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
-
-.origin-scroll {
-  height: 800vh;
-  position: relative;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #351822;
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* font */
+header,
+footer {
+  font-family: "Libre Bodoni", serif;
+}
+/* header */
+header {
+  width: 1200px;
+  display: flex;
+  background-color: #2d1b24;
+  color: #f6dcd5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
 }
 
-.origin-sticky {
-  position: sticky;
-  top: 0;
+header h1 {
+  color: #f8eecc;
+}
+header .menu {
+  display: flex;
+  font-size: 18px;
+  gap: 35px;
+}
+header .menu_icon {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+
+  margin-right: 20px;
+}
+header img {
+  width: 250px;
+}
+/* con03 */
+.con03 {
+  width: 1200px;
+  position: relative;
+  background-color: #f4e9e3;
+}
+.con03 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.con03 .con03_story {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translate(-10%, -30%);
+}
+.con03 h2 {
+  font-size: 30px;
+}
+.con03 p {
+  font-weight: lighter;
+  color: #111;
+  font-size: 15px;
+}
+.con03 .exploremore {
+  background-color: #a8b398;
+  width: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-  height: 100svh;
-  overflow: hidden;
-  background: #fbf4e7;
+  height: 40px;
+  border-radius: 25px;
+  color: white;
+  margin-top: 40px;
 }
-.origin-frame {
-  position: relative;
-  width: min(96vw, calc(88svh * 1.77586), 1440px);
-  aspect-ratio: 1648 / 928;
-  isolation: isolate;
+/* footer */
+footer img {
+  width: 280px;
 }
-.origin-map {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  user-select: none;
-  -webkit-user-drag: none;
+footer {
+  width: 1200px;
+  background-color: #2d1b24;
 }
-.origin-points {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-/* ========== 국가 위치: 별/다이아몬드 없는 노란 원형 PING ========== */
-.map-point {
-  position: absolute;
-  z-index: 1;
-  width: 10px;
-  height: 10px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: #f2c84b;
-  box-shadow:
-    0 0 0 2px rgba(255, 248, 221, 0.85),
-    0 0 10px rgba(242, 200, 75, 0.5);
-}
-.map-point::before,
-.map-point::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-.map-point::before {
-  width: 26px;
-  height: 26px;
-  background: radial-gradient(circle, rgba(255, 225, 120, 0.48), transparent 70%);
-  animation: softPulse 2s ease-in-out infinite;
-  animation-delay: var(--delay, 0s);
-}
-.map-point::after {
-  width: 10px;
-  height: 10px;
-  border: 2px solid rgba(242, 200, 75, 0.9);
-  opacity: 0;
-  animation: pingRing 2s ease-out infinite;
-  animation-delay: var(--delay, 0s);
-}
-.map-point.active {
-  z-index: 2;
-  background: #ffd667;
-  box-shadow:
-    0 0 0 4px rgba(242, 200, 75, 0.32),
-    0 0 22px rgba(255, 220, 102, 0.95);
-}
-@keyframes softPulse {
-  0%,
-  100% {
-    opacity: 0.4;
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.25);
-  }
-}
-@keyframes pingRing {
-  0% {
-    opacity: 0.9;
-    transform: translate(-50%, -50%) scale(0.8);
-  }
-  70% {
-    opacity: 0.18;
-    transform: translate(-50%, -50%) scale(2.7);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(3.2);
-  }
-}
-
-/* ========== 대표 디저트 카드 ========== */
-.dessert-card {
-  position: absolute;
-  z-index: 5;
-  left: 50%;
-  top: 50%;
-  width: clamp(130px, 6vw, 100px);
-  padding: 9px;
-  background: rgba(255, 250, 240, 0.97);
-  border: 1px solid rgba(181, 140, 72, 0.48);
-  border-radius: 16px;
-  box-shadow: 0 16px 55px rgba(42, 22, 25, 0.22);
-  opacity: 0;
-  pointer-events: none;
-  will-change: transform, opacity;
-  transform: translate(-50%, -50%) scale(0.2);
-}
-.dessert-card > img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 10px;
-  background: #f6ebd9;
-}
-.dessert-info {
+footer .footer_top {
+  height: 100px;
+  padding: 50px 0px;
   display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 12px 9px 8px;
-}
-.dessert-country {
-  color: #6f4d34; /* 국가명 가독성 강화 */
-  font:
-    700 11px/1.4 Arial,
-    sans-serif;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-.dessert-name {
-  font-size: clamp(17px, 1.4vw, 23px);
-  font-weight: 500;
-  line-height: 1.15;
-  color: #3a2427;
-}
-
-/* ========== 지도 하단 진행 표시 ========== */
-.scroll-indicator {
-  position: absolute;
-  z-index: 10;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
-  border: 1px solid rgba(123, 87, 57, 0.12);
-  border-radius: 999px;
-  background: rgba(255, 251, 243, 0.86);
-  color: #664c46;
-  font:
-    10px/1 Arial,
-    sans-serif;
-  letter-spacing: 0.12em;
-  white-space: nowrap;
+  /* border-bottom: 1px solid #f6dcd5;
+  width: 1100px; */
 }
-.progress-track {
-  width: 95px;
-  height: 2px;
-  overflow: hidden;
-  background: #e5d9bc;
+footer .footer_menu {
+  display: flex;
+  gap: 40px;
+  color: #f6dcd5;
+  margin-right: 50px;
+  font-size: 18px;
 }
-.progress-fill {
-  width: 0;
-  height: 100%;
-  background: #b8944b;
+footer .footer_icon {
+  display: flex;
+  gap: 20px;
+  color: #f6dcd5;
+  font-size: 25px;
+  margin-right: 20px;
 }
-
-@media (max-width: 600px) {
-  .origin-frame {
-    width: 100vw;
-  }
-  .dessert-card {
-    width: min(62vw, 240px);
-    padding: 7px;
-  }
-  .dessert-info {
-    padding: 8px 7px 7px;
-  }
-  .dessert-name {
-    font-size: 17px;
-  }
-  .scroll-indicator {
-    bottom: 22px;
-  }
+footer .footer_logo {
+  color: #f8eecc;
+  font-size: 25px;
 }
-@media (prefers-reduced-motion: reduce) {
-  .map-point::before,
-  .map-point::after {
-    animation: none;
-  }
+footer .footer_logo p {
+  color: #f8eecc;
+  font-size: 15px;
+}
+footer .footer_bottom {
+  height: 80px;
+  border-top: 1px solid #f6dcd5;
+  width: 1150px;
+  margin-left: 25px;
+}
+footer .footer_bottom_txt {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: #f6dcd5;
+}
+footer .footer_bottom_txt p:first-child {
+  font-size: 12px;
+}
+footer .footer_bottom_txt p:nth-of-type(2) {
+  text-align: right;
+  font-size: 12px;
 }
