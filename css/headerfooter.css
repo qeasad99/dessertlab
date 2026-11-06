@@ -1,0 +1,147 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* font */
+header,
+footer {
+  font-family: "Libre Bodoni", serif;
+}
+/* header */
+header {
+  width: 1200px;
+  display: flex;
+  background-color: #2d1b24;
+  color: #f6dcd5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+header h1 {
+  color: #f8eecc;
+}
+header .menu {
+  display: flex;
+  font-size: 18px;
+  gap: 35px;
+}
+header .menu_icon {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+
+  margin-right: 20px;
+}
+header img {
+  width: 250px;
+}
+/* con03 */
+.con03 {
+  width: 1200px;
+  position: relative;
+  background-color: #f4e9e3;
+  margin: 0px auto;
+}
+.con03 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.con03 .con03_story {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translate(-10%, -30%);
+}
+.con03 h2 {
+  font-size: 30px;
+}
+.con03 p {
+  font-weight: lighter;
+  color: #111;
+  font-size: 15px;
+}
+.con03 .exploremore {
+  background-color: #a8b398;
+  width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-radius: 25px;
+  color: white;
+  margin-top: 40px;
+}
+/* footer */
+footer img {
+  width: 280px;
+}
+footer {
+  width: 1200px;
+  background-color: #2d1b24;
+  margin: 0px auto;
+}
+footer .footer_top {
+  height: 100px;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid #f6dcd5;
+  width: 1100px; */
+}
+footer .footer_menu {
+  display: flex;
+  gap: 40px;
+  color: #f6dcd5;
+  margin-right: 50px;
+  font-size: 18px;
+}
+footer .footer_icon {
+  display: flex;
+  gap: 20px;
+  color: #f6dcd5;
+  font-size: 25px;
+  margin-right: 20px;
+}
+footer .footer_logo {
+  color: #f8eecc;
+  font-size: 25px;
+}
+footer .footer_logo p {
+  color: #f8eecc;
+  font-size: 15px;
+}
+footer .footer_bottom {
+  height: 80px;
+  border-top: 1px solid #f6dcd5;
+  width: 1150px;
+  margin-left: 25px;
+}
+footer .footer_bottom_txt {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: #f6dcd5;
+}
+footer .footer_bottom_txt p:first-child {
+  font-size: 12px;
+}
+footer .footer_bottom_txt p:nth-of-type(2) {
+  text-align: right;
+  font-size: 12px;
+}
