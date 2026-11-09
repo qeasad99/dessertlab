@@ -13,8 +13,18 @@ ul {
   list-style: none;
 }
 
+
+
+
 /*모바일*/
 @media (max-width: 768px) {
+  #con01 .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* 모바일 화면은 좌우 여백을 조금 좁게 설정 */
+  }
 
   /*#con01*/
   #con01 {
@@ -294,6 +304,13 @@ ul {
 
 /*테블릿*/
 @media (min-width: 769px) and (max-width: 1199px) {
+  #con01 .container {
+    width: 90%;
+    /* 태블릿에서는 화면의 90% 공간 활용 */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
   /*#con01*/
   #con01 {
@@ -530,6 +547,13 @@ ul {
 
 /*pc*/
 @media (min-width: 1200px) {
+  #con01 .container {
+    width: 100%;
+    max-width: 1200px;
+    /* 1200px 고정 최대 크기로 중앙 정렬 */
+    margin: 0 auto;
+    padding: 0;
+  }
 
   /*#con01*/
   #con01 {
