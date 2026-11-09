@@ -1,0 +1,747 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*모바일*/
+@media (max-width: 768px) {
+
+    /*#con01*/
+    #con01 {
+        width: 100%;
+        margin: 0px auto;
+        height: 700px;
+        /* 영역 높이 지정 */
+        /* display: flex; */
+        background-color: #FEF7EC;
+        overflow: hidden;
+
+    }
+
+    #con01 .pic ul {
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    #con01 .pic .ul01 {
+        width: max-content;
+        transition: none;
+    }
+
+    #con01 .pic .ul02 {
+        display: none;
+        margin-top: 0;
+    }
+
+    #con01 .pic li {
+        width: 200px;
+        height: 250px;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    /*#con01 txt*/
+    #con01 .txt {
+        width: 60%;
+        margin-left: 50px;
+        margin-top: 40px;
+    }
+
+    #con01 .txt h3 {
+        font-size: 60px;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+
+    #con01 .txt p {
+        font-size: 15px;
+        line-height: 40px;
+        margin-top: 30px;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+
+    #con01.on .txt h3,
+    #con01.on .txt p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    #con01.on .txt h3 {
+        transition-delay: 0.2s;
+    }
+
+    #con01.on .txt p {
+        transition-delay: 0.6s;
+    }
+
+
+    /*#con01 pic*/
+    #con01 .pic {
+        width: 100%;
+        height: 300px;
+        display: block;
+        overflow: hidden;
+
+    }
+
+    #con01 ul {
+        color: #fff;
+        text-align: center;
+        position: relative;
+    }
+
+    #con01 li {
+        margin-top: 20px;
+        border-radius: 30px;
+        width: 200px;
+        height: 250px;
+        flex: 0 0 200px;
+        overflow: hidden;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .ul02 {
+        margin-top: -270px;
+    }
+
+    #con01 li p:nth-of-type(1) {
+        font-size: 20px;
+    }
+
+    /*#con01 pic 배경이미지 hover 효과*/
+    #con01 .ul01 .cake:hover,
+    #con01 .ul01 .tart:hover,
+    #con01 .ul01 .cookie:hover,
+    #con01 .ul01 .pastry:hover {
+        filter: saturate(1.3);
+    }
+
+    #con01 .ul02 .cake:hover,
+    #con01 .ul02 .tart:hover,
+    #con01 .ul02 .cookie:hover,
+    #con01 .ul02 .pastry:hover {
+        filter: saturate(1.3);
+    }
+
+    /*#con01 pic 배경이미지*/
+    #con01 .ul01 .cake {
+        background-image: url(../img/con01_1.jpeg);
+
+    }
+
+    #con01 .ul01 .tart {
+        background-image: url(../img/con01_9.jpg);
+    }
+
+    #con01 .ul01 .cookie {
+        background-image: url(../img/con01_5.jpg);
+    }
+
+    #con01 .ul01 .pastry {
+        background-image: url(../img/con01_11.jpeg);
+    }
+
+    #con01 .ul02 .cake {
+        background-image: url(../img/con01_2.avif);
+    }
+
+    #con01 .ul02 .tart {
+        background-image: url(../img/con01_4.jpg);
+    }
+
+    #con01 .ul02 .macaron {
+        background-image: url(../img/con01_7.webp);
+    }
+
+    #con01 .ul02 .pastry {
+        background-image: url(../img/con01_10.jpg);
+    }
+
+    /*#con01 pic 더보기 버튼컬러*/
+    #con01 .ul01 .cake .more_f,
+    #con01 .ul01 .cookie .more_f {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #fff;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul01 .cake .more_f:hover,
+    #con01 .ul01 .cookie .more_f:hover {
+        background-color: #2D1B24;
+        color: #fff;
+    }
+
+    #con01 .ul01 .tart .more {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #A8B398;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul01 .pastry .more {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #F8EECC;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul01 .tart .more:hover {
+        background-color: #F8EECC;
+    }
+
+    #con01 .ul01 .pastry .more:hover {
+        background-color: #A8B398;
+    }
+
+    #con01 .ul02 .macaron .more_f,
+    #con01 .ul02 .cake .more_f {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #F8EECC;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul02 .macaron .more_f:hover,
+    #con01 .ul02 .cake .more_f:hover {
+        background-color: #A8B398;
+    }
+
+    #con01 .ul02 .pastry .more,
+    #con01 .ul02 .tart .more {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #fff;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul02 .pastry .more:hover,
+    #con01 .ul02 .tart .more:hover {
+        background-color: #2D1B24;
+        color: #fff;
+    }
+}
+
+/*테블릿*/
+@media (min-width: 769px) and (max-width: 1199px) {
+
+    /*#con01*/
+    #con01 {
+        width: 100%;
+        margin: 0px auto;
+        height: 700px;
+        /* 영역 높이 지정 */
+        display: flex;
+        background-color: #FEF7EC;
+        overflow: hidden;
+
+    }
+
+    #con01 .pic ul {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #con01 .pic li {
+        width: 200px;
+        height: 250px;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    /*#con01 txt*/
+    #con01 .txt {
+        width: 60%;
+        margin-left: 100px;
+        margin-top: 40px;
+    }
+
+    #con01 .txt h3 {
+        font-size: 80px;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+
+    #con01 .txt p {
+        font-size: 25px;
+        line-height: 50px;
+        margin-top: 30px;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+
+    #con01.on .txt h3,
+    #con01.on .txt p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    #con01.on .txt h3 {
+        transition-delay: 0.2s;
+    }
+
+    #con01.on .txt p {
+        transition-delay: 0.6s;
+    }
+
+
+    /*#con01 pic*/
+    #con01 .pic {
+        width: 30%;
+        height: 700px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        overflow: visible;
+
+    }
+
+    #con01 ul {
+        color: #fff;
+        text-align: center;
+        position: relative;
+    }
+
+    #con01 li {
+        margin-top: 20px;
+        border-radius: 30px;
+        width: 200px;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .ul02 {
+        margin-top: -270px;
+    }
+
+    #con01 li p:nth-of-type(1) {
+        font-size: 20px;
+    }
+
+    /*#con01 pic 배경이미지 hover 효과*/
+    #con01 .ul01 .cake:hover,
+    #con01 .ul01 .tart:hover,
+    #con01 .ul01 .cookie:hover,
+    #con01 .ul01 .pastry:hover {
+        filter: saturate(1.3);
+    }
+
+    #con01 .ul02 .cake:hover,
+    #con01 .ul02 .tart:hover,
+    #con01 .ul02 .cookie:hover,
+    #con01 .ul02 .pastry:hover {
+        filter: saturate(1.3);
+    }
+
+    /*#con01 pic 배경이미지*/
+    #con01 .ul01 .cake {
+        background-image: url(../img/con01_1.jpeg);
+
+    }
+
+    #con01 .ul01 .tart {
+        background-image: url(../img/con01_9.jpg);
+    }
+
+    #con01 .ul01 .cookie {
+        background-image: url(../img/con01_5.jpg);
+    }
+
+    #con01 .ul01 .pastry {
+        background-image: url(../img/con01_11.jpeg);
+    }
+
+    #con01 .ul02 .cake {
+        background-image: url(../img/con01_2.avif);
+    }
+
+    #con01 .ul02 .tart {
+        background-image: url(../img/con01_4.jpg);
+    }
+
+    #con01 .ul02 .macaron {
+        background-image: url(../img/con01_7.webp);
+    }
+
+    #con01 .ul02 .pastry {
+        background-image: url(../img/con01_10.jpg);
+    }
+
+    /*#con01 pic 더보기 버튼컬러*/
+    #con01 .ul01 .cake .more_f,
+    #con01 .ul01 .cookie .more_f {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #fff;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul01 .cake .more_f:hover,
+    #con01 .ul01 .cookie .more_f:hover {
+        background-color: #2D1B24;
+        color: #fff;
+    }
+
+    #con01 .ul01 .tart .more,
+    #con01 .ul01 .pastry .more {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #A8B398;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul01 .tart .more:hover,
+    #con01 .ul01 .pastry .more:hover {
+        background-color: #F8EECC;
+    }
+
+    #con01 .ul02 .macaron .more_f,
+    #con01 .ul02 .cake .more_f {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #F8EECC;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul02 .macaron .more_f:hover,
+    #con01 .ul02 .cake .more_f:hover {
+        background-color: #A8B398;
+    }
+
+    #con01 .ul02 .pastry .more,
+    #con01 .ul02 .tart .more {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #fff;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul02 .pastry .more:hover,
+    #con01 .ul02 .tart .more:hover {
+        background-color: #2D1B24;
+        color: #fff;
+    }
+}
+
+/*pc*/
+@media (min-width: 1200px) {
+
+    /*#con01*/
+    #con01 {
+        width: 100%;
+        margin: 0px auto;
+        height: 700px;
+        /* 영역 높이 지정 */
+        display: flex;
+        background-color: #FEF7EC;
+        overflow: hidden;
+
+    }
+
+    #con01 .pic ul {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #con01 .pic li {
+        width: 200px;
+        height: 250px;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    /*#con01 txt*/
+    #con01 .txt {
+        width: 60%;
+        margin-left: 130px;
+        margin-top: 40px;
+    }
+
+    #con01 .txt h3 {
+        font-size: 80px;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+
+    #con01 .txt p {
+        font-size: 25px;
+        line-height: 50px;
+        margin-top: 30px;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: 1s;
+    }
+
+    #con01.on .txt h3,
+    #con01.on .txt p {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    #con01.on .txt h3 {
+        transition-delay: 0.2s;
+    }
+
+    #con01.on .txt p {
+        transition-delay: 0.6s;
+    }
+
+
+    /*#con01 pic*/
+    #con01 .pic {
+        width: 30%;
+        height: 700px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        overflow: visible;
+
+    }
+
+    #con01 ul {
+        color: #fff;
+        text-align: center;
+        position: relative;
+    }
+
+    #con01 li {
+        margin-top: 20px;
+        border-radius: 30px;
+        width: 200px;
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .ul02 {
+        margin-top: -270px;
+    }
+
+    #con01 li p:nth-of-type(1) {
+        font-size: 20px;
+    }
+
+    /*#con01 pic 배경이미지 hover 효과*/
+    #con01 .ul01 .cake:hover,
+    #con01 .ul01 .tart:hover,
+    #con01 .ul01 .cookie:hover,
+    #con01 .ul01 .pastry:hover {
+        filter: saturate(1.3);
+    }
+
+    #con01 .ul02 .cake:hover,
+    #con01 .ul02 .tart:hover,
+    #con01 .ul02 .cookie:hover,
+    #con01 .ul02 .pastry:hover {
+        filter: saturate(1.3);
+    }
+
+    /*#con01 pic 배경이미지*/
+    #con01 .ul01 .cake {
+        background-image: url(../img/con01_1.jpeg);
+
+    }
+
+    #con01 .ul01 .tart {
+        background-image: url(../img/con01_9.jpg);
+    }
+
+    #con01 .ul01 .cookie {
+        background-image: url(../img/con01_5.jpg);
+    }
+
+    #con01 .ul01 .pastry {
+        background-image: url(../img/con01_11.jpeg);
+    }
+
+    #con01 .ul02 .cake {
+        background-image: url(../img/con01_2.avif);
+    }
+
+    #con01 .ul02 .tart {
+        background-image: url(../img/con01_4.jpg);
+    }
+
+    #con01 .ul02 .macaron {
+        background-image: url(../img/con01_7.webp);
+    }
+
+    #con01 .ul02 .pastry {
+        background-image: url(../img/con01_10.jpg);
+    }
+
+    /*#con01 pic 더보기 버튼컬러*/
+    #con01 .ul01 .cake .more_f,
+    #con01 .ul01 .cookie .more_f {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #fff;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul01 .cake .more_f:hover,
+    #con01 .ul01 .cookie .more_f:hover {
+        background-color: #2D1B24;
+        color: #fff;
+    }
+
+    #con01 .ul01 .tart .more,
+    #con01 .ul01 .pastry .more {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #A8B398;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul01 .tart .more:hover,
+    #con01 .ul01 .pastry .more:hover {
+        background-color: #F8EECC;
+    }
+
+    #con01 .ul02 .macaron .more_f,
+    #con01 .ul02 .cake .more_f {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #F8EECC;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul02 .macaron .more_f:hover,
+    #con01 .ul02 .cake .more_f:hover {
+        background-color: #A8B398;
+    }
+
+    #con01 .ul02 .pastry .more,
+    #con01 .ul02 .tart .more {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        margin: 0px auto;
+        background-color: #fff;
+        border-radius: 20px;
+        color: #000;
+        position: absolute;
+        left: 30px;
+        bottom: 20px;
+    }
+
+    #con01 .ul02 .pastry .more:hover,
+    #con01 .ul02 .tart .more:hover {
+        background-color: #2D1B24;
+        color: #fff;
+    }
+}
