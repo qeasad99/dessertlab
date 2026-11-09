@@ -323,8 +323,9 @@ ul {
   /*#con01 txt*/
   #con01 .txt {
     width: 60%;
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 40px;
+    flex-shrink: 0;
   }
 
   #con01 .txt h3 {
@@ -367,6 +368,7 @@ ul {
     gap: 20px;
     justify-content: center;
     overflow: visible;
+    flex-shrink: 0;
 
   }
 
@@ -557,8 +559,9 @@ ul {
   /*#con01 txt*/
   #con01 .txt {
     width: 60%;
-    margin-left: 5%;
+    margin-left: 3%;
     margin-top: 40px;
+    flex-shrink: 0;
   }
 
   #con01 .txt h3 {
@@ -601,6 +604,7 @@ ul {
     gap: 20px;
     justify-content: center;
     overflow: visible;
+    flex-shrink: 0;
 
   }
 
