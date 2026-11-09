@@ -11,13 +11,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-/* body {
-  height: 4000px;
-} */
 /*----------con02----------*/
-#con02 {
-  /* margin-top: 1000px; */
-}
 #con02 .wrap {
   background-color: #f7efdf;
   padding-top: 50px;
@@ -41,7 +35,8 @@ a {
 #con02 .txtbox p:nth-of-type(2),
 #con02 .txtbox p:nth-of-type(3) {
   font-size: 2.3rem;
-  font-weight: bold;
+  font-weight: 500;
+  font-family: "Libre Bodoni", serif;
 }
 #con02 .imgbox {
   width: 100%;
