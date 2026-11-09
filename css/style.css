@@ -29,12 +29,11 @@ ul {
   /*#con01*/
   #con01 {
     width: 100%;
-    margin: 0px auto;
+    margin: 50px auto;
     height: auto;
-    /* 높이를 콘텐츠에 맞게 자동 조절 (잘림 방지) */
-    /* display: flex; */
     background-color: #FEF7EC;
     overflow: hidden;
+    padding: 60px 0px;
 
   }
 
@@ -44,7 +43,7 @@ ul {
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 15px;
-    margin: 0;
+    margin-top: 60px;
     padding: 0;
 
   }
@@ -68,14 +67,18 @@ ul {
 
   /*#con01 txt*/
   #con01 .txt {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 40px;
-    text-align: center;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0;
+    text-align: left;
+    transform: none;
+    width: 70%;
+    flex-shrink: 0;
   }
 
   #con01 .txt h3 {
-    font-size: 36px;
+    font-size: 50px;
     /* 모바일에 맞게 폰트 크기 축소 */
     opacity: 0;
     transform: translateY(-50px);
@@ -83,7 +86,7 @@ ul {
   }
 
   #con01 .txt p {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     margin-top: 15px;
     opacity: 0;
@@ -109,13 +112,15 @@ ul {
 
   /*#con01 pic*/
   #con01 .pic {
-    height: auto;
+    /* height: auto;
     display: flex;
     flex-direction: column;
     /* 세로 정렬로 변경하여 가로 넘침 방지 */
-    align-items: center;
+    /* align-items: center;
     overflow: visible;
-    margin-top: 30px;
+    margin-top: 30px; */
+    width: 100%;
+    overflow: hidden;
 
   }
 
@@ -135,7 +140,7 @@ ul {
   }
 
   #con01 li {
-    margin-top: 0;
+    margin-top: 20px;
     border-radius: 30px;
     width: 200px;
     height: 250px;
@@ -306,21 +311,22 @@ ul {
 @media (min-width: 769px) and (max-width: 1199px) {
   #con01 .container {
     width: 90%;
-    /* 태블릿에서는 화면의 90% 공간 활용 */
     max-width: 1100px;
-    margin: 0 auto;
+    height: 700px;
+    margin: 40px auto;
     padding: 0 20px;
+    display: flex;
+    align-items: flex-start;
   }
 
   /*#con01*/
   #con01 {
     width: 100%;
-    margin: 0px auto;
     height: 700px;
-    /* 영역 높이 지정 */
-    display: flex;
-    background-color: #FEF7EC;
     overflow: hidden;
+    background-color: #FEF7EC;
+    margin: 50px auto;
+
 
   }
 
@@ -339,21 +345,25 @@ ul {
 
   /*#con01 txt*/
   #con01 .txt {
+    position: relative;
+    left: 0;
+    top: 0px;
+    margin: 0;
+    text-align: left;
+    transform: none;
     width: 60%;
-    margin-left: 3%;
-    margin-top: 40px;
     flex-shrink: 0;
   }
 
   #con01 .txt h3 {
-    font-size: 80px;
+    font-size: 70px;
     opacity: 0;
     transform: translateY(-50px);
     transition: 1s;
   }
 
   #con01 .txt p {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 50px;
     margin-top: 30px;
     opacity: 0;
@@ -548,22 +558,24 @@ ul {
 /*pc*/
 @media (min-width: 1200px) {
   #con01 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
-    /* 1200px 고정 최대 크기로 중앙 정렬 */
-    margin: 0 auto;
-    padding: 0;
+    height: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
   }
 
   /*#con01*/
   #con01 {
     width: 100%;
-    margin: 0px auto;
     height: 700px;
-    /* 영역 높이 지정 */
-    display: flex;
-    background-color: #FEF7EC;
     overflow: hidden;
+    background-color: #FEF7EC;
+    margin: 50px auto;
+
 
   }
 
@@ -582,21 +594,25 @@ ul {
 
   /*#con01 txt*/
   #con01 .txt {
+    position: relative;
+    left: 0;
+    top: -60px;
+    margin: 0;
+    text-align: left;
+    transform: none;
     width: 60%;
-    margin-left: 3%;
-    margin-top: 40px;
     flex-shrink: 0;
   }
 
   #con01 .txt h3 {
-    font-size: 80px;
+    font-size: 70px;
     opacity: 0;
     transform: translateY(-50px);
     transition: 1s;
   }
 
   #con01 .txt p {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 50px;
     margin-top: 30px;
     opacity: 0;
@@ -622,12 +638,11 @@ ul {
 
   /*#con01 pic*/
   #con01 .pic {
-    width: 30%;
+    width: 40%;
     height: 700px;
     display: flex;
     gap: 20px;
     justify-content: center;
-    overflow: visible;
     flex-shrink: 0;
 
   }
