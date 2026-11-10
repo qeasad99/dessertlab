@@ -1,3 +1,110 @@
+$(function () {
+  /* con01 scroll */
+  $(window).on("scroll", function () {
+    let sc = $(this).scrollTop();
+    let pos = $("#con01").offset().top;
+
+    if (sc >= pos - 600) {
+      $("#con01").addClass("on");
+    } else {
+      $("#con01").removeClass("on");
+    }
+  });
+
+  /* ul01 : PC 위쪽 / 모바일 왼쪽 이동 */
+  function slideUp() {
+    if ($(window).width() <= 768) {
+      // 모바일 : 가로 이동
+      $(".ul01").animate(
+        {
+          marginLeft: "-=215px",
+        },
+        1500,
+        "linear",
+        function () {
+          $(".ul01 li:first").appendTo(".ul01");
+
+          $(this).css("marginLeft", "0px");
+
+          slideUp();
+        },
+      );
+    } else {
+      // PC / 태블릿 : 위쪽 이동
+      $(".ul01").animate(
+        {
+          marginTop: "-=270px",
+        },
+        1500,
+        "linear",
+        function () {
+          $(".ul01 li:first").appendTo(".ul01");
+
+          $(this).css("marginTop", "0px");
+
+          slideUp();
+        },
+      );
+    }
+  }
+
+  // /* ul02 : PC / 태블릿 아래쪽 이동 */
+  // function slideDown() {
+
+  //   if ($(window).width() > 768) {
+
+  //     $(".ul02").animate({
+  //       marginTop: "+=270px"
+  //     }, 1500, function () {
+
+  //       $(".ul02 li:last").prependTo(".ul02");
+
+  //       $(this).css("marginTop", "-270px");
+
+  //       slideDown();
+
+  //     });
+
+  //   }
+  /* ul02 : PC / 태블릿 아래쪽 이동 */
+  function slideDown() {
+    if ($(window).width() > 768) {
+      $(".ul02").animate(
+        {
+          marginTop: "0px",
+        },
+        1500,
+        "linear",
+        function () {
+          $(".ul02 li:last").prependTo(".ul02");
+
+          $(this).css("marginTop", "-270px");
+
+          slideDown();
+        },
+      );
+    }
+  }
+
+  /* 화면 크기 변경 */
+  $(window).on("resize", function () {
+    if ($(window).width() > 768) {
+      $(".ul02").stop(true);
+
+      $(".ul02").css("marginTop", "-270px");
+
+      slideDown();
+    } else {
+      $(".ul02").stop(true);
+    }
+  });
+
+  /* 슬라이드 실행 */
+  slideUp();
+  slideDown();
+});
+
+// 팀원 코드 : con02 GSAP 스크롤 애니메이션
 gsap.registerPlugin(ScrollTrigger);
 
 let tl = gsap.timeline({
@@ -15,23 +122,27 @@ let tl = gsap.timeline({
   },
 });
 
-t1.fromTo(
+tl.fromTo(
   "#con02 .txtbox",
   { opacity: 0, y: 30 },
   { opacity: 1, y: 0, duration: 1 },
 );
 
-// 1단계: 첫 번째 li 밝아짐
-tl.to("#con02 .imgbox li:nth-child(1) img", { filter: "brightness(1)" })
-  // 2단계: 두 번째 li 밝아짐
-  .to("#con02 .imgbox li:nth-child(2) img", { filter: "brightness(1)" })
-  // 3단계: 세 번째 li 밝아짐
-  .to("#con02 .imgbox li:nth-child(3) img", { filter: "brightness(1)" })
-  // 4단계: 네 번째 li 밝아짐
-  .to("#con02 .imgbox li:nth-child(4) img", { filter: "brightness(1)" })
-  // 5단계: li 안의 텍스트(.li-txt) 등장
+// 이미지 순서대로 밝아지는 효과
+tl.to("#con02 .imgbox li:nth-child(1) img", {
+  filter: "brightness(1)",
+})
+  .to("#con02 .imgbox li:nth-child(2) img", {
+    filter: "brightness(1)",
+  })
+  .to("#con02 .imgbox li:nth-child(3) img", {
+    filter: "brightness(1)",
+  })
+  .to("#con02 .imgbox li:nth-child(4) img", {
+    filter: "brightness(1)",
+  })
   .to("#con02 .imgbox .li-txt", {
     opacity: 1,
-    y: -20, // translateY(20px)인 상태에서 원래 자리(0)로 이동하게 수정
+    y: -20,
     stagger: 0.5,
   });
