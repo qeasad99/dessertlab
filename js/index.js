@@ -19,7 +19,7 @@ $(function () {
         {
           marginLeft: "-=215px",
         },
-        1700,
+        1500,
         "linear",
         function () {
           $(".ul01 li:first").appendTo(".ul01");
@@ -35,7 +35,7 @@ $(function () {
         {
           marginTop: "-=270px",
         },
-        1700,
+        1500,
         "linear",
         function () {
           $(".ul01 li:first").appendTo(".ul01");
@@ -73,7 +73,7 @@ $(function () {
         {
           marginTop: "0px",
         },
-        1700,
+        1500,
         "linear",
         function () {
           $(".ul02 li:last").prependTo(".ul02");
@@ -110,7 +110,7 @@ gsap.registerPlugin(ScrollTrigger);
 let tl = gsap.timeline({
   scrollTrigger: {
     trigger: "#con02",
-    start: "top top",
+    start: "top 82px",
     end: "+=3000",
     pin: true,
     scrub: 1,
@@ -122,6 +122,7 @@ let tl = gsap.timeline({
   },
 });
 
+// 중앙 텍스트박스 효과
 tl.fromTo(
   "#con02 .txtbox",
   { opacity: 0, y: 30 },
