@@ -49,50 +49,7 @@ header .menu_icon {
 header img {
   width: 250px;
 }
-header .menu li:hover {
-  color: #f8eecc;
-  border-bottom: 1px solid white;
-}
-header .menu_icon li:hover {
-  color: #f8eecc;
-}
-/* con03 */
-.con03 {
-  width: 1200px;
-  position: relative;
-  background-color: #f4e9e3;
-  margin: 0px auto;
-}
-.con03 video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.con03 .con03_story {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  transform: translate(-10%, -30%);
-}
-.con03 h2 {
-  font-size: 30px;
-}
-.con03 p {
-  font-weight: lighter;
-  color: #111;
-  font-size: 15px;
-}
-.con03 .exploremore {
-  background-color: #a8b398;
-  width: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  border-radius: 25px;
-  color: white;
-  margin-top: 40px;
-}
+
 /* footer */
 footer img {
   width: 280px;
@@ -151,10 +108,4 @@ footer .footer_bottom_txt p:first-child {
 footer .footer_bottom_txt p:nth-of-type(2) {
   text-align: right;
   font-size: 12px;
-}
-footer .footer_menu li:hover {
-  color: #f8eecc;
-}
-footer .footer_icon li:hover {
-  color: #f8eecc;
 }
