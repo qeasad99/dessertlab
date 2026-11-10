@@ -456,3 +456,8 @@
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+/* CON04 상단 50px 여백 */
+#origin.origin-scroll {
+  padding-top: 100px;
+}
