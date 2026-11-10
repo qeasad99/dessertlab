@@ -57,4 +57,79 @@ $(function () {
   $("#con5 .modal").on("click", function () {
     $(this).removeClass("on");
   });
+  /*con3 drag*/
+  let isDragging = false;
+  let startX = 0;
+  let scrollLeft = 0;
+
+  $("#con3 ul").on("mousedown", function (e) {
+    if (e.button !== 0) return;
+
+    isDragging = true;
+    startX = e.pageX;
+    scrollLeft = $(this).scrollLeft();
+
+    $(this).addClass("dragging");
+  });
+
+  $(document).on("mousemove", function (e) {
+    if (!isDragging) return;
+
+    e.preventDefault();
+
+    let moveX = (e.pageX - startX) * 0.5;
+
+    $("#con3 ul").scrollLeft(scrollLeft - moveX);
+  });
+
+  $(document).on("mouseup", function () {
+    isDragging = false;
+    $("#con3 ul").removeClass("dragging");
+  });
+
+  /*con3 click*/
+  $(".over").on("click", function () {
+    $(this).find(".second").toggleClass("on");
+  });
+  /*scroll */
+  $(window).on("scroll", function () {
+    let pos = $(this).scrollTop();
+    let con1 = $("#con1").offset().top;
+    let con3 = $("#con3").offset().top;
+    let con4 = $("#con4").offset().top;
+    let con5 = $("#con5").offset().top;
+
+    if (pos > con1 - 700) {
+      $("#con1 .left").addClass("on");
+      $("#con1 h3").addClass("on");
+      $("#con1 .first").addClass("on");
+      $("#con1 .second").addClass("on");
+    } else {
+      $("#con1 .left").removeClass("on");
+      $("#con1 h3").removeClass("on");
+      $("#con1 .first").removeClass("on");
+      $("#con1 .second").removeClass("on");
+    }
+    if (pos > con3 - 700) {
+      $("#con3 h3").addClass("on");
+      $("#con3 h5").addClass("on");
+    } else {
+      $("#con3 h3").removeClass("on");
+      $("#con3 h5").removeClass("on");
+    }
+    if (pos > con4 - 700) {
+      $("#con4 div").addClass("on");
+      $("#con4 h3").addClass("on");
+      $("#con4 p").addClass("on");
+    } else {
+      $("#con4 div").removeClass("on");
+      $("#con4 h3").removeClass("on");
+      $("#con4 p").removeClass("on");
+    }
+    if (pos > con5 - 700) {
+      $("#con5 h3").addClass("on");
+    } else {
+      $("#con5 h3").removeClass("on");
+    }
+  });
 });
