@@ -316,7 +316,8 @@ ul {
     height: 700px;
     overflow: hidden;
     background-color: #fef7ec;
-    margin: 50px auto;
+    margin: 0px auto;
+    padding: 50px 0px;
   }
 
   #con01 .pic ul {
@@ -559,7 +560,8 @@ ul {
     height: 700px;
     overflow: hidden;
     background-color: #fef7ec;
-    margin: 50px auto;
+    margin: 0px auto;
+    padding: 50px 0px;
   }
 
   #con01 .pic ul {
@@ -788,6 +790,7 @@ ul {
 }
 #con02 .wrap {
   width: 1200px;
+  padding: 50px 0px;
   height: 650px;
   margin: 0px auto;
   position: relative;

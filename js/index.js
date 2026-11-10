@@ -19,7 +19,7 @@ $(function () {
         {
           marginLeft: "-=215px",
         },
-        1500,
+        1700,
         "linear",
         function () {
           $(".ul01 li:first").appendTo(".ul01");
@@ -35,7 +35,7 @@ $(function () {
         {
           marginTop: "-=270px",
         },
-        1500,
+        1700,
         "linear",
         function () {
           $(".ul01 li:first").appendTo(".ul01");
@@ -73,7 +73,7 @@ $(function () {
         {
           marginTop: "0px",
         },
-        1500,
+        1700,
         "linear",
         function () {
           $(".ul02 li:last").prependTo(".ul02");
