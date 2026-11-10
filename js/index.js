@@ -15,6 +15,12 @@ let tl = gsap.timeline({
   },
 });
 
+t1.fromTo(
+  "#con02 .txtbox",
+  { opacity: 0, y: 30 },
+  { opacity: 1, y: 0, duration: 1 },
+);
+
 // 1단계: 첫 번째 li 밝아짐
 tl.to("#con02 .imgbox li:nth-child(1) img", { filter: "brightness(1)" })
   // 2단계: 두 번째 li 밝아짐
