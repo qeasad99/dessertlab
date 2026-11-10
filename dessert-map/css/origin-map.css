@@ -1,0 +1,463 @@
+/* =========================================
+   01. 기본 설정
+========================================= */
+
+/* 독립 페이지에만 적용 */
+body.origin-demo {
+  margin: 0;
+  background: #fbf4e7;
+  color: #351822;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* 지도 영역 내부에만 적용 */
+.origin-scroll,
+.origin-scroll * {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   02. 지도 스크롤 구간
+========================================= */
+
+.origin-scroll {
+  position: relative;
+  height: 800vh;
+  background: #fbf4e7;
+  color: #351822;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.origin-sticky {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+
+  overflow: hidden;
+  background: #fbf4e7;
+}
+
+/* =========================================
+   03. 세계지도 프레임
+========================================= */
+
+.origin-frame {
+  position: relative;
+
+  width: min(96vw, 156.28svh, 1200px);
+  max-width: 100%;
+
+  aspect-ratio: 1648 / 928;
+  flex: 0 0 auto;
+
+  background: transparent;
+  isolation: isolate;
+}
+
+.origin-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  filter: none;
+  mix-blend-mode: normal;
+  opacity: 1;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.origin-points {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* =========================================
+   04. View More
+========================================= */
+
+.origin-view-more {
+  position: absolute;
+  z-index: 8;
+
+  /* 원본 지도 속 버튼 위치 */
+  left: 6.8%;
+  top: 18.8%;
+
+  width: 11.8%;
+  height: 6.4%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 999px;
+  background: transparent;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: background-color 0.25s ease;
+}
+
+.origin-view-more span {
+  opacity: 0;
+
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(8px, 1.25vw, 18px);
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition: opacity 0.25s ease;
+}
+
+.origin-view-more:hover,
+.origin-view-more:focus-visible {
+  background: #97a081;
+}
+
+.origin-view-more:hover span,
+.origin-view-more:focus-visible span {
+  opacity: 1;
+}
+
+/* =========================================
+   05. 국가별 노란색 핑
+========================================= */
+
+.map-point {
+  position: absolute;
+  z-index: 1;
+
+  width: 12px;
+  height: 12px;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  background: #f2c84b;
+
+  box-shadow:
+    0 0 0 2px rgba(255, 248, 221, 0.85),
+    0 0 12px rgba(242, 200, 75, 0.5);
+}
+
+.map-point::before,
+.map-point::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.map-point::before {
+  width: 34px;
+  height: 34px;
+
+  background: radial-gradient(circle, rgba(255, 225, 120, 0.48), transparent 70%);
+
+  animation: softPulse 2s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.map-point::after {
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid rgba(242, 200, 75, 0.9);
+  opacity: 0;
+
+  animation: pingRing 2s ease-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+.map-point.active {
+  z-index: 2;
+
+  background: #ffd667;
+
+  box-shadow:
+    0 0 0 5px rgba(242, 200, 75, 0.32),
+    0 0 25px rgba(255, 220, 102, 0.95);
+}
+
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+}
+
+@keyframes pingRing {
+  0% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  70% {
+    opacity: 0.18;
+    transform: translate(-50%, -50%) scale(2.7);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3.2);
+  }
+}
+
+/* =========================================
+   06. 디저트 카드
+========================================= */
+
+.dessert-card {
+  position: absolute;
+  z-index: 5;
+
+  left: 50%;
+  top: 50%;
+
+  width: 130px;
+  padding: 9px;
+
+  background: rgba(255, 250, 240, 0.97);
+
+  border: 1px solid rgba(181, 140, 72, 0.48);
+  border-radius: 16px;
+
+  box-shadow: 0 16px 55px rgba(42, 22, 25, 0.22);
+
+  opacity: 0;
+  pointer-events: none;
+
+  will-change: transform, opacity;
+
+  transform: translate(-50%, -50%) scale(0.2);
+}
+
+.dessert-card > img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+
+  border-radius: 10px;
+  background: #f6ebd9;
+}
+
+.dessert-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+  padding: 12px 9px 8px;
+}
+
+.dessert-country {
+  color: #6f4d34;
+
+  font:
+    700 11px/1.4 Arial,
+    sans-serif;
+
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+
+  overflow-wrap: anywhere;
+}
+
+.dessert-name {
+  font-size: clamp(17px, 1.4vw, 23px);
+  font-weight: 500;
+  line-height: 1.15;
+
+  color: #3a2427;
+
+  overflow-wrap: anywhere;
+}
+
+/* =========================================
+   07. 하단 스크롤 진행 표시
+========================================= */
+
+.scroll-indicator {
+  position: absolute;
+  z-index: 10;
+
+  bottom: 14px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+  padding: 10px 14px;
+
+  border: 1px solid rgba(123, 87, 57, 0.12);
+  border-radius: 999px;
+
+  background: rgba(255, 251, 243, 0.86);
+  color: #664c46;
+
+  font:
+    10px/1 Arial,
+    sans-serif;
+  letter-spacing: 0.12em;
+
+  white-space: nowrap;
+}
+
+.progress-track {
+  width: 95px;
+  height: 2px;
+
+  overflow: hidden;
+  background: #e5d9bc;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+
+  background: #b8944b;
+}
+
+/* =========================================
+   08. 태블릿 반응형
+========================================= */
+
+@media (max-width: 800px) {
+  .dessert-card {
+    width: clamp(85px, 17vw, 120px);
+    padding: 7px;
+    border-radius: 12px;
+  }
+
+  .dessert-card > img {
+    border-radius: 7px;
+  }
+
+  .dessert-info {
+    gap: 4px;
+    padding: 8px 5px 5px;
+  }
+
+  .dessert-country {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .dessert-name {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   09. 모바일 반응형
+========================================= */
+
+@media (max-width: 600px) {
+  .origin-frame {
+    width: 100vw;
+  }
+
+  /* 카드 전체를 화면 크기에 맞게 축소 */
+  .dessert-card {
+    width: clamp(68px, 19vw, 98px);
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  /* 카드가 작아지면 사진도 같이 축소 */
+  .dessert-card > img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .dessert-info {
+    gap: 3px;
+    padding: 6px 3px 4px;
+  }
+
+  .dessert-country {
+    font-size: clamp(8px, 1.8vw, 10px);
+    letter-spacing: 0.03em;
+  }
+
+  .dessert-name {
+    font-size: clamp(11px, 2.3vw, 14px);
+    line-height: 1.12;
+  }
+
+  /* 모바일 핑 크기 보정 */
+  .map-point {
+    width: 8px;
+    height: 8px;
+  }
+
+  .map-point::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .map-point::after {
+    width: 10px;
+    height: 10px;
+  }
+
+  .scroll-indicator {
+    bottom: 22px;
+    gap: 7px;
+    padding: 8px 10px;
+    font-size: 8px;
+  }
+
+  .progress-track {
+    width: 55px;
+  }
+
+  .origin-view-more span {
+    font-size: 8px;
+  }
+}
+
+/* =========================================
+   10. 애니메이션 접근성
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .map-point::before,
+  .map-point::after {
+    animation: none;
+  }
+}
