@@ -110,7 +110,7 @@ gsap.registerPlugin(ScrollTrigger);
 let tl = gsap.timeline({
   scrollTrigger: {
     trigger: "#con02",
-    start: "top top",
+    start: "top 82px",
     end: "+=3000",
     pin: true,
     scrub: 1,
@@ -122,6 +122,7 @@ let tl = gsap.timeline({
   },
 });
 
+// 중앙 텍스트박스 효과
 tl.fromTo(
   "#con02 .txtbox",
   { opacity: 0, y: 30 },
