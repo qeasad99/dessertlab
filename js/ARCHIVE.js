@@ -1,4 +1,12 @@
+
 $(function () {
+    /*마우스*/
+    $(document).on("mousemove", function (e) {
+        $(".cursor").css({
+            left: `${e.clientX}px`,
+            top: `${e.clientY}px`
+        });
+    });
     /* section02 scroll */
 
     $(window).on("scroll", function () {
@@ -257,3 +265,4 @@ $(function () {
 
 
 
+>>>>>>> 9cf6d03 (sub3)
