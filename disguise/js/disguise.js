@@ -132,4 +132,16 @@ $(function () {
       $("#con5 h3").removeClass("on");
     }
   });
+  /*top 버튼 */
+  $(".top1").on("click", function () {
+    $("html, body").stop().animate({ scrollTop: "0" });
+  });
+});
+/*마우스*/
+
+$(document).on("mousemove", function (e) {
+  $(".cursor").css({
+    left: `${e.clientX}px`,
+    top: `${e.clientY}px`,
+  });
 });
