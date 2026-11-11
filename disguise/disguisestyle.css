@@ -24,7 +24,15 @@ a {
   width: 100px;
   height: 100px;
 }
+
+header,
+footer {
+  font-family: "Libre Bodoni", serif;
+}
 @media (max-width: 768px) {
+  .cursor {
+    display: none;
+  }
   body {
     width: 100%;
   }
@@ -433,9 +441,10 @@ a {
   #visual .wrap01 {
     position: absolute;
     left: 50%;
-    top: 3%;
+    top: 12%;
     text-align: center;
     transform: translateX(-50%);
+    color: white;
   }
   #visual h2 {
     font-size: 40px;
@@ -814,13 +823,16 @@ a {
     height: 100%;
     object-fit: cover;
   }
+
   #visual .wrap01 {
     position: absolute;
     left: 50%;
-    top: 3%;
+    top: 12%;
     text-align: center;
     transform: translateX(-50%);
+    color: white;
   }
+
   #visual h2 {
     font-size: 40px;
     font-weight: normal;
