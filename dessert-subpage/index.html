@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#580919" />
+    <title>Dessert Lab | Global Dessert Heritage Collection</title>
+    <meta
+      name="description"
+      content="세계의 디저트를 따라 떠나는 여정. 각국의 대표 디저트를 지도에서 만나보세요."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&amp;family=Protest+Guerrilla&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/headerfooter.css" />
+    <link rel="preload" href="assets/hero/world-map.svg" as="image" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body class="dessert-subpage dessert-subpage-preview">
+    <!-- Team shared header markup; styling comes from css/headerfooter.css -->
+    <header>
+      <h1>
+        <a href="../index.html"><img src="../img/header.png" alt="LUMIÈRE DESSERT LAB 홈" /></a>
+      </h1>
+      <ul class="menu">
+        <li><a href="../ARCHIVE.html">ARCHIVE</a></li>
+        <li><a href="#">STORY</a></li>
+        <li><a href="#">VISUALIZE</a></li>
+        <li><a href="../disguise/disguise.html">DISGUISE</a></li>
+        <li><a href="#">SPOT</a></li>
+      </ul>
+      <ul class="menu_icon">
+        <li>
+          <a href="#" aria-label="내 계정"><i class="fa-regular fa-user" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="#" aria-label="검색"
+            ><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </header>
+    <main class="page-shell" id="top">
+      <section class="visual-panel hero-origin" id="hero" aria-labelledby="heroTitle">
+        <div class="hero-origin__inner">
+          <div class="hero-origin__copy">
+            <h1 class="hero-origin__title" id="heroTitle">The Finest<br /><em>Origins.</em></h1>
+            <svg
+              class="hero-origin__flourish"
+              width="305"
+              height="26"
+              viewBox="0 0 305 26"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 17C44-6 88 8 133 18S220 30 303 2"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+            <p class="hero-origin__intro">세계를 잇는 가장 달콤한 이야기.</p>
+            <a class="hero-origin__cta" href="#collection" aria-label="세계 디저트 컬렉션으로 이동"
+              ><span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div
+            class="hero-origin__stage"
+            aria-label="세계 지도에서 나라를 선택하면 디저트를 소개합니다"
+          >
+            <div class="hero-origin__globe" aria-hidden="true"></div>
+            <div class="hero-origin__map-wrap">
+              <img
+                class="hero-origin__map"
+                src="assets/hero/world-map.svg"
+                alt=""
+                draggable="false"
+              />
+              <div class="hero-origin__points" role="group" aria-label="디저트 국가 선택">
+                <button
+                  type="button"
+                  class="hero-origin__point is-active"
+                  data-origin="usa"
+                  style="--x: 24%; --y: 39%; --tip: left"
+                  aria-pressed="true"
+                >
+                  <span class="hero-origin__point-dot"></span
+                  ><span class="hero-origin__point-label">USA · Nicaragua</span>
+                </button>
+                <button
+                  type="button"
+                  class="hero-origin__point"
+                  data-origin="canada"
+                  style="--x: 24%; --y: 24%; --tip: top"
+                  aria-pressed="false"
+                >
+                  <span class="hero-origin__point-dot"></span
+                  ><span class="hero-origin__point-label">Canada</span>
+                </button>
+                <button
+                  type="button"
+                  class="hero-origin__point"
+                  data-origin="mexico"
+                  style="--x: 26%; --y: 52%; --tip: left"
+                  aria-pressed="false"
+                >
+                  <span class="hero-origin__point-dot"></span
+                  ><span class="hero-origin__point-label">Mexico</span>
+                </button>
+                <button
+                  type="button"
+                  class="hero-origin__point"
+                  data-origin="brazil"
+                  style="--x: 37%; --y: 65%; --tip: right"
+                  aria-pressed="false"
+                >
+                  <span class="hero-origin__point-dot"></span
+                  ><span class="hero-origin__point-label">Brazil</span>
+                </button>
+                <button
+                  type="button"
+                  class="hero-origin__point"
+                  data-origin="chile"
+                  style="--x: 30%; --y: 81%; --tip: left"
+                  aria-pressed="false"
+                >
+                  <span class="hero-origin__point-dot"></span
+                  ><span class="hero-origin__point-label">Chile</span>
+                </button>
+                <button
+                  type="button"
+                  class="hero-origin__point"
+                  data-origin="china"
+                  style="--x: 78%; --y: 42%; --tip: top"
+                  aria-pressed="false"
+                >
+                  <span class="hero-origin__point-dot"></span
+                  ><span class="hero-origin__point-label">China</span>
+                </button>
+                <button
+                  type="button"
+                  class="hero-origin__point"
+                  data-origin="japan-korea"
+                  style="--x: 87%; --y: 48%; --tip: right"
+                  aria-pressed="false"
+                >
+                  <span class="hero-origin__point-dot"></span
+                  ><span class="hero-origin__point-label">Japan &amp; Korea</span>
+                </button>
+              </div>
+            </div>
+            <article
+              class="hero-origin__card"
+              id="originFeature"
+              aria-live="polite"
+              aria-label="선택된 국가 디저트"
+            >
+              <img
+                class="hero-origin__card-photo"
+                id="originFeaturePhoto"
+                src="assets/hero/tres-leches.webp"
+                alt="트레스 레체스 케이크"
+                width="130"
+                height="130"
+              />
+              <div class="hero-origin__card-text">
+                <span class="hero-origin__card-region" id="originFeatureRegion"
+                  >USA · NICARAGUA</span
+                >
+                <h2 class="hero-origin__card-title" id="originFeatureTitle">Tres Leches</h2>
+                <p class="hero-origin__card-description" id="originFeatureDescription">
+                  세 가지 우유로 촉촉하게 적신 부드러운 스펀지 케이크.
+                </p>
+                <span class="hero-origin__card-footnote"
+                  >THE DESSERT ATLAS <span aria-hidden="true">↗</span></span
+                >
+              </div>
+            </article>
+            <div class="hero-origin__counter" aria-hidden="true">
+              <span id="originFeatureCount">01</span><span class="hero-origin__counter-rule"></span
+              ><span>07</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CON01 / World Dessert Collection — authored HTML, not an image or overlay hitboxes -->
+      <section class="collection-editorial" id="collection" aria-labelledby="collectionTitle">
+        <div class="collection-editorial__grain" aria-hidden="true"></div>
+        <div class="collection-editorial__inner">
+          <div class="collection-editorial__heading">
+            <div>
+              <h2 id="collectionTitle">World Dessert <em>Collection.</em></h2>
+            </div>
+            <div class="collection-editorial__intro">
+              <span class="collection-editorial__intro-line"></span>
+              <p>
+                한 입의 디저트로 떠나는 작은 세계 여행.<br />카드를 뒤집어 그 나라의 달콤한 이야기를
+                만나보세요.
+              </p>
+            </div>
+          </div>
+
+          <div class="collection-editorial__viewport" aria-live="off">
+            <div class="collection-editorial__grid" id="collectionGrid">
+              <!-- Four semantic interactive cards rendered locally by js/collection.js -->
+            </div>
+          </div>
+          <nav class="collection-editorial__pagination" aria-label="세계 디저트 컬렉션 페이지 이동">
+            <button
+              type="button"
+              class="collection-editorial__navarrow"
+              data-collection-direction="-1"
+              aria-label="이전 페이지"
+            >
+              ←
+            </button>
+            <span class="collection-editorial__navline" aria-hidden="true"></span>
+            <div class="collection-editorial__pages" role="group" aria-label="페이지 선택">
+              <button
+                type="button"
+                data-collection-page="0"
+                class="is-current"
+                aria-label="1페이지"
+                aria-current="page"
+              >
+                1
+              </button>
+              <button type="button" data-collection-page="1" aria-label="2페이지">2</button>
+            </div>
+            <span class="collection-editorial__navline" aria-hidden="true"></span>
+            <button
+              type="button"
+              class="collection-editorial__navarrow"
+              data-collection-direction="1"
+              aria-label="다음 페이지"
+            >
+              →
+            </button>
+          </nav>
+        </div>
+      </section>
+      <!-- CON02 / World Desserts: independently coded, original radial layout preserved. -->
+      <section class="world-desserts" id="world" aria-labelledby="worldDessertsTitle">
+        <div class="world-desserts__paper" aria-hidden="true"></div>
+        <div class="world-desserts__copy">
+          <h2 id="worldDessertsTitle" class="world-desserts__title">
+            <em>세계</em><br /><em>디저트 여행</em>
+          </h2>
+
+          <p class="world-desserts__description">
+            각 나라를 클릭하면,<br />비행기가 그 나라로 떠나<br />대표 디저트를 만나볼 수 있어요.
+          </p>
+          <button
+            class="world-desserts__explore"
+            type="button"
+            data-world-start
+            aria-label="멕시코 디저트 여행 시작하기"
+          >
+            <span>지금 세계 디저트 여행하기</span><span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="world-desserts__universe" aria-label="세계 디저트 방사형 지도">
+          <svg
+            class="world-desserts__routes"
+            viewBox="0 0 2240 843"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <circle class="world-desserts__orbit" cx="1309" cy="378" r="164" />
+            <circle class="world-desserts__orbit" cx="1309" cy="378" r="262" />
+            <circle class="world-desserts__orbit" cx="1309" cy="378" r="365" />
+            <circle
+              class="world-desserts__orbit world-desserts__orbit--outer"
+              cx="1309"
+              cy="378"
+              r="471"
+            />
+            <path class="world-desserts__spoke" d="M1219.0 327.8 Q1091.0 224.7 936 170" />
+            <path class="world-desserts__spoke" d="M1309.0 275.0 Q1326.5 192.0 1309 109" />
+            <path class="world-desserts__spoke" d="M1206.0 377.3 Q1037.7 347.5 869 375" />
+            <path class="world-desserts__spoke" d="M1229.4 443.3 Q1130.3 497.4 1058 584" />
+            <path class="world-desserts__spoke" d="M1308.6 481.0 Q1291.3 560.4 1308 640" />
+            <path class="world-desserts__spoke" d="M1404.7 339.8 Q1573.0 303.6 1720 214" />
+            <path class="world-desserts__spoke" d="M1394.3 435.7 Q1492.6 531.4 1618 587" />
+            <path id="worldActiveRoute" class="world-desserts__active-route" d="" />
+          </svg>
+          <div class="world-desserts__hub" aria-hidden="true">
+            <div class="world-desserts__hub-inner">
+              <span class="world-desserts__hub-monogram">DL</span
+              ><span class="world-desserts__hub-rule"></span
+              ><span class="world-desserts__hub-caption">WORLD<br />DESSERTS</span>
+            </div>
+          </div>
+          <button
+            class="world-desserts__node world-desserts__node--usa"
+            type="button"
+            data-world-country="usa"
+            style="--wx: 41.7857%; --wy: 20.1661%"
+            aria-label="USA (Nicaragua) 대표 디저트 탐험"
+            aria-pressed="false"
+          >
+            <span class="world-desserts__node-name">USA<small>(Nicaragua)</small></span>
+            <svg viewBox="0 0 30 42" class="world-desserts__pin" aria-hidden="true">
+              <path
+                d="M15 1.7C7.2 1.7 2.1 7.8 2.1 15c0 10.5 12.9 25.7 12.9 25.7S27.9 25.5 27.9 15C27.9 7.8 22.8 1.7 15 1.7Z"
+              />
+              <circle cx="15" cy="15.4" r="5.2" />
+            </svg>
+          </button>
+          <button
+            class="world-desserts__node world-desserts__node--canada"
+            type="button"
+            data-world-country="canada"
+            style="--wx: 58.4375%; --wy: 12.93%"
+            aria-label="Canada 대표 디저트 탐험"
+            aria-pressed="false"
+          >
+            <span class="world-desserts__node-name">Canada</span>
+            <svg viewBox="0 0 30 42" class="world-desserts__pin" aria-hidden="true">
+              <path
+                d="M15 1.7C7.2 1.7 2.1 7.8 2.1 15c0 10.5 12.9 25.7 12.9 25.7S27.9 25.5 27.9 15C27.9 7.8 22.8 1.7 15 1.7Z"
+              />
+              <circle cx="15" cy="15.4" r="5.2" />
+            </svg>
+          </button>
+          <button
+            class="world-desserts__node world-desserts__node--mexico"
+            type="button"
+            data-world-country="mexico"
+            style="--wx: 38.7946%; --wy: 44.484%"
+            aria-label="Mexico 대표 디저트 탐험"
+            aria-pressed="false"
+          >
+            <span class="world-desserts__node-name">Mexico</span>
+            <svg viewBox="0 0 30 42" class="world-desserts__pin" aria-hidden="true">
+              <path
+                d="M15 1.7C7.2 1.7 2.1 7.8 2.1 15c0 10.5 12.9 25.7 12.9 25.7S27.9 25.5 27.9 15C27.9 7.8 22.8 1.7 15 1.7Z"
+              />
+              <circle cx="15" cy="15.4" r="5.2" />
+            </svg>
+          </button>
+          <button
+            class="world-desserts__node world-desserts__node--brazil"
+            type="button"
+            data-world-country="brazil"
+            style="--wx: 47.2321%; --wy: 69.2764%"
+            aria-label="Brazil 대표 디저트 탐험"
+            aria-pressed="false"
+          >
+            <span class="world-desserts__node-name">Brazil</span>
+            <svg viewBox="0 0 30 42" class="world-desserts__pin" aria-hidden="true">
+              <path
+                d="M15 1.7C7.2 1.7 2.1 7.8 2.1 15c0 10.5 12.9 25.7 12.9 25.7S27.9 25.5 27.9 15C27.9 7.8 22.8 1.7 15 1.7Z"
+              />
+              <circle cx="15" cy="15.4" r="5.2" />
+            </svg>
+          </button>
+          <button
+            class="world-desserts__node world-desserts__node--chile"
+            type="button"
+            data-world-country="chile"
+            style="--wx: 58.3929%; --wy: 75.9193%"
+            aria-label="Chile 대표 디저트 탐험"
+            aria-pressed="false"
+          >
+            <span class="world-desserts__node-name">Chile</span>
+            <svg viewBox="0 0 30 42" class="world-desserts__pin" aria-hidden="true">
+              <path
+                d="M15 1.7C7.2 1.7 2.1 7.8 2.1 15c0 10.5 12.9 25.7 12.9 25.7S27.9 25.5 27.9 15C27.9 7.8 22.8 1.7 15 1.7Z"
+              />
+              <circle cx="15" cy="15.4" r="5.2" />
+            </svg>
+          </button>
+          <button
+            class="world-desserts__node world-desserts__node--china"
+            type="button"
+            data-world-country="china"
+            style="--wx: 76.7857%; --wy: 25.3855%"
+            aria-label="China 대표 디저트 탐험"
+            aria-pressed="false"
+          >
+            <span class="world-desserts__node-name">China</span>
+            <svg viewBox="0 0 30 42" class="world-desserts__pin" aria-hidden="true">
+              <path
+                d="M15 1.7C7.2 1.7 2.1 7.8 2.1 15c0 10.5 12.9 25.7 12.9 25.7S27.9 25.5 27.9 15C27.9 7.8 22.8 1.7 15 1.7Z"
+              />
+              <circle cx="15" cy="15.4" r="5.2" />
+            </svg>
+          </button>
+          <button
+            class="world-desserts__node world-desserts__node--japan-korea"
+            type="button"
+            data-world-country="japan-korea"
+            style="--wx: 72.2321%; --wy: 69.6323%"
+            aria-label="Japan &amp; Korea 대표 디저트 탐험"
+            aria-pressed="false"
+          >
+            <span class="world-desserts__node-name">Japan &amp; Korea</span>
+            <svg viewBox="0 0 30 42" class="world-desserts__pin" aria-hidden="true">
+              <path
+                d="M15 1.7C7.2 1.7 2.1 7.8 2.1 15c0 10.5 12.9 25.7 12.9 25.7S27.9 25.5 27.9 15C27.9 7.8 22.8 1.7 15 1.7Z"
+              />
+              <circle cx="15" cy="15.4" r="5.2" />
+            </svg>
+          </button>
+          <span class="world-desserts__plane" id="worldFlightPlane" aria-hidden="true">
+            <svg viewBox="-22 -24 44 48" aria-hidden="true">
+              <path
+                d="M0 -21c2.7 0 3.6 3.5 3.7 6.8l.7 9.4L19 6c1.5 1.2 2.2 2.6 2.2 4.2l-16-4-1.1 10.5 5 3.2v2.4L0 20l-9.1 2.3v-2.4l5-3.2-1.1-10.5-16 4c0-1.6.7-3 2.2-4.2L-4.4-4.8l.7-9.4C-3.6-17.5-2.7-21 0-21Z"
+              />
+            </svg>
+          </span>
+          <article
+            class="world-desserts__card"
+            id="worldDessertCard"
+            aria-live="polite"
+            aria-label="선택한 국가의 대표 디저트"
+            hidden
+          >
+            <div class="world-desserts__card-art">
+              <img
+                id="worldDessertPhoto"
+                class="world-desserts__card-photo"
+                alt=""
+                width="340"
+                height="255"
+              />
+              <div class="world-desserts__card-overlay" aria-hidden="true"></div>
+              <div class="world-desserts__card-heading">
+                <p id="worldDessertRegion" class="world-desserts__card-region"></p>
+                <h3 id="worldDessertTitle" class="world-desserts__card-title"></h3>
+              </div>
+              <span class="world-desserts__card-seal" aria-hidden="true">✦</span>
+            </div>
+            <div class="world-desserts__card-notes">
+              <p id="worldDessertDescription" class="world-desserts__card-desc"></p>
+              <span class="world-desserts__card-footer">A SWEET DESTINATION &nbsp; ↗</span>
+            </div>
+          </article>
+          <p class="world-desserts__status" id="worldTravelStatus" aria-live="polite">
+            <span class="world-desserts__status-indicator" aria-hidden="true"></span
+            ><span id="worldTravelStatusText">SELECT A DESTINATION</span>
+          </p>
+        </div>
+      </section>
+      <!-- CON03 · Individual photo carousel. Original staggered five-card composition. -->
+      <section
+        class="visual-panel layer-showcase"
+        id="gallery"
+        aria-labelledby="layerShowcaseTitle"
+      >
+        <div class="layer-showcase__paper" aria-hidden="true"></div>
+        <div class="layer-showcase__inner">
+          <div class="layer-showcase__heading">
+            <p class="layer-showcase__lead" id="layerShowcaseTitle">
+              겹겹이 쌓인 맛의 조화, 디저트의 매력
+            </p>
+            <p class="layer-showcase__sub">
+              다양한 재료와 식감이 층층이 어우러져<br />완성되는 디저트의 풍부한 맛을 경험해보세요.
+            </p>
+          </div>
+          <div class="layer-showcase__viewport">
+            <button
+              class="layer-showcase__arrow layer-showcase__arrow--prev"
+              type="button"
+              data-gallery-prev
+              aria-label="이전 디저트"
+            >
+              ‹
+            </button>
+            <div
+              class="layer-showcase__stage"
+              id="galleryStage"
+              tabindex="0"
+              role="region"
+              aria-roledescription="캐러셀"
+              aria-label="마우스 드래그 또는 좌우 화살표로 디저트 넘기기"
+            >
+              <button
+                class="layer-showcase__card"
+                type="button"
+                data-gallery-card="0"
+                data-position="-2"
+                aria-label="화과자와 약과 카드 선택"
+                aria-current="false"
+              >
+                <span class="layer-showcase__photo"
+                  ><img
+                    src="assets/gallery/wagashi.webp"
+                    alt="화과자와 약과 디저트 클로즈업 사진"
+                    loading="lazy"
+                    draggable="false"
+                    width="1400"
+                    height="1000"
+                /></span>
+                <span class="layer-showcase__card-shine" aria-hidden="true"></span>
+                <span class="layer-showcase__card-footer">
+                  <span class="layer-showcase__card-text"
+                    ><span class="layer-showcase__card-category">TRADITIONAL SWEETS</span
+                    ><span class="layer-showcase__card-name">Wagashi & Yakgwa</span></span
+                  >
+                  <span class="layer-showcase__card-arrow" aria-hidden="true">↗</span>
+                </span>
+              </button>
+              <button
+                class="layer-showcase__card"
+                type="button"
+                data-gallery-card="1"
+                data-position="-1"
+                aria-label="자두 쿠헨 카드 선택"
+                aria-current="false"
+              >
+                <span class="layer-showcase__photo"
+                  ><img
+                    src="assets/gallery/kuchen.webp"
+                    alt="자두 쿠헨 디저트 클로즈업 사진"
+                    loading="lazy"
+                    draggable="false"
+                    width="1400"
+                    height="1000"
+                /></span>
+                <span class="layer-showcase__card-shine" aria-hidden="true"></span>
+                <span class="layer-showcase__card-footer">
+                  <span class="layer-showcase__card-text"
+                    ><span class="layer-showcase__card-category">FRUIT & CRUMBLE</span
+                    ><span class="layer-showcase__card-name">Plum Kuchen</span></span
+                  >
+                  <span class="layer-showcase__card-arrow" aria-hidden="true">↗</span>
+                </span>
+              </button>
+              <button
+                class="layer-showcase__card is-current"
+                type="button"
+                data-gallery-card="2"
+                data-position="0"
+                aria-label="레이어 케이크 카드 선택"
+                aria-current="true"
+              >
+                <span class="layer-showcase__photo"
+                  ><img
+                    src="assets/gallery/layer-cake.webp"
+                    alt="레이어 케이크 디저트 클로즈업 사진"
+                    loading="eager"
+                    draggable="false"
+                    width="1400"
+                    height="1000"
+                /></span>
+                <span class="layer-showcase__card-shine" aria-hidden="true"></span>
+                <span class="layer-showcase__card-footer">
+                  <span class="layer-showcase__card-text"
+                    ><span class="layer-showcase__card-category">SIGNATURE LAYERS</span
+                    ><span class="layer-showcase__card-name">Layer Cake</span></span
+                  >
+                  <span class="layer-showcase__card-arrow" aria-hidden="true">↗</span>
+                </span>
+              </button>
+              <button
+                class="layer-showcase__card"
+                type="button"
+                data-gallery-card="3"
+                data-position="1"
+                aria-label="버터 타르트 카드 선택"
+                aria-current="false"
+              >
+                <span class="layer-showcase__photo"
+                  ><img
+                    src="assets/gallery/butter-tart.webp"
+                    alt="버터 타르트 디저트 클로즈업 사진"
+                    loading="lazy"
+                    draggable="false"
+                    width="1400"
+                    height="1000"
+                /></span>
+                <span class="layer-showcase__card-shine" aria-hidden="true"></span>
+                <span class="layer-showcase__card-footer">
+                  <span class="layer-showcase__card-text"
+                    ><span class="layer-showcase__card-category">GOLDEN PASTRY</span
+                    ><span class="layer-showcase__card-name">Butter Tart</span></span
+                  >
+                  <span class="layer-showcase__card-arrow" aria-hidden="true">↗</span>
+                </span>
+              </button>
+              <button
+                class="layer-showcase__card"
+                type="button"
+                data-gallery-card="4"
+                data-position="2"
+                aria-label="브리가데이루 카드 선택"
+                aria-current="false"
+              >
+                <span class="layer-showcase__photo"
+                  ><img
+                    src="assets/gallery/brigadeiro.webp"
+                    alt="브리가데이루 디저트 클로즈업 사진"
+                    loading="lazy"
+                    draggable="false"
+                    width="1400"
+                    height="1000"
+                /></span>
+                <span class="layer-showcase__card-shine" aria-hidden="true"></span>
+                <span class="layer-showcase__card-footer">
+                  <span class="layer-showcase__card-text"
+                    ><span class="layer-showcase__card-category">CHOCOLATE MOMENT</span
+                    ><span class="layer-showcase__card-name">Brigadeiro</span></span
+                  >
+                  <span class="layer-showcase__card-arrow" aria-hidden="true">↗</span>
+                </span>
+              </button>
+            </div>
+            <button
+              class="layer-showcase__arrow layer-showcase__arrow--next"
+              type="button"
+              data-gallery-next
+              aria-label="다음 디저트"
+            >
+              ›
+            </button>
+          </div>
+          <div class="layer-showcase__controls">
+            <p class="layer-showcase__count" aria-live="polite">
+              <span id="galleryCurrent">03</span><span class="layer-showcase__count-line"></span>05
+            </p>
+          </div>
+          <p class="layer-showcase__caption" id="galleryCaption" aria-live="polite">
+            촉촉한 케이크와 부드러운 크림, 딸기의 조화.
+          </p>
+        </div>
+      </section>
+      <!-- CON04 / Sweet Dispatch: individually coded artwork, photos and animated green wave -->
+      <section class="visual-panel sweet-dispatch" id="dispatch" aria-labelledby="dispatchTitle">
+        <!-- One green surface; its upper edge gently moves as one wave. -->
+        <div class="sweet-dispatch__surface" aria-hidden="true"></div>
+        <div class="sweet-dispatch__inner">
+          <div class="sweet-dispatch__brand">
+            <h2 id="dispatchTitle">Sweet<br /><em>Dispatch</em></h2>
+          </div>
+          <div class="sweet-dispatch__divider" aria-hidden="true"></div>
+          <nav class="sweet-dispatch__topics" aria-label="디저트 콘텐츠 바로가기">
+            <a class="sweet-dispatch__topic" href="#collection">
+              <span class="sweet-dispatch__photo"
+                ><img
+                  src="assets/dispatch/world-desserts.webp"
+                  alt="딸기와 크림을 곁들인 트레스 레체스 케이크"
+                  width="384"
+                  height="384"
+                  loading="lazy"
+              /></span>
+              <span class="sweet-dispatch__topic-name">WORLD DESSERTS</span>
+              <span class="sweet-dispatch__topic-sub">세계 디저트</span>
+            </a>
+            <a class="sweet-dispatch__topic" href="#world">
+              <span class="sweet-dispatch__photo"
+                ><img
+                  src="assets/dispatch/travel-notes.webp"
+                  alt="초콜릿 소스를 곁들인 츄러스"
+                  width="384"
+                  height="384"
+                  loading="lazy"
+              /></span>
+              <span class="sweet-dispatch__topic-name">TRAVEL NOTES</span>
+              <span class="sweet-dispatch__topic-sub">디저트 여행</span>
+            </a>
+            <a class="sweet-dispatch__topic" href="#gallery">
+              <span class="sweet-dispatch__photo"
+                ><img
+                  src="assets/dispatch/seasonal-picks.webp"
+                  alt="화과자와 약과로 구성한 계절 디저트"
+                  width="384"
+                  height="384"
+                  loading="lazy"
+              /></span>
+              <span class="sweet-dispatch__topic-name">SEASONAL PICKS</span>
+              <span class="sweet-dispatch__topic-sub">계절의 디저트</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <!-- Team shared footer markup; styling comes from css/headerfooter.css -->
+    <footer>
+      <div class="footer_top">
+        <div class="footer_logo">
+          <a href="../index.html"><img src="../img/footer.png" alt="LUMIÈRE DESSERT LAB 홈" /></a>
+        </div>
+        <ul class="footer_menu">
+          <li><a href="#">ARCHIVE</a></li>
+          <li><a href="#">STORY</a></li>
+          <li><a href="#">VISUALIZE</a></li>
+          <li><a href="#">DISGUISE</a></li>
+          <li><a href="#">SPOT</a></li>
+        </ul>
+        <ul class="footer_icon">
+          <li>
+            <a href="https://www.instagram.com" aria-label="인스타그램"
+              ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/?app=desktop&amp;hl=ko&amp;gl=KR" aria-label="유튜브"
+              ><i class="fa-brands fa-youtube" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" aria-label="검색"
+              ><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_bottom">
+        <div class="footer_bottom_txt">
+          <p>©2026 DESSERT LAB. ALL RIGHTS RESERVED.</p>
+          <p>SWEET, ARTISTRY<br />A BRIGHTER TOMORROW</p>
+        </div>
+      </div>
+    </footer>
+    <!-- Subpage-only TOP control using the team member's .top1 convention -->
+    <button class="top1" type="button" aria-label="맨 위로 이동" title="맨 위로 이동">
+      <i class="fa-solid fa-circle-chevron-up" aria-hidden="true"></i>
+    </button>
+    <!-- Subpage only. The team's cursor image is reused from ../img/cur_2.png. -->
+    <div class="cursor" aria-hidden="true">
+      <img src="../img/cur_2.png" alt="" width="100" height="100" />
+    </div>
+  </body>
+</html>
