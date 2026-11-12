@@ -3,6 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   word-break: keep-all;
+  cursor: none;
 }
 ul {
   list-style: none;
