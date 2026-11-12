@@ -1,5 +1,9 @@
 
 $(function () {
+    /*top 버튼 */
+    $(".top1").on("click", function () {
+        $("html, body").stop().animate({ scrollTop: "0" });
+    });
     // GSAP 플러그인 등록
     gsap.registerPlugin(ScrollTrigger);
     /*마우스*/
