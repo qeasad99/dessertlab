@@ -147,3 +147,10 @@ tl.to("#con02 .imgbox li:nth-child(1) img", {
     y: -20,
     stagger: 0.5,
   });
+/*마우스*/
+$(document).on("mousemove", function (e) {
+  $(".cursor").css({
+    left: `${e.clientX}px`,
+    top: `${e.clientY}px`,
+  });
+});
