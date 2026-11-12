@@ -1,4 +1,5 @@
 
+
 $(function () {
 
     /* con01 scroll */
@@ -126,52 +127,53 @@ $(function () {
         }, 200);
     });
 
+// 팀원 코드 : con02 GSAP 스크롤 애니메이션
+gsap.registerPlugin(ScrollTrigger);
 
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#con02",
+    start: "top 82px",
+    end: "+=3000",
+    pin: true,
+    scrub: 1,
+    snap: {
+      snapTo: [0, 0.2, 0.4, 0.6, 0.8, 1],
+      duration: 0.5,
+      delay: 0.1,
+    },
+  },
+});
 
-    /* 팀원 코드 : con02 GSAP 스크롤 애니메이션 */
-    gsap.registerPlugin(ScrollTrigger);
+// 중앙 텍스트박스 효과
+tl.fromTo(
+  "#con02 .txtbox",
+  { opacity: 0, y: 30 },
+  { opacity: 1, y: 0, duration: 1 },
+);
 
-    let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#con02",
-            start: "top 82px",
-            end: "+=3000",
-            pin: true,
-            scrub: 1,
-            snap: {
-                snapTo: [0, 0.2, 0.4, 0.6, 0.8, 1],
-                duration: 0.5,
-                delay: 0.1,
-            },
-        },
-    });
-
-
-    // 중앙 텍스트박스 효과
-    tl.fromTo(
-        "#con02 .txtbox",
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1 }
-    );
-
-
-    // 이미지 순서대로 밝아지는 효과
-    tl.to("#con02 .imgbox li:nth-child(1) img", {
-        filter: "brightness(1)",
-    })
-        .to("#con02 .imgbox li:nth-child(2) img", {
-            filter: "brightness(1)",
-        })
-        .to("#con02 .imgbox li:nth-child(3) img", {
-            filter: "brightness(1)",
-        })
-        .to("#con02 .imgbox li:nth-child(4) img", {
-            filter: "brightness(1)",
-        })
-        .to("#con02 .imgbox .li-txt", {
-            opacity: 1,
-            y: -20,
-            stagger: 0.5,
-        });
-
+// 이미지 순서대로 밝아지는 효과
+tl.to("#con02 .imgbox li:nth-child(1) img", {
+  filter: "brightness(1)",
+})
+  .to("#con02 .imgbox li:nth-child(2) img", {
+    filter: "brightness(1)",
+  })
+  .to("#con02 .imgbox li:nth-child(3) img", {
+    filter: "brightness(1)",
+  })
+  .to("#con02 .imgbox li:nth-child(4) img", {
+    filter: "brightness(1)",
+  })
+  .to("#con02 .imgbox .li-txt", {
+    opacity: 1,
+    y: -20,
+    stagger: 0.5,
+  });
+/*마우스*/
+$(document).on("mousemove", function (e) {
+  $(".cursor").css({
+    left: `${e.clientX}px`,
+    top: `${e.clientY}px`,
+  });
 });
