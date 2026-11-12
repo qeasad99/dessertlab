@@ -96,7 +96,6 @@ header .menu_icon li:hover {
   color: white;
   margin-top: 40px;
 }
-
 /* footer */
 footer img {
   width: 280px;
@@ -144,7 +143,7 @@ footer .footer_bottom {
   margin-left: 50px;
 }
 footer .footer_bottom_txt {
-  padding: 30px 0px;
+  padding-top: 30px;
   display: flex;
   justify-content: space-between;
   color: #f6dcd5;
@@ -155,4 +154,10 @@ footer .footer_bottom_txt p:first-child {
 footer .footer_bottom_txt p:nth-of-type(2) {
   text-align: right;
   font-size: 12px;
+}
+footer .footer_menu li:hover {
+  color: #f8eecc;
+}
+footer .footer_icon li:hover {
+  color: #f8eecc;
 }
