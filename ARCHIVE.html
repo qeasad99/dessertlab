@@ -2,289 +2,389 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-    integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="css/ARCHIVE.css">
-  <script src="js/jquery-4.0.0.min.js"></script>
-  <script src="js/ARCHIVE.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHIVE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/ARCHIVE.css">
+    <script src="js/jquery-4.0.0.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <!-- ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+
+    <!-- ARCHIVE JS -->
+    <script src="js/ARCHIVE.js"></script>
+
 </head>
 
 <body>
-  <div class="section01">
-    <div class="txt">
-      <h3>매일 아침 정성스럽게 구워내는<br>
-        디저트랩의 달콤한 라인업</h3>
-      <p>부드러운 케이크부터 바삭한 타르트, 고소한 쿠키와 풍미 가득한 페이스트리까지,<br>디저트랩이 엄선한 재료로 만든 특별한 디저트들을 한눈에 만나보세요.</p>
+    <!-- 마우스 -->
+    <div class="cursor">
+        <img src="img/cur_2.png" alt="포크" />
     </div>
-  </div>
-  <div class="section02">
-    <div class="title">
-      <h4>Cake Collection</h4>
-      <p>신선한 과일과 부드러운 유기농 생크림의 가벼운 조화, 매일 아침 구워내는 신선함으로 특별한 순간을 선사합니다.</p>
+    <!-- header -->
+    <header>
+        <h1>
+            <a href="index.html">
+                <img src="img/header.png" alt="header" />
+            </a>
+        </h1>
+        <ul class="menu">
+            <li>
+                <a href="ARCHIVE.html">ARCHIVE</a>
+            </li>
+            <li>
+                <a href="dessertstory.html">STORY</a>
+            </li>
+            <li>
+                <a href="#">VISUALIZE</a>
+            </li>
+            <li>
+                <a href="disguise/disguise.html">DISGUISE</a>
+            </li>
+            <li>
+                <a href="#">SPOT</a>
+            </li>
+        </ul>
+        <ul class="menu_icon">
+            <li>
+                <a href="#"> <i class="fa-regular fa-user"> </i></a>
+            </li>
+
+            <li>
+                <a href="#"> <i class="fa-solid fa-magnifying-glass"> </i></a>
+            </li>
+        </ul>
+    </header>
+    <div class="section01">
+        <div class="txt">
+            <h3>매일 아침 정성스럽게 구워내는<br>
+                디저트랩의 달콤한 라인업</h3>
+            <p>부드러운 케이크부터 바삭한 타르트, 고소한 쿠키와 풍미 가득한 페이스트리까지,<br>디저트랩이 엄선한 재료로 만든 특별한 디저트들을 한눈에 만나보세요.</p>
+        </div>
     </div>
-    <ul>
-      <li>
-        <div class="front">
-          <div class="txt">
-            <p>스트로베리 생크림 케이크</p>
-            <p>Strawberry Cream Cake</p>
-            <i class="fa-solid fa-angles-up"></i>
-          </div>
-        </div>
-        <div class="back">
-          <p>Tasting Notes: <br>새콤한 딸기와 가벼운 우유 크림의 부드러운 조화</p>
-          <p>엄선된 재료: 100% 동물성 크림, 유기농 밀가루</p>
-          <p>추천 페어링: 얼그레이 티, 아메리카노</p>
-        </div>
-      </li>
-      <li>
-        <div class="front">
-          <div class="txt">
-            <p>얼그레이 밀크티 케이크</p>
-            <p>Earl Grey Milk Tea Cake</p>
-            <i class="fa-solid fa-angles-up"></i>
-          </div>
-        </div>
-        <div class="back">
-          <p>Tasting Notes: <br>진한 얼그레이 향과 달콤한 초콜릿의 고급스러운 만남</p>
-          <p>엄선된 재료: 베르가못 얼그레이, 다크 초콜릿</p>
-          <p>추천 페어링: 홍차, 카페라떼</p>
-        </div>
-      </li>
-      <li>
-        <div class="front">
-          <div class="txt">
-            <p>상큼한 레몬 시폰 케이크</p>
-            <p>Refreshing Lemon Chiffon Cake</p>
-            <i class="fa-solid fa-angles-up"></i>
-          </div>
-        </div>
-        <div class="back">
-          <p>Tasting Notes: <br>촉촉한 시폰 시트와 상큼한 레몬 커드의 환상적인 만남</p>
-          <p>엄선된 재료: 유기농 레몬, 마다가스카르 바닐라</p>
-          <p>추천 페어링: 아이스 아메리카노</p>
-        </div>
-      </li>
-      <li>
-        <div class="front">
-          <div class="txt">
-            <p>블루베리 치즈케이크</p>
-            <p>Blueberry Cheesecake</p>
-            <i class="fa-solid fa-angles-up"></i>
-          </div>
-        </div>
-        <div class="back">
-          <p>Tasting Notes: <br>진한 크림치즈와 달콤한 블루베리 리플의 조화</p>
-          <p>엄선된 재료: 덴마크산 치즈, 필라델피아 크림치즈</p>
-          <p>추천 페어링: 스위트 와인, 따뜻한 우유</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="section03">
-    <div class="all">
-      <div class="left">
-        <img src="img/s3main10.jpg" alt="타르트메인">
-      </div>
-      <div class="right">
+    <div class="section02">
         <div class="title">
-          <h4>Tart Selection</h4>
-          <p>바삭한 타르트 위에 담아낸<br>달콤하고 섬세한 한 조각의 여유</p>
+            <h4>Cake Collection</h4>
+            <p>신선한 과일과 부드러운 유기농 생크림의 가벼운 조화, 매일 아침 구워내는 신선함으로 특별한 순간을 선사합니다.</p>
         </div>
-        <div class="track">
-          <ul>
-            <li class="straw"><img src="img/딸기타르트1.jpg" alt="딸기타르트">
-              <div class="txt">
-                <p>STRAWBERRY TART
-                </p>
-                <p>Fresh & Sweet</p>
-              </div>
+        <ul>
+            <li>
+                <div class="front">
+                    <div class="txt">
+                        <p>스트로베리 생크림 케이크</p>
+                        <p>Strawberry Cream Cake</p>
+                        <i class="fa-solid fa-angles-up"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <p>Tasting Notes: <br>새콤한 딸기와 가벼운 우유 크림의 부드러운 조화</p>
+                    <p>엄선된 재료: 100% 동물성 크림, 유기농 밀가루</p>
+                    <p>추천 페어링: 얼그레이 티, 아메리카노</p>
+                </div>
             </li>
-            <li class="remon"><img src="img/레몬타르트4.png" alt="레몬타르트">
-              <div class="txt">
-                <p>LEMON TART
-                </p>
-                <p>Sweet & Sour</p>
-              </div>
+            <li>
+                <div class="front">
+                    <div class="txt">
+                        <p>얼그레이 밀크티 케이크</p>
+                        <p>Earl Grey Milk Tea Cake</p>
+                        <i class="fa-solid fa-angles-up"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <p>Tasting Notes: <br>진한 얼그레이 향과 달콤한 초콜릿의 고급스러운 만남</p>
+                    <p>엄선된 재료: 베르가못 얼그레이, 다크 초콜릿</p>
+                    <p>추천 페어링: 홍차, 카페라떼</p>
+                </div>
             </li>
-            <li class="choco"><img src="img/초코타르트3.jpg" alt="초코타르트">
-              <div class="txt">
-                <p>CHOCOLATE TART
-                </p>
-                <p>Rich & Deep</p>
-              </div>
+            <li>
+                <div class="front">
+                    <div class="txt">
+                        <p>상큼한 레몬 시폰 케이크</p>
+                        <p>Refreshing Lemon Chiffon Cake</p>
+                        <i class="fa-solid fa-angles-up"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <p>Tasting Notes: <br>촉촉한 시폰 시트와 상큼한 레몬 커드의 환상적인 만남</p>
+                    <p>엄선된 재료: 유기농 레몬, 마다가스카르 바닐라</p>
+                    <p>추천 페어링: 아이스 아메리카노</p>
+                </div>
             </li>
-          </ul>
-          <ul>
-            <li class="straw"><img src="img/딸기타르트1.jpg" alt="딸기타르트">
-              <div class="txt">
-                <p>STRAWBERRY TART
-                </p>
-                <p>Fresh & Sweet</p>
-              </div>
+            <li>
+                <div class="front">
+                    <div class="txt">
+                        <p>블루베리 치즈케이크</p>
+                        <p>Blueberry Cheesecake</p>
+                        <i class="fa-solid fa-angles-up"></i>
+                    </div>
+                </div>
+                <div class="back">
+                    <p>Tasting Notes: <br>진한 크림치즈와 달콤한 블루베리 리플의 조화</p>
+                    <p>엄선된 재료: 덴마크산 치즈, 필라델피아 크림치즈</p>
+                    <p>추천 페어링: 스위트 와인, 따뜻한 우유</p>
+                </div>
             </li>
-            <li class="remon"><img src="img/레몬타르트4.png" alt="레몬타르트">
-              <div class="txt">
-                <p>LEMON TART
-                </p>
-                <p>Sweet & Sour</p>
-              </div>
-            </li>
-            <li class="choco"><img src="img/초코타르트3.jpg" alt="초코타르트">
-              <div class="txt">
-                <p>CHOCOLATE TART
-                </p>
-                <p>Rich & Deep</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+        </ul>
     </div>
-
-  </div>
-  <div class="section04">
-    <img src="img/s4_1.png" alt="프래즐" class="pretzel">
-    <img src="img/s4_3.png" alt="도너츠" class="donuts">
-    <img src="img/s4_2.png" alt="크로와상" class="croissant">
-
-    <p>EXPLORE OUR COLLECTION OF</p>
-    <p>HANDCRAFTED <span> </span>ARTISAN</p>
-    <p>TREATS & PASTRIES</p>
-  </div>
-
-  <div class="section05">
-    <div class="title">
-      <h4>Cookie Collection</h4>
-      <p>진한 우지 말차와 달콤한 초콜릿, 다채로운 식감이 전하는 기분 좋은 순간</p>
-    </div>
-    <div class="bg1">
-      <ul>
-        <li>
-          <div class="imgbox">
-            <img src="img/쿠키1.jpg" alt="초콜릿칩 쿠키">
-            <div class="more">
-              <p>More</p>
-              <i class="fa-solid fa-angles-up"></i>
+    <div class="section03">
+        <div class="all">
+            <div class="left">
+                <img src="img/s3main10.jpg" alt="타르트메인">
             </div>
-          </div>
-          <div class="txt">
-            <p>클래식 초콜릿 칩 쿠키
-            </p>
-            <p>Classic Chocolate Chip Cookie
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="imgbox"><img src="img/말차3.jpg" alt="마카롱">
-            <div class="more">
-              <p>More</p>
-              <i class="fa-solid fa-angles-up"></i>
+            <div class="right">
+                <div class="title">
+                    <h4>Tart Selection</h4>
+                    <p>바삭한 타르트 위에 담아낸<br>달콤하고 섬세한 한 조각의 여유</p>
+                </div>
+                <div class="track">
+                    <ul>
+                        <li class="straw"><img src="img/s3_1.jpg" alt="딸기타르트">
+                            <div class="txt">
+                                <p>STRAWBERRY TART
+                                </p>
+                                <p>Fresh & Sweet</p>
+                            </div>
+                        </li>
+                        <li class="remon"><img src="img/s3_2.png" alt="레몬타르트">
+                            <div class="txt">
+                                <p>LEMON TART
+                                </p>
+                                <p>Sweet & Sour</p>
+                            </div>
+                        </li>
+                        <li class="choco"><img src="img/s3_3.jpg" alt="초코타르트">
+                            <div class="txt">
+                                <p>CHOCOLATE TART
+                                </p>
+                                <p>Rich & Deep</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="straw"><img src="img/s3_1.jpg" alt="딸기타르트">
+                            <div class="txt">
+                                <p>STRAWBERRY TART
+                                </p>
+                                <p>Fresh & Sweet</p>
+                            </div>
+                        </li>
+                        <li class="remon"><img src="img/s3_2.png" alt="레몬타르트">
+                            <div class="txt">
+                                <p>LEMON TART
+                                </p>
+                                <p>Sweet & Sour</p>
+                            </div>
+                        </li>
+                        <li class="choco"><img src="img/s3_3.jpg" alt="초코타르트">
+                            <div class="txt">
+                                <p>CHOCOLATE TART
+                                </p>
+                                <p>Rich & Deep</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="txt">
-            <p>말차 우지 마카롱
-            </p>
-            <p>Matcha Uji Macaron
-            </p>
-          </div>
-
-        </li>
-
-      </ul>
-    </div>
-    <div class="bg2">
-      <ul>
-        <li>
-          <div class="txt2">
-            <p>클래식 초콜릿 칩 쿠키<br> (Classic Chocolate Chip Cookie)</p>
-            <p>Main Ingredient: 프리미엄 버크셔 버터, 60% 다크 초콜릿 칩, 천연 바닐라 빈</p>
-            <p>Taste Profile: 고소한 버터 베이스에 묵직하게 씹히는 쌉싸름한 다크 초콜릿</p>
-            <p>Texture: 겉은 바삭하고 속은 촉촉하게 씹히는 완벽한 겉바속촉 텍스처</p>
-          </div>
-          <div class="button"><i class="fa-solid fa-xmark"></i></div>
-
-        </li>
-        <li>
-          <div class="txt2">
-            <p>말차 우지 마카롱<br> (Matcha Uji Macaron)</p>
-            <p>Main Ingredient: 일본 교토 우지산 프리미엄 말차 powder</p>
-            <p>Taste Profile: 쌉싸름한 말차 향과 달콤한 화이트 가나슈의 완벽한 밸런스</p>
-            <p>Texture: 겉은 바삭하고 속은 쫀득한 프렌치 코크와 묵직한 크림 필링</p>
-          </div>
-          <div class="button"><i class="fa-solid fa-xmark"></i></div>
-
-
-        </li>
-
-      </ul>
+        </div>
 
     </div>
-  </div>
-  <div class="section06">
-    <div class="bg">
-      <ul class="panel">
+    <div class="section04">
+        <img src="img/s4_1.png" alt="프래즐" class="pretzel">
+        <img src="img/s4_3.png" alt="도너츠" class="donuts">
+        <img src="img/s4_2.png" alt="크로와상" class="croissant">
 
-        <li class="bg1">
-          <div class="title">
-            <p>PASTRY COLLECTION</p>
-            <h4>겹겹이 쌓인 결 사이로 퍼지는<br>
-              고소하고 섬세한 페이스트리의 매력</h4>
-            <p>겉은 바삭하고 속은 촉촉하게 찢어지는 결,<br>한 입 베어 문 순간 깊은 버터 향이 퍼집니다.</p>
-          </div>
-
-        </li>
-        <li class="bg2">
-          <div class="title">
-            <p>PASTRY COLLECTION</p>
-            <h4>겹겹이 쌓인 결 사이로 퍼지는<br>
-              고소하고 섬세한 페이스트리의 매력</h4>
-            <p>달콤한 크림과 신선한 토핑의 부드러운 조화,<br>입안 가득 상큼하고 기분 좋은 여운을 전합니다.</p>
-          </div>
-
-
-        </li>
-        <li class="bg3">
-          <div class="title">
-            <p>PASTRY COLLECTION</p>
-            <h4>겹겹이 쌓인 결 사이로 퍼지는<br>
-              고소하고 섬세한 페이스트리의 매력</h4>
-            <p>섬세하게 부서지는 수백 겹의 가벼운 식감,<br>씹을수록 은은하고 담백한 고소함을 선사합니다.</p>
-          </div>
-
-        </li>
-      </ul>
+        <p>EXPLORE OUR COLLECTION OF</p>
+        <p>HANDCRAFTED <span> </span>ARTISAN</p>
+        <p>TREATS & PASTRIES</p>
     </div>
-    <ul class="panel2">
-      <li><img src="img/s6main1.png" alt="크로와상">
-        <div class="more">
-          <p>CROISSANT</p>
-          <i class="fa-solid fa-angles-up"></i>
+
+    <div class="section05">
+        <div class="title">
+            <h4>Cookie Collection</h4>
+            <p>진한 우지 말차와 달콤한 초콜릿, 다채로운 식감이 전하는 기분 좋은 순간</p>
         </div>
-      </li>
-      <li><img src="img/s6main2.png" alt="데니쉬">
-        <div class="more">
-          <p>DANISH</p>
-          <i class="fa-solid fa-angles-up"></i>
+        <div class="bg1">
+            <ul>
+                <li>
+                    <div class="imgbox">
+                        <img src="img/s5_1.jpg" alt="초콜릿칩 쿠키">
+                        <div class="more">
+                            <p>More</p>
+                            <i class="fa-solid fa-angles-up"></i>
+                        </div>
+                    </div>
+                    <div class="txt">
+                        <p>클래식 초콜릿 칩 쿠키
+                        </p>
+                        <p>Classic Chocolate Chip Cookie
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="imgbox"><img src="img/s5_2.jpg" alt="마카롱">
+                        <div class="more">
+                            <p>More</p>
+                            <i class="fa-solid fa-angles-up"></i>
+                        </div>
+                    </div>
+                    <div class="txt">
+                        <p>말차 우지 마카롱
+                        </p>
+                        <p>Matcha Uji Macaron
+                        </p>
+                    </div>
+
+                </li>
+
+            </ul>
         </div>
-      </li>
-      <li><img src="img/s6main3.png" alt="페이스트리">
-        <div class="more">
-          <p>PASTRY</p>
-          <i class="fa-solid fa-angles-up"></i>
+        <div class="bg2">
+            <ul>
+                <li>
+                    <div class="txt2">
+                        <p>클래식 초콜릿 칩 쿠키<br> (Classic Chocolate Chip Cookie)</p>
+                        <p>Main Ingredient: 프리미엄 버크셔 버터, 60% 다크 초콜릿 칩, 천연 바닐라 빈</p>
+                        <p>Taste Profile: 고소한 버터 베이스에 묵직하게 씹히는 쌉싸름한 다크 초콜릿</p>
+                        <p>Texture: 겉은 바삭하고 속은 촉촉하게 씹히는 완벽한 겉바속촉 텍스처</p>
+                    </div>
+                    <div class="button"><i class="fa-solid fa-xmark"></i></div>
+
+                </li>
+                <li>
+                    <div class="txt2">
+                        <p>말차 우지 마카롱<br> (Matcha Uji Macaron)</p>
+                        <p>Main Ingredient: 일본 교토 우지산 프리미엄 말차 powder</p>
+                        <p>Taste Profile: 쌉싸름한 말차 향과 달콤한 화이트 가나슈의 완벽한 밸런스</p>
+                        <p>Texture: 겉은 바삭하고 속은 쫀득한 프렌치 코크와 묵직한 크림 필링</p>
+                    </div>
+                    <div class="button"><i class="fa-solid fa-xmark"></i></div>
+
+
+                </li>
+
+            </ul>
+
         </div>
-      </li>
-    </ul>
+    </div>
+    <div class="section06">
+        <div class="bg">
+            <ul class="panel">
+
+                <li class="bg1">
+                    <div class="title">
+                        <p>PASTRY COLLECTION</p>
+                        <h4>겹겹이 쌓인 결 사이로 퍼지는<br>
+                            고소하고 섬세한 페이스트리의 매력</h4>
+                        <p>겉은 바삭하고 속은 촉촉하게 찢어지는 결,<br>한 입 베어 문 순간 깊은 버터 향이 퍼집니다.</p>
+                    </div>
+
+                </li>
+                <li class="bg2">
+                    <div class="title">
+                        <p>PASTRY COLLECTION</p>
+                        <h4>겹겹이 쌓인 결 사이로 퍼지는<br>
+                            고소하고 섬세한 페이스트리의 매력</h4>
+                        <p>달콤한 크림과 신선한 토핑의 부드러운 조화,<br>입안 가득 상큼하고 기분 좋은 여운을 전합니다.</p>
+                    </div>
+
+
+                </li>
+                <li class="bg3">
+                    <div class="title">
+                        <p>PASTRY COLLECTION</p>
+                        <h4>겹겹이 쌓인 결 사이로 퍼지는<br>
+                            고소하고 섬세한 페이스트리의 매력</h4>
+                        <p>섬세하게 부서지는 수백 겹의 가벼운 식감,<br>씹을수록 은은하고 담백한 고소함을 선사합니다.</p>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <ul class="panel2">
+            <li><img src="img/s6main1.png" alt="크로와상">
+                <div class="more">
+                    <p>CROISSANT</p>
+                    <i class="fa-solid fa-angles-up"></i>
+                </div>
+            </li>
+            <li><img src="img/s6main2.png" alt="데니쉬">
+                <div class="more">
+                    <p>DANISH</p>
+                    <i class="fa-solid fa-angles-up"></i>
+                </div>
+            </li>
+            <li><img src="img/s6main3.png" alt="페이스트리">
+                <div class="more">
+                    <p>PASTRY</p>
+                    <i class="fa-solid fa-angles-up"></i>
+                </div>
+            </li>
+        </ul>
 
 
 
 
-  </div>
+    </div>
+    <!-- footer -->
+    <footer>
+
+
+        <div class="footer_top">
+            <div class="footer_logo">
+                <a href="index.html">
+                    <img src="img/footer.png" alt="footer" />
+                </a>
+            </div>
+            <ul class="footer_menu">
+                <li><a href="ARCHIVE.html"> ARCHIVE </a></li>
+                <li>
+                    <a href="dessertstory.html"> STORY </a>
+                </li>
+                <li>
+                    <a href="#"> VISUALIZE </a>
+                </li>
+                <li>
+                    <a href="disguise/disguise.html"> DISGUISE </a>
+                </li>
+                <li>
+                    <a href="#"> SPOT </a>
+                </li>
+            </ul>
+            <ul class="footer_icon">
+                <li>
+                    <a href="https://www.instagram.com">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/?app=desktop&hl=ko&gl=KR">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass"> </i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_bottom">
+            <div class="footer_bottom_txt">
+                <p>©2026 DESSERT LAB. ALL RIGHTS RESERVED.</p>
+                <p>SWEET, ARTISTRY<br />A BRIGHTER TOMORROW</p>
+
+            </div>
+    </footer>
 
 </body>
 

@@ -449,4 +449,11 @@ $(function () {
       $("#con03 .con03_txt").removeClass("active");
     }
   });
+  /*마우스*/
+  $(document).on("mousemove", function (e) {
+    $(".cursor").css({
+      left: `${e.clientX}px`,
+      top: `${e.clientY}px`,
+    });
+  });
 });

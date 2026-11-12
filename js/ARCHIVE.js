@@ -1,4 +1,14 @@
+
 $(function () {
+    // GSAP 플러그인 등록
+    gsap.registerPlugin(ScrollTrigger);
+    /*마우스*/
+    $(document).on("mousemove", function (e) {
+        $(".cursor").css({
+            left: `${e.clientX}px`,
+            top: `${e.clientY}px`
+        });
+    });
     /* section02 scroll */
 
     $(window).on("scroll", function () {
@@ -254,6 +264,7 @@ $(function () {
     });
 
 })
+
 
 
 
