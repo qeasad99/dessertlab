@@ -25,10 +25,30 @@ footer {
     font-family: "Libre Bodoni", serif;
 }
 
+/* 탑버튼 */
+.top1 {
+    font-size: 50px;
+    color: #2d1b24;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
+    z-index: 999;
+}
 
 
 /*모바일*/
 @media (max-width: 768px) {
+    .top1 {
+        font-size: 30px;
+        color: #2d1b24;
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
     .cursor {
         display: none;
     }
@@ -828,7 +848,7 @@ footer {
         background-color: rgba(247, 242, 242, 0.7);
         position: absolute;
         bottom: 50px;
-        left: 16%;
+        left: 12%;
         border-radius: 30px;
 
         display: flex;
@@ -1139,7 +1159,7 @@ footer {
 
         position: absolute;
         bottom: 25px;
-        left: 11%;
+        left: 5%;
         border-radius: 50%;
 
     }
@@ -2315,7 +2335,6 @@ footer {
         display: flex;
         gap: 20px;
         font-size: 20px;
-
         margin-right: 20px;
     }
 
