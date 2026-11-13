@@ -13,68 +13,72 @@ $(function () {
             $("#con01").removeClass("on");
         }
     });
+
     /* ul01 : PC 위쪽 / 모바일 왼쪽 이동 */
+    let ul01Timer;
+
     function slideup() {
 
-        if ($(window).width() <= 768) {
+        let mobile = $(window).width() <= 768;
+        let move = 0;
 
-            // 모바일 : transform으로 가로 이동
-            $(".ul01").animate({
-                dummy: 1
-            }, {
-                duration: 12000,
-                easing: "linear",
+        clearInterval(ul01Timer);
 
-                step: function (now) {
-                    $(this).css(
-                        "transform",
-                        "translate3d(" + (-1075 * now) + "px, 0, 0)"
-                    );
-                },
+        ul01Timer = setInterval(function () {
 
-                complete: function () {
+            if (mobile) {
 
-                    $(this).css("transform", "translate3d(0, 0, 0)");
+                // 모바일 : 왼쪽 이동
+                move -= 1;
 
-                    if ($(window).width() <= 768) {
-                        slideup();
-                    }
+                $(".ul01").css("left", move + "px");
+
+                if (move <= -1075) {
+                    move = 0;
+                    $(".ul01").css("left", "0px");
                 }
-            });
 
-        } else {
+            } else {
 
-            // PC + 태블릿 : 위로 이동
-            $(".ul01").animate({
-                top: "-=1350px"
-            }, 20000, "linear", function () {
+                // PC : 위쪽 이동
+                move -= 1;
 
-                // 처음 위치로 돌아가기
-                $(this).css("top", "-100px");
+                $(".ul01").css("top", (-100 + move) + "px");
 
-                if ($(window).width() > 768) {
-                    slideup();
+                if (move <= -1350) {
+                    move = 0;
+                    $(".ul01").css("top", "-100px");
                 }
-            });
-        }
+            }
+
+        }, 16);
     }
 
 
     /* ul02 : PC / 태블릿 아래쪽 이동 */
+    let ul02Timer;
+    let move2 = 0;
+
     function slideDown() {
+
+        clearInterval(ul02Timer);
 
         if ($(window).width() > 768) {
 
-            $(".ul02").animate({
-                top: "0px"
-            }, 20000, "linear", function () {
+            move2 = -1350;
 
-                $(this).css("top", "-1350px");
+            ul02Timer = setInterval(function () {
 
-                if ($(window).width() > 768) {
-                    slideDown();
+                move2 += 1;
+
+                $(".ul02").css("top", move2 + "px");
+
+                if (move2 >= 0) {
+                    move2 = -1350;
+                    $(".ul02").css("top", "-1350px");
                 }
-            });
+
+            }, 16);
         }
     }
 
@@ -83,8 +87,7 @@ $(function () {
     $(".ul01").css({
         position: "relative",
         left: "0px",
-        top: $(window).width() > 768 ? "-100px" : "0px",
-        transform: "translate3d(0, 0, 0)"
+        top: $(window).width() > 768 ? "-100px" : "0px"
     });
 
     $(".ul02").css({
@@ -108,13 +111,13 @@ $(function () {
         resizeTimer = setTimeout(function () {
 
             // 기존 애니메이션 정지
-            $(".ul01, .ul02").stop(true, false);
+            clearInterval(ul01Timer);
+            clearInterval(ul02Timer);
 
             // ul01 위치 초기화
             $(".ul01").css({
                 left: "0px",
-                top: $(window).width() > 768 ? "-100px" : "0px",
-                transform: "translate3d(0, 0, 0)"
+                top: $(window).width() > 768 ? "-100px" : "0px"
             });
 
             // ul02 위치 초기화
@@ -130,6 +133,7 @@ $(function () {
 // 팀원 코드 : con02 GSAP 스크롤 애니메이션
 gsap.registerPlugin(ScrollTrigger);
 
+<<<<<<< HEAD
 let tl = gsap.timeline({
   scrollTrigger: {
     trigger: "#con02",
@@ -177,3 +181,51 @@ $(document).on("mousemove", function (e) {
     top: `${e.clientY}px`,
   });
 });
+=======
+    gsap.registerPlugin(ScrollTrigger);
+
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#con02",
+            start: "top 82px",
+            end: "+=3000",
+            pin: true,
+            scrub: 1,
+            snap: {
+                snapTo: [0, 0.2, 0.4, 0.6, 0.8, 1],
+                duration: 0.5,
+                delay: 0.1,
+            },
+        },
+    });
+
+    // 중앙 텍스트박스 효과
+    tl.fromTo(
+        "#con02 .txtbox",
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1 },
+    );
+
+    // 이미지 순서대로 밝아지는 효과
+    tl.to("#con02 .imgbox li:nth-child(1) img", {
+        filter: "brightness(1)",
+    })
+        .to("#con02 .imgbox li:nth-child(2) img", {
+            filter: "brightness(1)",
+        })
+        .to("#con02 .imgbox li:nth-child(3) img", {
+            filter: "brightness(1)",
+        })
+        .to("#con02 .imgbox li:nth-child(4) img", {
+            filter: "brightness(1)",
+        })
+        .to("#con02 .imgbox .li-txt", {
+            opacity: 1,
+            y: -20,
+            stagger: 0.5,
+        });
+
+
+
+});
+>>>>>>> d675453 (index수정)
