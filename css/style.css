@@ -45,9 +45,25 @@ ul {
     }
 
     #con01 .pic .ul01 {
+        position: relative;
         width: max-content;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
         transition: none;
-        top: -100px;
+    }
+
+    #con01 .pic .ul01 li {
+        width: 200px;
+        height: 250px;
+        flex: 0 0 200px;
+        margin-top: 0;
+        overflow: hidden;
     }
 
     #con01 .pic .ul02 {
@@ -107,15 +123,10 @@ ul {
 
     /*#con01 pic*/
     #con01 .pic {
-        /* height: auto;
-    display: flex;
-    flex-direction: column;
-    /* 세로 정렬로 변경하여 가로 넘침 방지 */
-        /* align-items: center;
-    overflow: visible;
-    margin-top: 30px; */
         width: 100%;
         overflow: hidden;
+        padding-top: 20px;
+        box-sizing: border-box;
     }
 
     #con01 ul {
