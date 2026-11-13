@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualize</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Protest+Guerrilla&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-4.0.0.min.js"></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <h1>
+        <a href="index.html">
+          <img src="img/header_logo.png" alt="header" />
+        </a>
+      </h1>
+      <ul class="menu">
+        <li>
+          <a href="ARCHIVE.html">ARCHIVE</a>
+        </li>
+        <li>
+          <a href="dessertstory.html">STORY</a>
+        </li>
+        <li>
+          <a href="Visualize/visualize.html">VISUALIZE</a>
+        </li>
+        <li>
+          <a href="disguise/disguise.html">DISGUISE</a>
+        </li>
+        <li>
+          <a href="dessert-subpage/index.html">SPOT</a>
+        </li>
+      </ul>
+      <ul class="menu_icon">
+        <li>
+          <a href="#"> <i class="fa-regular fa-user"> </i></a>
+        </li>
+
+        <li>
+          <a href="#"> <i class="fa-solid fa-magnifying-glass"> </i></a>
+        </li>
+      </ul>
+      <!-- header미디어쿼리 -->
+      <div class="menu_bar">
+        <i class="fa-solid fa-cookie"></i>
+      </div>
+      <div class="menu_open">
+        <ul>
+          <li>
+            <a href="#">ARCHIVE</a>
+          </li>
+          <li>
+            <a href="dessertstory.html">STORY</a>
+          </li>
+          <li>
+            <a href="#">VISUALIZE</a>
+          </li>
+          <li>
+            <a href="#">DISGUISE</a>
+          </li>
+          <li>
+            <a href="#">SPOT</a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu_openbar">
+        <i class="fa-solid fa-cookie-bite"></i>
+      </div>
+      <!-- header미디어쿼리 -->
+    </header>
+    <!------------visual------------>
+    <div id="visual">
+      <ul class="slider">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="txtbox">
+        <h2>디저트의 시각화</h2>
+        <p>디저트, 그 이상의 감동을 시각화하다</p>
+      </div>
+    </div>
+    <!------------container----------->
+    <!------------con01------------>
+    <section id="con01">
+      <div class="wrap">
+        <h3 class="title">TEXTURE & COLOR</h3>
+        <h3>질감과 색감</h3>
+        <ul class="imgbox">
+          <!-- li 호버 시 텍스트카드 노출 -->
+          <li>
+            <img src="img/sub_con01_01.jpg" alt="" />
+            <div class="txtcard">
+              <p>Flaky layers</p>
+              <p>겹겹이 바삭하게 부서지는<br />결의 섬세한 식감</p>
+            </div>
+          </li>
+          <li>
+            <img src="img/sub_con01_02.jpg" alt="" />
+            <div class="txtcard">
+              <p>Velvety Soft</p>
+              <p>입안에서 부드럽게 녹아내리는<br />촉촉한 크림과 시트</p>
+            </div>
+          </li>
+          <li>
+            <img src="img/sub_con01_03.jpg" alt="" />
+            <div class="txtcard">
+              <p>Fresh Berry Tone</p>
+              <p>붉은 과일이 주는 상큼하고<br />생기 있는 시각적 포인트</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!------------con02------------>
+    <section id="con02">
+      <div class="wrap">
+        <div class="txtbox">
+          <p>THE LANGUAGE OF TASTE</p>
+          <h3>
+            Inside the<br />
+            Dessert
+          </h3>
+        </div>
+        <ul class="cut-image">
+          <!-- 모달창으로 단면 노출 -->
+          <li><img src="img/con02_hover_01.jpg" alt="" /></li>
+          <li><img src="img/con02_hover_02.jpg" alt="" /></li>
+          <li><img src="img/con02_hover_03.jpg" alt="" /></li>
+          <li><img src="img/con02_hover_04.jpg" alt="" /></li>
+        </ul>
+        <ul class="modal">
+          <li>
+            <img src="img/macaron.jpg" alt="" />
+            <div class="overlay-txt">
+              <h4>Crispy & Chewy Harmony</h4>
+              <p>
+                얇고 바삭한 꼬끄 사이로 진하게 베어 나오는 쫀득한 식감.<br />입안에서
+                부드럽게 퍼지는 가나슈와 크림의 달콤한 여운을 느껴보세요.
+              </p>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+          </li>
+          <li>
+            <img src="img/spongeroll.jpg" alt="" />
+            <div class="overlay-txt">
+              <h4>Cloud-like Softness</h4>
+              <p>
+                구름처럼 폭신한 스폰지 시트 속에 아낌없이 채워진 신선한 우유
+                크림.<br />한 입 베어 물 때마다 사르르 녹아내리는 순수한
+                부드러움입니다.
+              </p>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+          </li>
+          <li>
+            <img src="img/sub_tiramisu.jpg" alt="" />
+            <div class="overlay-txt">
+              <h4>Deep Espresso & Mascarpone</h4>
+              <p>
+                깊고 진한 에스프레소가 촉촉하게 스며든 레이디핑거 시트와<br />묵직하면서도
+                부드러운 마스카포네 치즈 크림의 매혹적인 만남.
+              </p>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+          </li>
+          <li>
+            <img src="img/cake1.jpg" alt="" />
+            <div class="overlay-txt">
+              <h4>Layers of Sweet Moments</h4>
+              <p>
+                촉촉한 시트와 상큼달콤한 과일, 풍성한 크림이 층층이 쌓여 완벽한
+                밸런스를 자랑하는<br />클래식 쇼트케이크의 정석.
+              </p>
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!------------con03------------>
+    <section id="con03">
+      <div class="wrap">
+        <h3 class="title">ART OF PLATING</h3>
+        <h3>플레이팅의 미학</h3>
+        <div class="imgbox">
+          <ul class="fix-imgbox">
+            <li>
+              <img src="img/sub_con03_011.jpg" alt="" />
+              <div class="txtcard">
+                <p>The Canvas of Flavors</p>
+                <p>
+                  하얀 접시를 도화지 삼아 섬세하게<br />그려낸 텍스처의 향연<br />시각과
+                  미각을 동시에 깨우는<br />파인 다이닝 디저트의 진수
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="img/sub_con03_02.jpg" alt="" />
+              <div class="txtcard">
+                <p>Artisanal Detail</p>
+                <p>
+                  자연스러운 흩뿌림과 정교한 터치 속에<br />담긴 제과 장인의
+                  철학<br />한 조각의 예술품으로 완성된<br />감동적인 미식의
+                  순간
+                </p>
+              </div>
+            </li>
+          </ul>
+          <div class="slider-box">
+            <!---- pc버전 ---->
+            <ul class="track pc-track">
+              <li><img src="img/sub_con03_03.jpg" alt="" /></li>
+              <li><img src="img/sub_con03_04.webp" alt="" /></li>
+              <li><img src="img/sub_con03_05.jpg" alt="" /></li>
+              <li><img src="img/sub_con03_03.jpg" alt="" /></li>
+            </ul>
+            <ul class="track tablet-track">
+              <!---- 태블릿, 모바일버전 ---->
+              <li><img src="img/sub_con03_03.jpg" alt="" /></li>
+              <li><img src="img/sub_con03_04.webp" alt="" /></li>
+              <li><img src="img/sub_con03_05.jpg" alt="" /></li>
+              <li><img src="img/sub_con03_06.webp" alt="" /></li>
+              <li><img src="img/sub_con03_07.webp" alt="" /></li>
+              <li><img src="img/sub_con03_08.webp" alt="" /></li>
+              <li><img src="img/sub_con03_03.jpg" alt="" /></li>
+              <li><img src="img/sub_con03_04.webp" alt="" /></li>
+              <li><img src="img/sub_con03_05.jpg" alt="" /></li>
+              <li><img src="img/sub_con03_06.webp" alt="" /></li>
+              <li><img src="img/sub_con03_07.webp" alt="" /></li>
+              <li><img src="img/sub_con03_08.webp" alt="" /></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------con04------------>
+    <section id="con04">
+      <div class="wrap">
+        <div class="spectrum-header">
+          <div class="title-box">
+            <h2>The Sweet Spectrum</h2>
+          </div>
+          <p class="desc">
+            오늘 당신이 원하는 단맛은 어디쯤인가요?<br />
+            담백함에서 풍부함까지 취향의 스펙트럼을 찾아보세요.
+          </p>
+        </div>
+
+        <!-- 태블릿/PC에서 살아나는 스펙트럼 라인 -->
+        <div class="spectrum-line-box">
+          <span class="label-pos light">LIGHT</span>
+          <div class="line">
+            <span class="dot pos-38" data-num="38"></span>
+            <span class="dot pos-64" data-num="64"></span>
+            <span class="dot pos-90" data-num="90"></span>
+          </div>
+          <span class="label-pos balanced">BALANCED</span>
+          <span class="label-pos rich">RICH</span>
+        </div>
+
+        <ul class="spectrum-circles">
+          <li>
+            <div class="circle-img">
+              <img src="img/sub_con04_01.webp" alt="Macaron" />
+            </div>
+            <div class="c-txt">
+              <span class="item-name">Macaron</span>
+            </div>
+          </li>
+          <li>
+            <div class="circle-img">
+              <img src="img/sub_con04_02.webp" alt="Fruit Tart" />
+            </div>
+            <div class="c-txt">
+              <span class="item-name">Fruit tart</span>
+            </div>
+          </li>
+          <li>
+            <div class="circle-img">
+              <img src="img/sub_con04_03.webp" alt="Chocolate" />
+            </div>
+            <div class="c-txt">
+              <span class="item-name">Chocolate</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="footer_top">
+        <div class="footer_logo">
+          <a href="index.html">
+            <img src="img/footer_logo.png" alt="footer" />
+          </a>
+        </div>
+        <ul class="footer_menu">
+          <li><a href="ARCHIVE.html"> ARCHIVE </a></li>
+          <li>
+            <a href="dessertstory.html"> STORY </a>
+          </li>
+          <li>
+            <a href="#"> VISUALIZE </a>
+          </li>
+          <li>
+            <a href="disguise/disguise.html"> DISGUISE </a>
+          </li>
+          <li>
+            <a href="dessert-subpage/index.html"> SPOT </a>
+          </li>
+        </ul>
+        <ul class="footer_icon">
+          <li>
+            <a href="https://www.instagram.com">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/?app=desktop&hl=ko&gl=KR">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-magnifying-glass"> </i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer_bottom">
+        <div class="footer_bottom_txt">
+          <p>©2026 DESSERT LAB. ALL RIGHTS RESERVED.</p>
+          <p>SWEET, ARTISTRY<br />A BRIGHTER TOMORROW</p>
+        </div>
+      </div>
+    </footer>
+    <!-- 마우스 -->
+    <div class="cursor">
+      <img src="img/cur_2.png" alt="포크" />
+    </div>
+    <div class="top1">
+      <i class="fa-solid fa-circle-chevron-up"></i>
+    </div>
+    <script>
+      // headerfooter start
+      // 메뉴바
+      $(".menu_bar").on("click", function () {
+        $(".menu_open").addClass("on");
+        // 바 없애기
+        $(".menu_openbar").show();
+      });
+      $(".menu_openbar").on("click", function () {
+        $(".menu_open").removeClass("on");
+        $(".menu_openbar").hide();
+      });
+      //  headerfooter end
+
+      $(window).on("scroll", function () {
+        let sc = $(window).scrollTop();
+        let con01Top = $("#con01").offset().top;
+        if (sc > con01Top - 300) {
+          $("#con01 h3").addClass("on");
+          $("#con01 .imgbox li").addClass("on");
+        }
+
+        let con02Top = $("#con02").offset().top;
+        if (sc > con02Top - 200) {
+          $("#con02 .txtbox").addClass("on");
+          $("#con02 .cut-image").addClass("on");
+        }
+
+        let con03Top = $("#con03").offset().top;
+        if (sc > con03Top - 200) {
+          $("#con03 h3").addClass("on");
+          $("#con03 .imgbox").addClass("on");
+        }
+
+        let con04Top = $("#con04").offset().top;
+        if (sc > con04Top - 400) {
+          $("#con04 .spectrum-header").addClass("on");
+          $("#con04 .spectrum-line-box").addClass("on");
+          $("#con04 .desc2").addClass("on");
+          $("#con04 .spectrum-circles").addClass("on");
+          $("#con04 .spectrum-circles li").addClass("on");
+        }
+      });
+
+      $("#con02 .cut-image li").on("click", function () {
+        let i = $(this).index();
+        $("#con02 .modal").addClass("on");
+        $("#con02 .modal li").removeClass("on");
+        $("#con02 .modal li").eq(i).addClass("on");
+      });
+      $("#con02 .modal li i").on("click", function () {
+        $("#con02 .modal").removeClass("on");
+      });
+
+      // con04번 효과
+      $("#con04 .spectrum-line-box .dot").on("mouseenter click", function () {
+        let idx = $(this).index();
+
+        $("#con04 .spectrum-line-box .dot").removeClass("active");
+        $(this).addClass("active");
+
+        $("#con04 .spectrum-circles li").removeClass("active");
+        $("#con04 .spectrum-circles li").eq(idx).addClass("active");
+      });
+
+      $("#con04 .spectrum-line-box .dot").on("mouseleave", function () {
+        $("#con04 .spectrum-line-box .dot").removeClass("active");
+        $("#con04 .spectrum-circles li").removeClass("active");
+      });
+
+      // 마우스 커서 효과
+      $(document).on("mousemove", function (e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        $(".cursor").css({
+          left: x + "px",
+          top: y + "px",
+        });
+      });
+
+      // 탑 버튼 효과
+      $(".top1").on("click", function () {
+        $("html, body").animate({ scrollTop: 0 }, 400);
+      });
+    </script>
+  </body>
+</html>
