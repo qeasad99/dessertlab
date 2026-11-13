@@ -1,0 +1,326 @@
+/* ================================================
+   CON04 ONLY — COUNTRY OF ORIGIN
+   Team header / footer / other sections untouched.
+   Responsive ranges: <=768 / 769–1199 / >=1200px
+   ================================================ */
+#origin {
+  --origin-map-paper: #f7efe2;
+  --origin-header-offset: 73px;
+  --vm-left: 6.9%;
+  --vm-top: 19%;
+  --vm-width: 11.9%;
+  --vm-height: 6.3%;
+}
+
+#origin, #origin * { box-sizing: border-box; }
+
+#origin.origin-scroll {
+  position: relative;
+  height: 450vh;
+  margin: 0;
+  padding: 100px 0 0;
+  background: var(--origin-map-paper);
+  color: #351822;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+#origin .origin-sticky {
+  position: sticky;
+  top: var(--origin-header-offset);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--origin-map-paper);
+}
+
+#origin .origin-frame {
+  position: relative;
+  width: min(96vw, 156.28svh, 1200px);
+  max-width: 100%;
+  aspect-ratio: 1648 / 928;
+  flex: 0 0 auto;
+  background: transparent;
+  isolation: isolate;
+}
+
+#origin .origin-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+#origin .origin-points {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* View More: all coordinates relative to the original map image */
+#origin .origin-frame > a.origin-view-more {
+  position: absolute;
+  z-index: 30;
+  left: var(--vm-left) !important;
+  top: var(--vm-top) !important;
+  width: var(--vm-width) !important;
+  height: var(--vm-height) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 !important;
+  border-radius: 999px;
+  text-decoration: none;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  transition: background-color .22s ease;
+}
+
+#origin .origin-view-more > span {
+  opacity: 0;
+  visibility: hidden;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(8px, 1.25vw, 18px);
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transition: opacity .22s ease;
+}
+#origin .origin-frame > a.origin-view-more:hover,
+#origin .origin-frame > a.origin-view-more:focus-visible {
+  background: #97a081 !important;
+  opacity: 1 !important;
+}
+#origin .origin-frame > a.origin-view-more:hover > span,
+#origin .origin-frame > a.origin-view-more:focus-visible > span {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+#origin .origin-view-more:focus-visible { outline: 2px solid #603c31; outline-offset: 3px; }
+
+/* Country dots */
+#origin .map-point {
+  position: absolute;
+  z-index: 1;
+  width: 12px;
+  height: 12px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #f2c84b;
+  box-shadow: 0 0 0 2px rgba(255,248,221,.85), 0 0 12px rgba(242,200,75,.5);
+}
+#origin .map-point::before, #origin .map-point::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+#origin .map-point::before {
+  width: 34px;
+  height: 34px;
+  background: radial-gradient(circle,rgba(255,225,120,.48),transparent 70%);
+  animation: originSoftPulse 2s ease-in-out infinite;
+  animation-delay: var(--delay,0s);
+}
+#origin .map-point::after {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(242,200,75,.9);
+  opacity: 0;
+  animation: originPingRing 2s ease-out infinite;
+  animation-delay: var(--delay,0s);
+}
+#origin .map-point.active {
+  z-index: 2;
+  background: #ffd667;
+  box-shadow: 0 0 0 5px rgba(242,200,75,.32),0 0 25px rgba(255,220,102,.95);
+}
+@keyframes originSoftPulse {
+  0%, 100% { opacity:.4; transform:translate(-50%,-50%) scale(.8); }
+  50% { opacity:1; transform:translate(-50%,-50%) scale(1.25); }
+}
+@keyframes originPingRing {
+  0% { opacity:.9; transform:translate(-50%,-50%) scale(.8); }
+  70% { opacity:.18; transform:translate(-50%,-50%) scale(2.7); }
+  100% { opacity:0; transform:translate(-50%,-50%) scale(3.2); }
+}
+
+/* Individual dessert cards */
+#origin .dessert-card {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 50%;
+  width: 130px;
+  padding: 9px;
+  background: rgba(255,250,240,.97);
+  border: 1px solid rgba(181,140,72,.48);
+  border-radius: 16px;
+  box-shadow: 0 16px 55px rgba(42,22,25,.22);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform,opacity;
+  transform: translate(-50%,-50%) scale(.2);
+}
+#origin .dessert-card > img {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:10px;
+  background:#f6ebd9;
+}
+#origin .dessert-info { display:flex; flex-direction:column; gap:6px; padding:12px 9px 8px; }
+#origin .dessert-country {
+  color:#6f4d34;
+  font:700 11px/1.4 Arial,sans-serif;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  overflow-wrap:anywhere;
+}
+#origin .dessert-name {
+  color:#3a2427;
+  font-size:clamp(17px,1.4vw,23px);
+  font-weight:500;
+  line-height:1.15;
+  overflow-wrap:anywhere;
+}
+
+/* Scroll progress */
+#origin .scroll-indicator {
+  position:absolute;
+  z-index:10;
+  bottom:14px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 14px;
+  border:1px solid rgba(123,87,57,.12);
+  border-radius:999px;
+  background:rgba(255,251,243,.86);
+  color:#664c46;
+  font:10px/1 Arial,sans-serif;
+  letter-spacing:.12em;
+  white-space:nowrap;
+}
+#origin .progress-track { width:95px; height:2px; overflow:hidden; background:#e5d9bc; }
+#origin .progress-fill { width:0; height:100%; background:#b8944b; }
+
+/* =================================================
+   >=1200px — existing desktop layout, no redesign
+   ================================================= */
+@media (min-width:1200px) {
+  #origin .origin-frame { width:min(96vw,156.28svh,1200px); }
+  #origin .dessert-card { width:130px; }
+}
+
+/* =================================================
+   769–1199px — full map and usable progress bar
+   ================================================= */
+@media (min-width:769px) and (max-width:1199px) {
+  #origin .origin-sticky {
+    height:calc(100svh - var(--origin-header-offset));
+    align-items:center;
+  }
+  #origin .origin-frame {
+    width:min(96vw,130svh,1200px);
+    margin-top:-16px;
+  }
+  #origin .dessert-card {
+    width:clamp(104px,12vw,130px);
+    padding:7px;
+    border-radius:12px;
+  }
+  #origin .dessert-card > img { border-radius:8px; }
+  #origin .dessert-info { gap:4px; padding:8px 5px 5px; }
+  #origin .dessert-country { font-size:9px; letter-spacing:.07em; }
+  #origin .dessert-name { font-size:clamp(13px,1.5vw,18px); }
+  #origin .origin-view-more > span { font-size:clamp(9px,1.2vw,14px); }
+}
+
+/* =================================================
+   <=768px — map remains uncropped; card displayed
+   below the map within the sticky viewport.
+   ================================================= */
+@media (max-width:768px) {
+  #origin.origin-scroll {
+    height:520svh;
+    padding-top:65px;
+  }
+  #origin .origin-sticky {
+    height:calc(100svh - var(--origin-header-offset));
+    align-items:flex-start;
+    padding-top:clamp(12px,3svh,25px);
+  }
+  #origin .origin-frame {
+    width:min(100%,650px,80svh);
+    max-width:100%;
+    margin:0 auto;
+  }
+  #origin .origin-frame > a.origin-view-more {
+    min-height:28px;
+  }
+  #origin .origin-view-more > span { font-size:9px; }
+  #origin .map-point { width:8px; height:8px; }
+  #origin .map-point::before { width:24px; height:24px; }
+  #origin .map-point::after { width:10px; height:10px; }
+  #origin .dessert-card {
+    /* JS sets left/top inline for desktop: keep mobile card centered below the image. */
+    left:50% !important;
+    top:calc(100% + 14px) !important;
+    width:clamp(174px,47vw,218px);
+    max-width:60vw;
+    padding:7px;
+    border-radius:12px;
+  }
+  #origin .dessert-card > img { border-radius:8px; }
+  #origin .dessert-info { gap:4px; padding:8px 7px 6px; }
+  #origin .dessert-country { font-size:9px; letter-spacing:.07em; }
+  #origin .dessert-name { font-size:17px; line-height:1.14; }
+  #origin .scroll-indicator {
+    bottom:clamp(12px,2.6svh,22px);
+    gap:8px;
+    padding:9px 11px;
+    font-size:9px;
+  }
+  #origin .progress-track { width:clamp(48px,13vw,70px); }
+}
+
+/* Short mobile/landscape screens: prevent card-progress overlap. */
+@media (max-width:768px) and (max-height:700px) {
+  #origin .dessert-card {
+    width:clamp(148px,34vw,174px);
+    padding:6px;
+  }
+  #origin .dessert-info { padding:5px 4px 4px; gap:3px; }
+  #origin .dessert-name { font-size:15px; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  #origin .map-point::before,
+  #origin .map-point::after { animation:none; }
+  #origin .origin-view-more,
+  #origin .origin-view-more > span { transition:none; }
+}
+
+/* standalone dessert-map/index.html only */
+body.origin-demo { margin:0; }
