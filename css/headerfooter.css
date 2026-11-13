@@ -37,7 +37,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
-    /* position: fixed; */
+    position: fixed;
     z-index: 10;
   }
 
