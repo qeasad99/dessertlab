@@ -17,10 +17,12 @@ a {
 .title {
   font-family: "Libre Bodoni", serif;
 }
+
 @media (min-width: 1200px) {
   body {
     cursor: none;
   }
+
   /* header */
   header {
     width: 100%;
@@ -40,11 +42,13 @@ a {
   header h1 {
     color: #f8eecc;
   }
+
   header .menu {
     display: flex;
     font-size: 18px;
     gap: 35px;
   }
+
   header .menu_icon {
     display: flex;
     gap: 20px;
@@ -52,29 +56,36 @@ a {
 
     margin-right: 20px;
   }
+
   header img {
     width: 250px;
   }
+
   header .menu li {
     border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
+
   header .menu li:hover {
     color: #f8eecc;
     border-bottom: 1px solid white;
   }
+
   header .menu_icon li:hover {
     color: #f8eecc;
   }
+
   /* header 미디어쿼리 */
   .menu_bar,
   .menu_open,
   .menu_openbar {
     display: none;
   }
+
   /*-================ visual =================-*/
   #visual {
     height: 600px;
     width: 100%;
+    margin-top: 81px;
     position: relative;
   }
 
@@ -158,6 +169,7 @@ a {
   }
 
   @keyframes txt {
+
     0%,
     33.5% {
       color: #3a2412;
@@ -246,6 +258,7 @@ a {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     text-align: center;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -267,12 +280,20 @@ a {
     font-weight: bold;
   }
 
+  #con01 .txtcard p:nth-of-type(2) {
+    margin-bottom: 20px;
+  }
+
   /*-================ con02 =================-*/
   #con02 {
+    background-image: linear-gradient(rgba(149, 158, 127, 0.7), rgba(149, 158, 127, 0.7)), url(../img/con02_bg.png);
+    background-position: center center;
+    background-size: contain;
     background-color: #959e7f;
     width: 100%;
     margin: 0px auto;
   }
+
 
   #con02 .wrap {
     max-width: 1200px;
@@ -294,12 +315,12 @@ a {
     transition: 1s;
   }
 
-  #con02 .txtbox > p {
+  #con02 .txtbox>p {
     font-weight: bold;
     font-size: 1.5rem;
   }
 
-  #con02 .txtbox > h3 {
+  #con02 .txtbox>h3 {
     font-size: 4.5rem;
     font-family: "Libre Bodoni", serif;
   }
@@ -387,6 +408,7 @@ a {
     right: 10px;
     cursor: pointer;
   }
+
   #con02 .modal .overlay-txt {
     position: absolute;
     bottom: 0;
@@ -394,12 +416,10 @@ a {
     width: 100%;
     padding: 60px 35px 35px;
     /* 아래에서 위로 자연스럽게 어두워지는 그라데이션 */
-    background: linear-gradient(
-      to top,
-      rgba(20, 12, 6, 0.9) 0%,
-      rgba(20, 12, 6, 0.5) 60%,
-      transparent 100%
-    );
+    background: linear-gradient(to top,
+        rgba(20, 12, 6, 0.9) 0%,
+        rgba(20, 12, 6, 0.5) 60%,
+        transparent 100%);
     color: #fff;
   }
 
@@ -476,6 +496,7 @@ a {
     object-fit: cover;
     display: block;
   }
+
   #con03 .txtcard {
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -492,12 +513,19 @@ a {
     opacity: 0;
     transition: 0.5s;
   }
+
   #con03 .txtcard:hover {
     opacity: 1;
   }
+
   #con03 .txtcard p:nth-of-type(1) {
     font-size: 1.3rem;
     font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  #con03 .txtcard p:nth-of-type(2),
+  #con03 .txtcard p:nth-of-type(3) {
     margin-bottom: 20px;
   }
 
@@ -617,13 +645,16 @@ a {
     letter-spacing: 1px;
     color: #3a2412;
   }
+
   #con04 .label-pos.light {
     left: 0;
   }
+
   #con04 .label-pos.balanced {
     left: 50%;
     transform: translateX(-50%);
   }
+
   #con04 .label-pos.rich {
     right: 0;
   }
@@ -645,9 +676,11 @@ a {
   #con04 .spectrum-line-box .dot.pos-38 {
     left: 38%;
   }
+
   #con04 .spectrum-line-box .dot.pos-64 {
     left: 64%;
   }
+
   #con04 .spectrum-line-box .dot.pos-90 {
     left: 90%;
   }
@@ -667,7 +700,8 @@ a {
     font-size: 0.8rem;
     font-weight: bold;
     color: #8c5830;
-    white-space: nowrap; /* 글자가 줄바꿈되지 않게 방지 */
+    white-space: nowrap;
+    /* 글자가 줄바꿈되지 않게 방지 */
     word-break: normal;
   }
 
@@ -709,12 +743,11 @@ a {
 
   #con04 .spectrum-circles li.active .circle-img {
     box-shadow: 0 15px 30px rgba(58, 36, 18, 0.25);
-    border: 3px solid #8c5830;
   }
 
   #con04 .circle-img {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto 15px;
     border-radius: 50%;
     overflow: hidden;
@@ -734,15 +767,18 @@ a {
     justify-content: center;
     gap: 10px;
   }
+
   /*============= footer ============ */
   footer img {
     width: 200px;
   }
+
   footer {
     width: 100%;
     background-color: #2d1b24;
     margin: 0px auto;
   }
+
   footer .footer_top {
     height: 100px;
     padding: 50px 0px;
@@ -752,6 +788,7 @@ a {
     width: 95%;
     margin: 0px auto;
   }
+
   footer .footer_menu {
     display: flex;
     gap: 40px;
@@ -759,6 +796,7 @@ a {
     margin-right: 50px;
     font-size: 18px;
   }
+
   footer .footer_icon {
     display: flex;
     gap: 20px;
@@ -766,39 +804,48 @@ a {
     font-size: 25px;
     margin-right: 20px;
   }
+
   footer .footer_logo {
     color: #f8eecc;
     font-size: 25px;
   }
+
   footer .footer_logo p {
     color: #f8eecc;
     font-size: 15px;
   }
+
   footer .footer_bottom {
     height: 80px;
     border-top: 1px solid #f6dcd5;
     width: 95%;
     margin-left: 50px;
   }
+
   footer .footer_bottom_txt {
     padding: 30px 0px;
     display: flex;
     justify-content: space-between;
     color: #f6dcd5;
   }
+
   footer .footer_bottom_txt p:first-child {
     font-size: 12px;
   }
+
   footer .footer_bottom_txt p:nth-of-type(2) {
     text-align: right;
     font-size: 12px;
   }
+
   footer .footer_menu li:hover {
     color: #f8eecc;
   }
+
   footer .footer_icon li:hover {
     color: #f8eecc;
   }
+
   /*top버튼*/
   .top1 {
     font-size: 50px;
@@ -829,11 +876,13 @@ a {
   body {
     cursor: none;
   }
+
   /* font */
   header,
   footer {
     font-family: "Libre Bodoni", serif;
   }
+
   /* header */
   header {
     width: 100%;
@@ -850,11 +899,13 @@ a {
   header h1 {
     color: #f8eecc;
   }
+
   header .menu {
     display: flex;
     font-size: 14px;
     gap: 25px;
   }
+
   header .menu_icon {
     display: flex;
     gap: 15px;
@@ -862,27 +913,34 @@ a {
 
     margin-right: 20px;
   }
+
   header img {
     width: 150px;
   }
+
   header .menu li {
     border-bottom: 1px solid rgba(0, 0, 0, 0);
   }
+
   header .menu li:hover {
     color: #f8eecc;
     border-bottom: 1px solid white;
   }
+
   header .menu_icon li:hover {
     color: #f8eecc;
   }
+
   /* header미디어쿼리 */
   .menu_bar,
   .menu_open,
   .menu_openbar {
     display: none;
   }
+
   /*============ visual ===========*/
   #visual {
+    /* margin-top: 81px; */
     height: 600px;
     width: 100%;
     position: relative;
@@ -968,6 +1026,7 @@ a {
   }
 
   @keyframes txt {
+
     0%,
     33.5% {
       color: #3a2412;
@@ -988,12 +1047,36 @@ a {
   #con01 {
     background-color: #f6efdd;
     width: 100%;
-    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 로고 워터마크 */
+  #con01::before {
+    content: "Texture & Color";
+    /* white-space: pre; */
+    font-size: 150px;
+    color: #3a2412;
+    font-family: "Tangerine", cursive;
+    font-weight: 800;
+    font-style: normal;
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+    opacity: 0.7;
+    pointer-events: none;
+    /* 마우스 호버나 클릭을 방해하지 않도록 설정 */
+    /* z-index: 1; */
   }
 
   #con01 .wrap {
-    width: 100%;
-    padding: 50px 10px;
+    width: 95%;
+    margin: 0px auto;
+    /* background-image: url(../img/con01_bg_01-removebg-preview.png); */
+    background-size: 600px auto;
+    background-position: 300px 550px;
+    background-repeat: no-repeat;
+    padding: 50px 0px;
   }
 
   #con01 h3 {
@@ -1034,7 +1117,7 @@ a {
 
   #con01 .imgbox li:nth-of-type(3) {
     width: (50%-10px);
-    margin: 0px auto;
+    /* margin: 0px auto; */
     transition-delay: 1.5s;
   }
 
@@ -1062,6 +1145,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 10px;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -1080,8 +1164,15 @@ a {
     font-weight: bold;
   }
 
+  #con01 .txtcard p:nth-of-type(2) {
+    margin-bottom: 20px;
+  }
+
   /*-================ con02 =================-*/
   #con02 {
+    background-image: linear-gradient(rgba(149, 158, 127, 0.7), rgba(149, 158, 127, 0.7)), url(../img/con02_bg.png);
+    background-position: center center;
+    background-size: contain;
     background-color: #959e7f;
     width: 100%;
     margin: 0px auto;
@@ -1109,12 +1200,12 @@ a {
     margin-bottom: 10px;
   }
 
-  #con02 .txtbox > p {
+  #con02 .txtbox>p {
     font-weight: bold;
     font-size: 1.5rem;
   }
 
-  #con02 .txtbox > h3 {
+  #con02 .txtbox>h3 {
     font-size: 4.5rem;
     font-family: "Libre Bodoni", serif;
   }
@@ -1203,6 +1294,7 @@ a {
     right: 10px;
     cursor: pointer;
   }
+
   #con02 .modal .overlay-txt {
     position: absolute;
     bottom: 0;
@@ -1210,12 +1302,10 @@ a {
     width: 100%;
     padding: 60px 35px 35px;
     /* 아래에서 위로 자연스럽게 어두워지는 그라데이션 */
-    background: linear-gradient(
-      to top,
-      rgba(20, 12, 6, 0.9) 0%,
-      rgba(20, 12, 6, 0.5) 60%,
-      transparent 100%
-    );
+    background: linear-gradient(to top,
+        rgba(20, 12, 6, 0.9) 0%,
+        rgba(20, 12, 6, 0.5) 60%,
+        transparent 100%);
     color: #fff;
   }
 
@@ -1237,13 +1327,12 @@ a {
   #con03 {
     background-color: #f5d0be;
     width: 100%;
-    margin: 0px auto;
   }
 
   #con03 .wrap {
-    max-width: 100%;
+    width: 95%;
     margin: 0px auto;
-    padding: 50px 10px;
+    padding: 50px 0px;
   }
 
   #con03 h3 {
@@ -1294,6 +1383,7 @@ a {
     object-fit: cover;
     display: block;
   }
+
   #con03 .txtcard {
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -1310,12 +1400,19 @@ a {
     opacity: 0;
     transition: 0.5s;
   }
+
   #con03 .txtcard:hover {
     opacity: 1;
   }
+
   #con03 .txtcard p:nth-of-type(1) {
     font-size: 1.3rem;
     font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  #con03 .txtcard p:nth-of-type(2),
+  #con03 .txtcard p:nth-of-type(3) {
     margin-bottom: 20px;
   }
 
@@ -1435,13 +1532,16 @@ a {
     letter-spacing: 1px;
     color: #3a2412;
   }
+
   #con04 .label-pos.light {
     left: 0;
   }
+
   #con04 .label-pos.balanced {
     left: 50%;
     transform: translateX(-50%);
   }
+
   #con04 .label-pos.rich {
     right: 0;
   }
@@ -1463,9 +1563,11 @@ a {
   #con04 .spectrum-line-box .dot.pos-38 {
     left: 38%;
   }
+
   #con04 .spectrum-line-box .dot.pos-64 {
     left: 64%;
   }
+
   #con04 .spectrum-line-box .dot.pos-90 {
     left: 90%;
   }
@@ -1485,7 +1587,8 @@ a {
     font-size: 0.8rem;
     font-weight: bold;
     color: #8c5830;
-    white-space: nowrap; /* 추가: 글자가 줄바꿈되지 않게 방지 */
+    white-space: nowrap;
+    /* 추가: 글자가 줄바꿈되지 않게 방지 */
     word-break: normal;
   }
 
@@ -1525,7 +1628,6 @@ a {
 
   #con04 .spectrum-circles li.active .circle-img {
     box-shadow: 0 15px 30px rgba(58, 36, 18, 0.25);
-    border: 3px solid #8c5830;
   }
 
   #con04 .circle-img {
@@ -1550,22 +1652,26 @@ a {
     justify-content: center;
     gap: 10px;
   }
+
   /* footer */
   footer .footer_logo img {
     width: 120px;
     margin-left: 10%;
   }
+
   footer {
     width: 100%;
     background-color: #2d1b24;
     margin: 0px auto;
   }
+
   footer .footer_top {
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   footer .footer_menu {
     display: flex;
     gap: 20px;
@@ -1573,6 +1679,7 @@ a {
     margin-right: 50px;
     font-size: 14px;
   }
+
   footer .footer_icon {
     display: flex;
     gap: 20px;
@@ -1580,39 +1687,48 @@ a {
     font-size: 20px;
     margin-right: 20px;
   }
+
   footer .footer_logo {
     color: #f8eecc;
     font-size: 25px;
   }
+
   footer .footer_logo p {
     color: #f8eecc;
     font-size: 15px;
   }
+
   footer .footer_bottom {
     height: 80px;
     border-top: 1px solid #f6dcd5;
     width: 90%;
     margin-left: 3%;
   }
+
   footer .footer_bottom_txt {
     padding: 30px 0px;
     display: flex;
     justify-content: space-between;
     color: #f6dcd5;
   }
+
   footer .footer_bottom_txt p:first-child {
     font-size: 12px;
   }
+
   footer .footer_bottom_txt p:nth-of-type(2) {
     text-align: right;
     font-size: 12px;
   }
+
   footer .footer_menu li:hover {
     color: #f8eecc;
   }
+
   footer .footer_icon li:hover {
     color: #f8eecc;
   }
+
   /*top버튼*/
   .top1 {
     font-size: 30px;
@@ -1648,14 +1764,17 @@ a {
     bottom: 10px;
     cursor: pointer;
   }
+
   /* 마우스 */
   .cursor {
     display: none;
   }
+
   header,
   footer {
     font-family: "Libre Bodoni", serif;
   }
+
   /* header */
   header {
     width: 100%;
@@ -1677,6 +1796,7 @@ a {
   .menu_icon {
     display: none;
   }
+
   header .menu_bar {
     font-size: 30px;
     position: absolute;
@@ -1686,6 +1806,7 @@ a {
     color: #f8eecc;
     cursor: pointer;
   }
+
   /* 숨겨진 메뉴창 */
   header .menu_open {
     width: 100%;
@@ -1697,6 +1818,7 @@ a {
     top: 0px;
     z-index: 11;
   }
+
   header .menu_openbar {
     font-size: 30px;
     color: #f8eecc;
@@ -1708,28 +1830,34 @@ a {
     cursor: pointer;
     z-index: 12;
   }
+
   header .menu_open ul {
     padding-top: 20%;
   }
+
   header .menu_open li {
     color: #f6dcd5;
     font-size: 30px;
     text-align: center;
     margin: 90px auto;
   }
+
   /* header제이쿼리 */
   body {
     overflow-x: clip;
   }
+
   header .menu_open {
     transform: translateX(100%);
     transition: all 1s ease;
     visibility: hidden;
   }
+
   header .menu_open.on {
     transform: translateX(0%);
     visibility: visible;
   }
+
   /* 메뉴 hover */
   header .menu_open li {
     transition: all 0.2s ease;
@@ -1739,23 +1867,29 @@ a {
     animation: bounce 0.9s ease;
     color: #f8eecc;
   }
+
   @keyframes bounce {
     0% {
       transform: translateY(0);
     }
+
     30% {
       transform: translateY(-15px);
     }
+
     50% {
       transform: translateY(0);
     }
+
     70% {
       transform: translateY(-7px);
     }
+
     100% {
       transform: translateY(0);
     }
   }
+
   /*-================ visual =================-*/
   #visual {
     height: 600px;
@@ -1843,6 +1977,7 @@ a {
   }
 
   @keyframes txt {
+
     0%,
     33.5% {
       color: #3a2412;
@@ -1952,8 +2087,16 @@ a {
     font-size: 1.2rem;
     font-weight: bold;
   }
+
+  #con01 .txtcard p:nth-of-type(2) {
+    margin-bottom: 20px;
+  }
+
   /*-================ con02 =================-*/
   #con02 {
+    background-image: linear-gradient(rgba(149, 158, 127, 0.7), rgba(149, 158, 127, 0.7)), url(../img/con02_bg.png);
+    background-position: center center;
+    background-size: contain;
     background-color: #959e7f;
     width: 100%;
     margin: 0px auto;
@@ -1981,12 +2124,12 @@ a {
     margin-bottom: 10px;
   }
 
-  #con02 .txtbox > p {
+  #con02 .txtbox>p {
     font-weight: bold;
     font-size: 1.5rem;
   }
 
-  #con02 .txtbox > h3 {
+  #con02 .txtbox>h3 {
     font-size: 3.5rem;
     font-family: "Libre Bodoni", serif;
   }
@@ -2075,6 +2218,7 @@ a {
     right: 10px;
     cursor: pointer;
   }
+
   #con02 .modal .overlay-txt {
     position: absolute;
     bottom: 0;
@@ -2082,12 +2226,10 @@ a {
     width: 100%;
     padding: 40px 20px 20px;
     /* 아래에서 위로 자연스럽게 어두워지는 그라데이션 */
-    background: linear-gradient(
-      to top,
-      rgba(20, 12, 6, 0.9) 0%,
-      rgba(20, 12, 6, 0.5) 60%,
-      transparent 100%
-    );
+    background: linear-gradient(to top,
+        rgba(20, 12, 6, 0.9) 0%,
+        rgba(20, 12, 6, 0.5) 60%,
+        transparent 100%);
     color: #fff;
   }
 
@@ -2166,6 +2308,7 @@ a {
     object-fit: cover;
     display: block;
   }
+
   #con03 .txtcard {
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -2182,12 +2325,18 @@ a {
     opacity: 0;
     transition: 0.5s;
   }
+
   #con03 .txtcard:hover {
     opacity: 1;
   }
+
   #con03 .txtcard p:nth-of-type(1) {
     font-size: 1.3rem;
     font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  #con03 .txtcard p:nth-of-type(2) {
     margin-bottom: 20px;
   }
 
@@ -2232,6 +2381,7 @@ a {
       transform: translateX(-2220px);
     }
   }
+
   /*-================ con04 =================-*/
   #con04 {
     background-color: #f6efdd;
@@ -2240,12 +2390,10 @@ a {
     overflow: hidden;
     /* 가로 넘침 방지 */
   }
+
   #con04 .wrap {
     width: 90%;
     margin: 0px auto;
-  }
-  #con04 .desc2 {
-    display: none;
   }
 
   #con04 h2 {
@@ -2254,6 +2402,7 @@ a {
     font-family: "Libre Bodoni", serif;
     margin-bottom: 10px;
   }
+
   #con04 .desc {
     display: flex;
     justify-content: center;
@@ -2264,7 +2413,7 @@ a {
     align-items: center;
     gap: 10px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     opacity: 0;
     transform: translateY(40px);
     transition: 1s;
@@ -2283,7 +2432,7 @@ a {
   #con04 .spectrum-line-box {
     position: relative;
     width: 100%;
-    margin: 30px 0 40px;
+    margin-bottom: 60px;
     display: flex;
     align-items: center;
     opacity: 0;
@@ -2291,10 +2440,12 @@ a {
     transition: 1s;
     transition-delay: 0.3s;
   }
+
   #con04 .spectrum-line-box.on {
     opacity: 1;
     transform: translateY(0px);
   }
+
   #con04 .spectrum-line-box .line {
     position: relative;
     width: 100%;
@@ -2310,13 +2461,16 @@ a {
     letter-spacing: 1px;
     color: #3a2412;
   }
+
   #con04 .label-pos.light {
     left: 0;
   }
+
   #con04 .label-pos.balanced {
     left: 50%;
     transform: translateX(-50%);
   }
+
   #con04 .label-pos.rich {
     right: 0;
   }
@@ -2339,9 +2493,11 @@ a {
   #con04 .spectrum-line-box .dot.pos-38 {
     left: 38%;
   }
+
   #con04 .spectrum-line-box .dot.pos-64 {
     left: 64%;
   }
+
   #con04 .spectrum-line-box .dot.pos-90 {
     left: 90%;
   }
@@ -2405,11 +2561,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff; /* 카드 배경 (원하시는 톤으로 조절 가능) */
+    background-color: #fff;
+    /* 카드 배경 (원하시는 톤으로 조절 가능) */
     padding: 15px 30px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(58, 36, 18, 0.05);
-    text-align: left; /* 텍스트 좌측 정렬로 가독성 향상 */
+    text-align: left;
+    /* 텍스트 좌측 정렬로 가독성 향상 */
     gap: 20px;
   }
 
@@ -2427,33 +2585,40 @@ a {
     object-fit: cover;
     display: block;
   }
+
   #con04 .c-txt {
     width: 130px;
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
   }
+
   #con04 .c-txt span:nth-of-type(1) {
     margin: 0xp 20px;
   }
+
   /* footer */
   footer {
     width: 100%;
     height: 100%;
     background-color: #2d1b24;
   }
+
   footer .footer_logo img {
     width: 120px;
     margin: 15% 0% 0% 10%;
   }
+
   footer .footer_top {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   footer .footer_menu {
     display: none;
   }
+
   footer .footer_icon {
     display: flex;
     color: #f6dcd5;
@@ -2462,16 +2627,20 @@ a {
   footer .footer_bottom_txt {
     text-align: right;
   }
+
   footer .footer_bottom p {
     font-size: 8px;
     color: #f6dcd5;
     margin-left: 3%;
   }
+
   footer .footer_bottom p:nth-of-type(2) {
     text-align: right;
   }
 }
+
 @media (max-width: 500px) {
+
   /*-================ con02 =================-*/
   #con02 {
     background-color: #959e7f;
@@ -2501,12 +2670,12 @@ a {
     margin-bottom: 10px;
   }
 
-  #con02 .txtbox > p {
+  #con02 .txtbox>p {
     font-weight: bold;
     font-size: 1rem;
   }
 
-  #con02 .txtbox > h3 {
+  #con02 .txtbox>h3 {
     font-size: 2.3rem;
     font-family: "Libre Bodoni", serif;
   }
@@ -2596,6 +2765,7 @@ a {
     right: 10px;
     cursor: pointer;
   }
+
   #con02 .modal .overlay-txt {
     position: absolute;
     bottom: 0;
@@ -2603,12 +2773,10 @@ a {
     width: 100%;
     padding: 40px 20px 20px;
     /* 아래에서 위로 자연스럽게 어두워지는 그라데이션 */
-    background: linear-gradient(
-      to top,
-      rgba(20, 12, 6, 0.9) 0%,
-      rgba(20, 12, 6, 0.5) 60%,
-      transparent 100%
-    );
+    background: linear-gradient(to top,
+        rgba(20, 12, 6, 0.9) 0%,
+        rgba(20, 12, 6, 0.5) 60%,
+        transparent 100%);
     color: #fff;
   }
 
@@ -2625,6 +2793,7 @@ a {
     color: #f0f0f0;
     word-break: keep-all;
   }
+
   /*-================ con03 =================-*/
   #con03 {
     background-color: #f5d0be;
@@ -2687,6 +2856,7 @@ a {
     object-fit: cover;
     display: block;
   }
+
   #con03 .txtcard {
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
@@ -2703,12 +2873,19 @@ a {
     opacity: 0;
     transition: 0.5s;
   }
+
   #con03 .txtcard:hover {
     opacity: 1;
   }
+
   #con03 .txtcard p:nth-of-type(1) {
     font-size: 1.3rem;
     font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  #con03 .txtcard p:nth-of-type(2),
+  #con03 .txtcard p:nth-of-type(3) {
     margin-bottom: 20px;
   }
 
