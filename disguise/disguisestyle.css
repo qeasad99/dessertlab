@@ -14,10 +14,10 @@ a {
 }
 .cursor {
   position: fixed;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   z-index: 9999;
-  transform: translate(-50%, -50%);
+  transform: translate(-25%, -15%);
   pointer-events: none;
 }
 
