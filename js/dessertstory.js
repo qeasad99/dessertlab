@@ -305,9 +305,10 @@ $(function () {
     // 카드 글자 나타내기
     $(".con03_right01").hide();
     $(".con03_hidden01").slideDown(1800);
-    // 모바일
-    $(".con03_right01").hide();
-    $(".con03_mobhidden01").slideDown(1800);
+    // 모바일일 때만 글자 나타내기
+    if (window.innerWidth <= 768) {
+      $(".con03_mobhidden01").slideDown(1800);
+    }
     //나머지 카드 숨기기 카드 2
     $(".con03_right02").hide();
     $(".con03_hidden02").hide();
@@ -343,8 +344,10 @@ $(function () {
     $(".con03_right02").hide();
     $(".con03_hidden02").slideDown(2000);
     // 모바일
-    $(".con03_right01").hide();
-    $(".con03_mobhidden02").slideDown(1800);
+    // 모바일일 때만 글자 나타내기
+    if (window.innerWidth <= 768) {
+      $(".con03_mobhidden02").slideDown(1800);
+    }
     // 나머지 카드 숨기기 01
     $(".con03_right01").hide();
     $(".con03_hidden01").hide();
@@ -378,8 +381,10 @@ $(function () {
     $(".con03_right03").hide();
     $(".con03_hidden03").slideDown(2000);
     // 모바일
-    $(".con03_right01").hide();
-    $(".con03_mobhidden03").slideDown(1800);
+    // 모바일일 때만 글자 나타내기
+    if (window.innerWidth <= 768) {
+      $(".con03_mobhidden03").slideDown(1800);
+    }
     // 나머지 카드 숨기기 01
     $(".con03_right01").hide();
     $(".con03_hidden01").hide();
@@ -412,9 +417,10 @@ $(function () {
     // 카드 글자 나타내기
     $(".con03_right04").hide();
     $(".con03_hidden04").slideDown(2000);
-    // 모바일
-    $(".con03_right01").hide();
-    $(".con03_mobhidden04").slideDown(1800);
+    // 모바일일 때만 글자 나타내기
+    if (window.innerWidth <= 768) {
+      $(".con03_mobhidden04").slideDown(1800);
+    }
     // 나머지 카드 숨기기 01
     $(".con03_right01").hide();
     $(".con03_hidden01").hide();
