@@ -541,4 +541,8 @@ $(function () {
       }, 1500);
     }
   });
+  /*top 버튼 */
+  $(".top1").on("click", function () {
+    $("html, body").stop().animate({ scrollTop: "0" });
+  });
 });

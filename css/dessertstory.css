@@ -353,7 +353,7 @@ h5,
     border: 1px solid white;
     border-radius: 25px;
     background-color: #879179;
-    width: 70%;
+    width: 80%;
     height: 200px;
   }
   #con02 li img {
@@ -786,6 +786,15 @@ h5,
   /* 마우스 */
   body {
     cursor: none;
+  }
+  /* 탑버튼 */
+  .top1 {
+    font-size: 50px;
+    color: #2d1b24;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
   }
   /* font */
   header,
@@ -1614,6 +1623,15 @@ h5,
   /* 마우스 */
   body {
     cursor: none;
+  }
+  /* 탑버튼 */
+  .top1 {
+    font-size: 50px;
+    color: #2d1b24;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    cursor: pointer;
   }
   /* font */
   header,
