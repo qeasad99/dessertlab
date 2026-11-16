@@ -305,17 +305,30 @@ $(function () {
     // 카드 글자 나타내기
     $(".con03_right01").hide();
     $(".con03_hidden01").slideDown(1800);
-
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden01").slideDown(1800);
     //나머지 카드 숨기기 카드 2
     $(".con03_right02").hide();
     $(".con03_hidden02").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden02").hide();
     //나머지 카드 숨기기 카드 3
     $(".con03_right03").hide();
     $(".con03_hidden03").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden03").hide();
     //나머지 카드 숨기기 카드 4
     $(".con03_right04").hide();
     $(".con03_hidden04").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden04").hide();
   });
+  // 케이크 모바일
+
   // con03 타르트
   $(".tart").on("click", function () {
     $("#con03 ul li").removeClass("on");
@@ -329,15 +342,27 @@ $(function () {
     // 카드 글자 나타내기
     $(".con03_right02").hide();
     $(".con03_hidden02").slideDown(2000);
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden02").slideDown(1800);
     // 나머지 카드 숨기기 01
     $(".con03_right01").hide();
     $(".con03_hidden01").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden01").hide();
     // 나머지 카드 숨기기 03
     $(".con03_right03").hide();
     $(".con03_hidden03").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden03").hide();
     // 나머지 카드 숨기기 04
     $(".con03_right04").hide();
     $(".con03_hidden04").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden04").hide();
   });
   // con03 쿠키
   $(".cookie").on("click", function () {
@@ -352,15 +377,27 @@ $(function () {
     // 카드 글자 나타내기
     $(".con03_right03").hide();
     $(".con03_hidden03").slideDown(2000);
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden03").slideDown(1800);
     // 나머지 카드 숨기기 01
     $(".con03_right01").hide();
     $(".con03_hidden01").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden01").hide();
     // 나머지 카드 숨기기 02
     $(".con03_right02").hide();
     $(".con03_hidden02").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden02").hide();
     // 나머지 카드 숨기기 04
     $(".con03_right04").hide();
     $(".con03_hidden04").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden04").hide();
   });
   // con04 페이스트리
   $(".pastry").on("click", function () {
@@ -375,15 +412,26 @@ $(function () {
     // 카드 글자 나타내기
     $(".con03_right04").hide();
     $(".con03_hidden04").slideDown(2000);
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden04").slideDown(1800);
     // 나머지 카드 숨기기 01
     $(".con03_right01").hide();
     $(".con03_hidden01").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden01").hide();
     // 나머지 카드 숨기기 02
     $(".con03_right02").hide();
     $(".con03_hidden02").hide();
+    // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden02").hide();
     // 나머지 카드 숨기기 03
     $(".con03_right03").hide();
-    $(".con03_hidden03").hide();
+    $(".con03_hidden03").hide(); // 모바일
+    $(".con03_right01").hide();
+    $(".con03_mobhidden03").hide();
   });
   // con02 스크롤 제목1
   $(window).on("scroll", function () {
