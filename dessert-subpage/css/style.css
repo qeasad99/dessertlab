@@ -1,0 +1,1345 @@
+/* Dessert Lab subpage | standalone sections | team header/footer unchanged */
+:root {
+  color-scheme: light;
+  --burgundy: #580c21;
+  --cream: #fff2e8;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--cream);
+  font-family: Georgia, "Times New Roman", serif;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+.page-shell {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: clip;
+}
+.visual-panel {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+
+
+
+
+[hidden] {
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Team header is fixed. Offset only this subpage's artwork. */
+body.dessert-subpage .page-shell {
+  padding-top: var(--subpage-header-height, 80px);
+}
+body.dessert-subpage .visual-panel {
+  scroll-margin-top: calc(var(--subpage-header-height, 80px) + 8px);
+}
+/* Avoid team footer border overflow on narrow viewport, without touching team CSS. */
+@media (max-width: 768px) {
+  body.dessert-subpage header img {
+    width: clamp(110px, 22vw, 250px);
+  }
+  body.dessert-subpage header .menu {
+    gap: 10px;
+    font-size: 12px;
+  }
+  body.dessert-subpage header .menu_icon {
+    gap: 8px;
+    margin-right: 4px;
+    font-size: 14px;
+  }
+  body.dessert-subpage footer .footer_menu {
+    gap: 12px;
+    margin-right: 12px;
+    font-size: 12px;
+  }
+  body.dessert-subpage footer .footer_icon {
+    gap: 9px;
+    margin-right: 10px;
+    font-size: 15px;
+  }
+  body.dessert-subpage footer img {
+    width: min(200px, 25vw);
+  }
+  body.dessert-subpage footer .footer_bottom {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+  }
+}
+@media (max-width: 520px) {
+  body.dessert-subpage header .menu {
+    display: none;
+  }
+  body.dessert-subpage footer .footer_menu {
+    display: none;
+  }
+  body.dessert-subpage footer .footer_bottom_txt {
+    gap: 10px;
+  }
+}
+
+/* ==============================================================
+   HERO V3 · ALL ORIGINAL INTERACTIVE HTML/SVG ELEMENTS
+   Scoped strictly to #hero. Team header/footer and other panels
+   intentionally remain unchanged.
+   ============================================================== */
+body.dessert-subpage {
+  overflow-x: clip;
+}
+body.dessert-subpage .page-shell {
+  overflow: visible;
+}
+body.dessert-subpage #hero.hero-origin {
+  --hero-ink: #541324;
+  --hero-gold: #d0a23f;
+  --hero-paper: #faeee5;
+  position: relative;
+  height: 600px;
+  isolation: isolate;
+  line-height: normal;
+  color: var(--hero-ink);
+  background: linear-gradient(118deg, #fff5ec 0%, #fdf0e5 42%, #f8e8dc 100%);
+}
+body.dessert-subpage #hero.hero-origin::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+  background: inherit;
+}
+body.dessert-subpage #hero.hero-origin::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.2;
+  z-index: 0;
+  background-image: radial-gradient(#bd8f79 0.45px, transparent 0.55px);
+  background-size: 7px 7px;
+  mix-blend-mode: multiply;
+}
+#hero .hero-origin__inner {
+  position: relative;
+  width: min(100%, 1380px);
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(390px, 40%) minmax(0, 60%);
+  z-index: 1;
+}
+#hero .hero-origin__copy {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 93px 0 48px clamp(34px, 5.4vw, 88px);
+}
+
+
+#hero .hero-origin__title {
+  margin: 0;
+  color: var(--hero-ink);
+  font-family: "Libre Bodoni", Georgia, serif;
+  font-size: clamp(60px, 6.5vw, 92px);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.96;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.42);
+  animation: hero-detail-rise 1s 0.24s cubic-bezier(0.18, 0.68, 0.26, 1) both;
+}
+#hero .hero-origin__title em {
+  font-style: italic;
+  letter-spacing: -0.075em;
+}
+#hero .hero-origin__flourish {
+  width: min(305px, 80%);
+  height: 26px;
+  margin: 23px 0 8px;
+  color: #c59895;
+}
+#hero .hero-origin__flourish path {
+  stroke-dasharray: 330;
+  stroke-dashoffset: 330;
+  animation: hero-draw 1.35s 0.78s ease-out forwards;
+}
+#hero .hero-origin__intro {
+  color: #875c5d;
+  margin: 0 0 15px;
+  font:
+    400 13px/1.5 system-ui,
+    "Apple SD Gothic Neo",
+    sans-serif;
+  letter-spacing: 0.045em;
+  animation: hero-detail-rise 0.9s 0.65s ease-out both;
+}
+#hero .hero-origin__cta {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--hero-ink);
+  animation: hero-detail-rise 0.95s 0.8s ease-out both;
+}
+#hero .hero-origin__cta > span:first-child {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 1px solid rgba(84, 19, 36, 0.4);
+  box-shadow:
+    inset 0 0 0 5px rgba(255, 255, 255, 0.52),
+    0 5px 22px rgba(69, 17, 33, 0.08);
+  font:
+    30px/1 Georgia,
+    serif;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+#hero .hero-origin__cta:hover > span:first-child,
+#hero .hero-origin__cta:focus-visible > span:first-child {
+  background: var(--hero-ink);
+  color: #fff4e5;
+  transform: translate(4px, -3px);
+  box-shadow: 0 10px 22px rgba(69, 17, 33, 0.18);
+}
+
+#hero .hero-origin__stage {
+  position: relative;
+  min-width: 0;
+  height: 100%;
+  z-index: 2;
+}
+#hero .hero-origin__globe {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  max-width: 95%;
+  top: 8px;
+  left: 47%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 42% 38%,
+    rgba(255, 255, 255, 0.5),
+    rgba(241, 199, 182, 0.2) 60%,
+    rgba(238, 170, 164, 0.08) 76%,
+    transparent 77%
+  );
+  border: 1px solid rgba(167, 76, 82, 0.055);
+  box-shadow:
+    inset 0 0 55px rgba(184, 110, 104, 0.06),
+    0 0 140px rgba(255, 255, 255, 0.28);
+  pointer-events: none;
+}
+#hero .hero-origin__globe::before,
+#hero .hero-origin__globe::after {
+  content: "";
+  position: absolute;
+  inset: 12% 30%;
+  border: 1px solid rgba(165, 79, 83, 0.065);
+  border-radius: 50%;
+}
+#hero .hero-origin__globe::after {
+  inset: 25% 4%;
+}
+#hero .hero-origin__map-wrap {
+  position: absolute;
+  width: min(100%, 810px);
+  aspect-ratio: 1388 / 807;
+  top: 58px;
+  right: 7px;
+  filter: drop-shadow(0 11px 5px rgba(100, 28, 44, 0.035));
+  animation: hero-detail-rise 1.2s 0.38s ease-out both;
+}
+#hero .hero-origin__map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+#hero .hero-origin__point {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 50%;
+  color: var(--hero-ink);
+  background: transparent;
+  cursor: pointer;
+  z-index: 4;
+  font: inherit;
+  outline-offset: 5px;
+}
+#hero .hero-origin__point::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(203, 156, 54, 0.33);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.7);
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
+}
+#hero .hero-origin__point.is-active::before,
+#hero .hero-origin__point:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+#hero .hero-origin__point.is-active::before {
+  animation: hero-pin-pulse 2.8s ease-in-out infinite;
+}
+#hero .hero-origin__point-dot {
+  display: block;
+  width: 9px;
+  height: 9px;
+  background: #e8b34c;
+  border: 2px solid #fff2d4;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 3px #c8932e,
+    0 3px 12px rgba(104, 47, 24, 0.22);
+}
+#hero .hero-origin__point:hover .hero-origin__point-dot,
+#hero .hero-origin__point.is-active .hero-origin__point-dot {
+  background: #fff7cf;
+  box-shadow:
+    0 0 0 4px #d7a43c,
+    0 0 0 8px rgba(215, 164, 60, 0.12);
+}
+#hero .hero-origin__point-label {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  display: block;
+  white-space: nowrap;
+  padding: 3px 6px;
+  font:
+    600 clamp(10px, 1vw, 13px)/1.2 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.015em;
+  color: #522034;
+  text-shadow:
+    1px 1px rgba(255, 247, 236, 0.9),
+    -1px -1px rgba(255, 247, 236, 0.9);
+  background: rgba(255, 243, 232, 0.62);
+  border-radius: 4px;
+  transform: translateY(-50%);
+  transition:
+    color 0.25s,
+    background 0.25s;
+}
+#hero .hero-origin__point[style*="--tip:left"] .hero-origin__point-label {
+  left: auto;
+  right: 30px;
+}
+#hero .hero-origin__point[style*="--tip:top"] .hero-origin__point-label {
+  left: 50%;
+  top: auto;
+  bottom: 25px;
+  transform: translateX(-50%);
+}
+#hero .hero-origin__point.is-active .hero-origin__point-label,
+#hero .hero-origin__point:hover .hero-origin__point-label {
+  color: #762e35;
+  background: rgba(255, 244, 229, 0.95);
+}
+#hero .hero-origin__point:focus-visible {
+  outline: 2px solid #9e4257;
+}
+#hero .hero-origin__card {
+  position: absolute;
+  width: 310px;
+  min-height: 139px;
+  right: 35px;
+  bottom: 56px;
+  display: grid;
+  grid-template-columns: 114px minmax(0, 1fr);
+  gap: 13px;
+  align-items: stretch;
+  padding: 9px;
+  border-radius: 14px;
+  border: 1px solid rgba(156, 103, 81, 0.23);
+  background: rgba(255, 249, 237, 0.97);
+  box-shadow:
+    0 14px 35px rgba(101, 40, 43, 0.16),
+    0 2px 8px rgba(101, 40, 43, 0.05);
+  color: var(--hero-ink);
+  z-index: 9;
+  transition:
+    opacity 0.2s ease,
+    transform 0.3s ease;
+}
+#hero .hero-origin__card.is-changing {
+  opacity: 0.3;
+  transform: translateY(8px);
+}
+#hero .hero-origin__card-photo {
+  width: 114px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+#hero .hero-origin__card-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4px 3px 3px 0;
+}
+#hero .hero-origin__card-region {
+  font:
+    700 9px/1.5 system-ui,
+    sans-serif;
+  letter-spacing: 0.12em;
+  color: #a66d56;
+}
+#hero .hero-origin__card-title {
+  font:
+    600 23px/1.1 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.03em;
+  margin: 6px 0;
+}
+#hero .hero-origin__card-description {
+  font:
+    400 10px/1.55 system-ui,
+    "Apple SD Gothic Neo",
+    sans-serif;
+  margin: 0;
+  color: #7f6261;
+  word-break: keep-all;
+}
+#hero .hero-origin__card-footnote {
+  margin-top: auto;
+  padding-top: 8px;
+  font:
+    650 8px/1.2 system-ui,
+    sans-serif;
+  letter-spacing: 0.09em;
+  color: #af895b;
+}
+#hero .hero-origin__card-footnote span {
+  margin-left: 5px;
+}
+#hero .hero-origin__counter {
+  position: absolute;
+  left: 46px;
+  bottom: 42px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #8e5860;
+  font:
+    600 12px/1 "Libre Bodoni",
+    Georgia,
+    serif;
+}
+#hero .hero-origin__counter-rule {
+  width: 44px;
+  height: 1px;
+  background: #d0ae83;
+}
+
+@keyframes hero-detail-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes hero-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes hero-pin-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(215, 164, 60, 0);
+    transform: scale(0.85);
+    opacity: 0.5;
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(215, 164, 60, 0.16);
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+@media (max-width: 1200px) {
+  #hero .hero-origin__inner {
+    grid-template-columns: minmax(330px, 39%) minmax(0, 61%);
+  }
+  #hero .hero-origin__copy {
+    padding-left: 38px;
+  }
+  #hero .hero-origin__title {
+    font-size: clamp(59px, 7vw, 82px);
+  }
+  #hero .hero-origin__map-wrap {
+    top: 95px;
+  }
+  #hero .hero-origin__card {
+    right: 20px;
+    bottom: 45px;
+  }
+  #hero .hero-origin__point-label {
+    font-size: 11px;
+  }
+}
+@media (max-width: 850px) {
+  body.dessert-subpage #hero.hero-origin {
+    height: auto;
+    min-height: 665px;
+  }
+  #hero .hero-origin__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  #hero .hero-origin__copy {
+    padding: 46px 32px 10px;
+  }
+
+  #hero .hero-origin__title {
+    font-size: clamp(52px, 8vw, 72px);
+  }
+  #hero .hero-origin__flourish {
+    margin: 12px 0 3px;
+    width: 200px;
+  }
+  #hero .hero-origin__intro {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+  #hero .hero-origin__cta > span:first-child {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+
+  #hero .hero-origin__stage {
+    width: 100%;
+    height: 340px;
+  }
+  #hero .hero-origin__globe {
+    width: 350px;
+    height: 350px;
+    top: -10px;
+  }
+  #hero .hero-origin__map-wrap {
+    width: calc(100% - 60px);
+    top: 12px;
+    right: 30px;
+    max-width: 620px;
+  }
+  #hero .hero-origin__point-label {
+    font-size: 10px;
+  }
+  #hero .hero-origin__card {
+    width: 267px;
+    grid-template-columns: 92px minmax(0, 1fr);
+    min-height: 100px;
+    bottom: 18px;
+    right: 28px;
+  }
+  #hero .hero-origin__card-photo {
+    width: 92px;
+    height: 100px;
+  }
+  #hero .hero-origin__card-title {
+    font-size: 20px;
+  }
+  #hero .hero-origin__card-description {
+    font-size: 9px;
+  }
+  #hero .hero-origin__counter {
+    bottom: 32px;
+    left: 38px;
+  }
+
+}
+@media (max-width: 550px) {
+  body.dessert-subpage #hero.hero-origin {
+    min-height: 690px;
+  }
+  #hero .hero-origin__copy {
+    padding: 37px 24px 6px;
+  }
+
+  #hero .hero-origin__title {
+    font-size: clamp(49px, 12vw, 65px);
+  }
+  #hero .hero-origin__intro {
+    display: none;
+  }
+  #hero .hero-origin__flourish {
+    margin: 9px 0 5px;
+    height: 17px;
+  }
+  #hero .hero-origin__stage {
+    height: 355px;
+  }
+  #hero .hero-origin__map-wrap {
+    width: calc(100% - 20px);
+    right: 10px;
+    top: 25px;
+  }
+  #hero .hero-origin__point-label {
+    font-size: 9px;
+    padding: 2px 3px;
+  }
+  #hero .hero-origin__point[style*="--tip:left"] .hero-origin__point-label {
+    right: 22px;
+  }
+  #hero .hero-origin__point-label {
+    left: 22px;
+  }
+  #hero .hero-origin__point[style*="--tip:top"] .hero-origin__point-label {
+    bottom: 20px;
+  }
+  #hero .hero-origin__point[data-origin="usa"] .hero-origin__point-label,
+  #hero .hero-origin__point[data-origin="mexico"] .hero-origin__point-label,
+  #hero .hero-origin__point[data-origin="japan-korea"] .hero-origin__point-label {
+    display: none;
+  }
+  #hero .hero-origin__card {
+    left: 20px;
+    bottom: 12px;
+    right: auto;
+    width: min(308px, calc(100% - 40px));
+  }
+  #hero .hero-origin__counter {
+    left: auto;
+    right: 22px;
+    bottom: 126px;
+  }
+
+}
+@media (prefers-reduced-motion: reduce) {
+  #hero .hero-origin__title,
+#hero .hero-origin__cta,
+#hero .hero-origin__intro,
+#hero .hero-origin__map-wrap,
+#hero .hero-origin__flourish path,
+#hero .hero-origin__point.is-active::before{
+    animation: none !important;
+  }
+  #hero .hero-origin__flourish path {
+    stroke-dashoffset: 0 !important;
+  }
+  #hero .hero-origin__card {
+    transition: none !important;
+  }
+}
+
+/* === CON01 / THE WORLD DESSERT COLLECTION ===
+   All selectors scoped; team header, hero and other panels unchanged. */
+body.dessert-subpage #collection.collection-editorial {
+  --c-ink: #4c1729; --c-muted: #94766b; --c-gold:#b58b4b;
+  position: relative; isolation: isolate; width:100%; max-width:none;
+  background: #f8f0e7; color:var(--c-ink); padding: 82px 0 48px;
+  line-height:normal; overflow:hidden; font-family: "Libre Bodoni", Georgia, serif;
+}
+#collection .collection-editorial__grain { position:absolute; inset:0; pointer-events:none; opacity:.68;
+ background:radial-gradient(ellipse 95% 65% at 70% 15%,#fffaf0 0%,transparent 75%),
+ repeating-linear-gradient(0deg,transparent 0px,transparent 3px,rgba(122,70,57,.018) 4px,transparent 5px); }
+#collection .collection-editorial__inner {position:relative; width:min(1180px,calc(100% - 90px)); margin:0 auto;}
+
+
+#collection .collection-editorial__heading {display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:end;padding:28px 0 30px;}
+
+
+#collection .collection-editorial__heading h2 {font:500 clamp(42px,5.2vw,73px)/.98 "Libre Bodoni",Georgia,serif;letter-spacing:-.045em;margin:0;}
+#collection .collection-editorial__heading h2 em {font-weight:400; color:#a46c64;}
+#collection .collection-editorial__intro {display:flex;align-items:center;gap:18px;justify-content:flex-end;}
+#collection .collection-editorial__intro p {font:400 12px/1.9 system-ui,sans-serif;letter-spacing:-.015em;word-break:keep-all;color:#81695f;margin:0;}
+#collection .collection-editorial__intro-line {height:75px;width:1px;background:#cfb39d;flex:none;}
+
+
+
+
+
+
+#collection .collection-editorial__viewport {overflow:hidden;margin:0 -2px;padding:5px 2px 9px;}
+#collection .collection-editorial__grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;perspective:1300px;}
+#collection .collection-editorial__grid.is-exiting-next {animation:collection-slide-out-next .20s ease both;}
+#collection .collection-editorial__grid.is-exiting-prev {animation:collection-slide-out-prev .20s ease both;}
+#collection .collection-editorial__grid.is-entering-next {animation:collection-slide-in-next .42s cubic-bezier(.19,.7,.25,1) both;}
+#collection .collection-editorial__grid.is-entering-prev {animation:collection-slide-in-prev .42s cubic-bezier(.19,.7,.25,1) both;}
+#collection .collection-editorial__card {position:relative;display:block;border:0; background:transparent;cursor:pointer;
+ width:100%;height:265px;padding:0;perspective:1200px;text-align:left;color:inherit;font:inherit;}
+#collection .collection-editorial__card:focus-visible {outline:3px solid #ae7e50;outline-offset:3px;border-radius:12px;}
+#collection .collection-editorial__card-inner {display:block;position:relative;width:100%;height:100%;transform-style:preserve-3d;
+ transition:transform .78s cubic-bezier(.16,.75,.3,1);}
+#collection .collection-editorial__card.is-flipped .collection-editorial__card-inner {transform:rotateY(180deg);}
+#collection .collection-editorial__face {position:absolute;inset:0;overflow:hidden;border:1px solid #e2d2c3;border-radius:12px;
+ backface-visibility:hidden;-webkit-backface-visibility:hidden;box-shadow:0 7px 19px rgba(89,45,34,.055);
+ background:#fff9f0;}
+#collection .collection-editorial__front {display:grid;grid-template-columns:46% 54%;}
+#collection .collection-editorial__front-copy {padding:22px 13px 19px 25px;display:flex;flex-direction:column;align-items:flex-start;position:relative;min-width:0;}
+#collection .collection-editorial__number {font:italic 400 38px/1 "Libre Bodoni",serif;color:#cbb7a6;letter-spacing:-.08em;}
+#collection .collection-editorial__country {margin:23px 0 7px;font:700 10px/1.35 system-ui,sans-serif;letter-spacing:.14em;color:#ab7e66;}
+#collection .collection-editorial__dish {margin:0;font:500 clamp(22px,2.6vw,36px)/1.08 "Libre Bodoni",Georgia,serif;letter-spacing:-.035em;word-break:normal;}
+#collection .collection-editorial__short {font:400 11px/1.65 system-ui,sans-serif;color:#997e70;margin:10px 0 auto;word-break:keep-all;}
+#collection .collection-editorial__flipcue {margin-top:8px;color:#a37e68;font:600 8px/1.4 system-ui,sans-serif;letter-spacing:.13em;}
+#collection .collection-editorial__photo-wrap {position:relative;overflow:hidden;min-width:0;}
+#collection .collection-editorial__photo-wrap img {display:block;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.75,.2,1);}
+#collection .collection-editorial__card:not(.is-flipped):hover .collection-editorial__photo-wrap img {transform:scale(1.06);}
+#collection .collection-editorial__photo-wrap:after {content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,249,240,.12),transparent 48%);pointer-events:none;}
+#collection .collection-editorial__photo-seal {position:absolute;right:13px;top:14px;width:32px;height:32px;border-radius:50%;
+ border:1px solid rgba(255,250,239,.8);display:grid;place-items:center;font:400 24px/1 serif;color:#fffaf3;
+ background:rgba(76,23,41,.68);box-shadow:0 2px 10px #0002;}
+#collection .collection-editorial__back {transform:rotateY(180deg);background:#572539;border-color:#572539; color:#ffefe0;
+ padding:24px 28px;display:flex;flex-direction:column;}
+#collection .collection-editorial__back-top {display:flex;justify-content:space-between;align-items:center;font:700 10px/1.3 system-ui,sans-serif;letter-spacing:.14em;color:#e5bea3;}
+#collection .collection-editorial__back h3 {font:500 31px/1.12 "Libre Bodoni",Georgia,serif;margin:20px 0 11px;}
+#collection .collection-editorial__back p {font:400 12px/1.8 system-ui,sans-serif;max-width:440px;margin:0;color:#f4dcd5;word-break:keep-all;}
+#collection .collection-editorial__ingredients {margin-top:auto;padding-top:15px;border-top:1px solid #ac7780;
+ display:flex;justify-content:space-between;align-items:end;gap:18px;font:500 10px/1.6 system-ui,sans-serif;color:#e8bfa6;}
+#collection .collection-editorial__ingredients b {font:700 9px/1.4 system-ui,sans-serif;letter-spacing:.11em;color:#cea485;display:block;margin-bottom:5px;}
+#collection .collection-editorial__back-arrow {font:400 28px/1 serif;white-space:nowrap;}
+#collection .collection-editorial__pagination {display:flex;justify-content:center;align-items:center;gap:18px;margin:26px auto 23px;position:relative;}
+#collection .collection-editorial__navarrow {width:38px;height:38px;border-radius:50%;background:transparent;border:1px solid #d6beaa;
+ color:#6b3542;font:400 20px/1 serif;cursor:pointer;transition:background .22s,color .22s,transform .22s;}
+#collection .collection-editorial__navarrow:hover {background:#5a2537;color:#fff;transform:translateY(-2px);}
+#collection .collection-editorial__navarrow:focus-visible, #collection .collection-editorial__pages button:focus-visible {outline:2px solid #a37848;outline-offset:3px;}
+#collection .collection-editorial__navline {width:57px;height:1px;background:#cfb9a4;}
+#collection .collection-editorial__pages {display:flex;gap:7px;align-items:center;}
+#collection .collection-editorial__pages button {width:31px;height:31px;border:0;border-radius:50%;background:transparent;
+ color:#926e62;font:600 12px/1 "Libre Bodoni",Georgia,serif;cursor:pointer;transition:background .22s,color .22s;}
+#collection .collection-editorial__pages button.is-current {background:#592538;color:#fff4e5;}
+#collection .collection-editorial__pages button:hover:not(.is-current) {background:#e9dacc;color:#582338;}
+
+
+@keyframes collection-slide-out-next {to{opacity:0;transform:translateX(-32px)}}
+@keyframes collection-slide-out-prev {to{opacity:0;transform:translateX(32px)}}
+@keyframes collection-slide-in-next {from{opacity:0;transform:translateX(36px)}to{opacity:1;transform:none}}
+@keyframes collection-slide-in-prev {from{opacity:0;transform:translateX(-36px)}to{opacity:1;transform:none}}
+@media(max-width:900px) {
+ #collection .collection-editorial__inner {width:min(100% - 40px,700px)}
+ #collection .collection-editorial__heading {grid-template-columns:1fr;gap:20px;}
+ #collection .collection-editorial__intro {justify-content:flex-start;}
+ #collection .collection-editorial__card {height:255px;}
+ #collection .collection-editorial__front-copy {padding:18px 10px 15px 17px;}
+ #collection .collection-editorial__dish {font-size:clamp(22px,3vw,29px)}
+ #collection .collection-editorial__short {font-size:10px;}
+ #collection .collection-editorial__country {margin-top:20px;}
+ #collection .collection-editorial__back {padding:18px;}
+ #collection .collection-editorial__back h3 {font-size:27px;margin:16px 0 8px;}
+ #collection .collection-editorial__back p {font-size:11px;}
+}
+@media(max-width:680px) {
+ body.dessert-subpage #collection.collection-editorial {padding:56px 0 35px;}
+ #collection .collection-editorial__inner {width:calc(100% - 30px);}
+
+ #collection .collection-editorial__heading h2 {font-size:clamp(41px,9vw,59px);}
+
+ #collection .collection-editorial__grid {grid-template-columns:1fr;gap:13px;}
+ #collection .collection-editorial__card {height:215px;}
+ #collection .collection-editorial__front-copy {padding:17px 15px 15px 20px;}
+ #collection .collection-editorial__country {margin:14px 0 6px;}
+ #collection .collection-editorial__dish {font-size:32px;}
+ #collection .collection-editorial__short {font-size:11px;}
+ #collection .collection-editorial__navline {width:20px;}
+ #collection .collection-editorial__pagination {gap:9px;}
+
+
+}
+@media(max-width:385px) {
+ #collection .collection-editorial__card {height:218px;}
+ #collection .collection-editorial__dish {font-size:27px;}
+
+ #collection .collection-editorial__navline {display:none;}
+}
+@media(prefers-reduced-motion:reduce) {
+ #collection .collection-editorial__card-inner {transition:none!important;}
+ #collection .collection-editorial__grid {animation:none!important;}
+ #collection .collection-editorial__photo-wrap img {transition:none!important;}
+}
+
+
+/* ==============================================================
+   CON02 / WORLD DESSERTS — interactive radial map
+   Scoped only to #world. Original typography, layout, and palette.
+   All seven pins, routes, plane and card are real elements.
+   ============================================================= */
+body.dessert-subpage #world.world-desserts {
+  --world-ink: #4b1022;
+  --world-caramel: #c89141;
+  --world-paper: #feebc7;
+  width: 100%; min-height: 0; aspect-ratio: 2240 / 843;
+  position: relative; isolation: isolate; overflow: hidden;
+  background: #feebc7; color: var(--world-ink);
+  font-family: "Libre Bodoni", Georgia, serif;
+  line-height: 1.35; scroll-margin-top: calc(var(--subpage-header-height, 80px) + 8px);
+}
+#world .world-desserts__paper {
+  position: absolute; inset: 0; z-index: -1; pointer-events:none;
+  background:
+    radial-gradient(ellipse 56% 74% at 64% 46%, rgba(250,202,112,.31), transparent 84%),
+    radial-gradient(ellipse 50% 80% at 92% 55%, rgba(246,188,102,.18), transparent 83%),
+    radial-gradient(ellipse 41% 52% at 10% 8%, rgba(255,255,246,.48), transparent 88%),
+    linear-gradient(109deg,#fff0d4 0%,#feebc7 49%,#fbe3b6 100%);
+}
+#world .world-desserts__paper:after {content:"";position:absolute;inset:0;opacity:.14;pointer-events:none;
+ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.19'/%3E%3C/svg%3E");}
+#world .world-desserts__copy {position:absolute;left:6.6%;top:9.4%;width:23.5%;z-index:5;line-height:normal;}
+
+#world .world-desserts__title {margin:9px 0 24px;font:500 clamp(52px,5.15vw,77px)/.86 "Libre Bodoni",Georgia,serif;letter-spacing:-.068em;color:#4f1426;white-space:nowrap;}
+#world .world-desserts__title em {font-style:italic;font-weight:500;}
+
+#world .world-desserts__description {font:500 clamp(11px,1.17vw,16px)/1.8 "Apple SD Gothic Neo","Malgun Gothic",sans-serif;margin:0;letter-spacing:-.05em;word-break:keep-all;}
+#world .world-desserts__explore {margin-top:22px;display:flex;align-items:center;justify-content:space-between;
+  width:min(100%,310px);min-height:43px;gap:10px;padding:9px 15px 9px 19px;
+  border:1px solid #bd857c;border-radius:50px;background:rgba(255,252,236,.33);color:#5c1c2b;
+  cursor:pointer;text-align:left;box-shadow:0 2px 0 rgba(151,72,58,.04);transition:background .25s,transform .25s,box-shadow .25s;
+  font:700 clamp(11px,1.1vw,15px)/1.4 "Apple SD Gothic Neo","Malgun Gothic",sans-serif;letter-spacing:-.045em;}
+#world .world-desserts__explore span:last-child {font:400 24px/1 Georgia,serif;}
+#world .world-desserts__explore:hover {background:#fff4e0;transform:translateY(-2px);box-shadow:0 8px 19px #7c37261b;}
+#world button:focus-visible {outline:2px solid #a86227;outline-offset:4px;}
+
+
+#world .world-desserts__universe {position:absolute;inset:0;isolation:isolate;}
+#world .world-desserts__routes {position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:1;}
+#world .world-desserts__orbit {fill:none;stroke:rgba(255,255,249,.72);stroke-width:2.4;}
+#world .world-desserts__orbit--outer {stroke:rgba(255,255,249,.48);}
+#world .world-desserts__spoke {fill:none;stroke:#98534e;stroke-width:4.1;stroke-dasharray:6 11;opacity:.88;}
+#world .world-desserts__active-route {fill:none;stroke:#e7a932;stroke-width:7.5;stroke-linecap:round;
+ filter:drop-shadow(0 1px 3px #d68d3d65);opacity:0;transition:opacity .16s;}
+#world .world-desserts__active-route.is-visible {opacity:1;}
+#world .world-desserts__hub {position:absolute;left:58.4375%;top:44.8399%;transform:translate(-50%,-50%);width:9.9%;aspect-ratio:1;z-index:3;
+ border-radius:50%;border:3px solid #4b0a1d;background:#590b22;
+ box-shadow:0 0 0 3px #fff4ce,0 0 0 7px #782b38,0 6px 20px #4b0c242c;display:grid;place-items:center;}
+#world .world-desserts__hub-inner {width:83%;height:83%;border:1px solid rgba(255,225,184,.48);border-radius:50%;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff2d7;gap:3px;text-align:center;}
+#world .world-desserts__hub-monogram {border:1px solid #f4dec5;width:29%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font:700 clamp(9px,1.1vw,17px)/1 Georgia,serif;}
+#world .world-desserts__hub-rule {height:1px;width:23%;background:#dcb88e;margin:3px 0;}
+#world .world-desserts__hub-caption {font:700 clamp(8px,.96vw,14px)/1.27 system-ui,sans-serif;letter-spacing:.045em;}
+#world .world-desserts__node {position:absolute;left:var(--wx);top:var(--wy);transform:translate(-50%,-50%);
+ width:45px;height:52px;padding:0;border:0;background:none;z-index:4;cursor:pointer;color:#6c2330;
+ display:grid;place-items:center;transition:filter .2s;}
+#world .world-desserts__node:before {content:"";position:absolute;inset:50%;border-radius:50%;background:rgba(241,175,53,.22);
+ transform:translate(-50%,-50%);width:48px;height:48px;opacity:0;transition:opacity .2s;}
+#world .world-desserts__node:hover:before,#world .world-desserts__node.is-active:before {opacity:1;}
+#world .world-desserts__node.is-active:before {animation:world-destination-pulse 2.6s ease-in-out infinite;}
+#world .world-desserts__pin {position:relative;z-index:1;display:block;width:25px;height:37px;filter:drop-shadow(0 1px 2px #5c282452);}
+#world .world-desserts__pin path {fill:#75142b;stroke:#fff7dc;stroke-width:1.5;}
+#world .world-desserts__pin circle {fill:#fff5d8;}
+#world .world-desserts__node.is-active .world-desserts__pin path {fill:#b46334;}
+#world .world-desserts__node-name {position:absolute;bottom:calc(100% + 1px);left:50%;transform:translateX(-50%);font:600 clamp(15px,2.1vw,31px)/1.03 "Libre Bodoni",Georgia,serif;
+ letter-spacing:-.055em;color:#4b1425;white-space:nowrap;pointer-events:none;text-shadow:0 1px 0 #fff4dc;}
+#world .world-desserts__node-name small {display:block;font-size:.67em;font-style:italic;letter-spacing:-.03em;}
+#world .world-desserts__node--usa .world-desserts__node-name {left:auto;right:80%;transform:none;text-align:right;bottom:43%;}
+#world .world-desserts__node--mexico .world-desserts__node-name {left:auto;right:45%;bottom:90%;transform:none;font-style:italic;}
+#world .world-desserts__node--brazil .world-desserts__node-name {left:auto;right:80%;bottom:auto;top:70%;transform:none;font-style:italic;}
+#world .world-desserts__node--chile .world-desserts__node-name {bottom:auto;top:87%;}
+#world .world-desserts__node--japan-korea .world-desserts__node-name {left:100%;bottom:20%;transform:none;}
+#world .world-desserts__node:hover,#world .world-desserts__node.is-active {filter:drop-shadow(0 0 7px #dfba51aa);}
+#world .world-desserts__plane {position:absolute;z-index:6;left:58.4%;top:44.8%;display:none;align-items:center;justify-content:center;
+ width:42px;height:42px;pointer-events:none;transform:translate(-50%,-50%);filter:drop-shadow(0 2px 4px #8e413074);}
+#world .world-desserts__plane.is-flying {display:flex;}
+#world .world-desserts__plane svg {width:34px;height:38px;overflow:visible;}
+#world .world-desserts__plane path {fill:#73203a;stroke:#fff2c7;stroke-width:.7;}
+#world .world-desserts__card {position:absolute;z-index:8;left:var(--card-x,58%);top:var(--card-y,58%);
+ width:min(325px,24%);height:198px;display:flex;flex-direction:column;border-radius:16px;
+ border:3px solid #fff5e5;background:#fff5e1;color:#4c1827;
+ box-shadow:0 0 0 1px #b78869,0 16px 36px rgba(82,39,29,.23),0 3px 0 rgba(124,61,38,.08);
+ overflow:hidden;transform:translate(-50%,-43%) scale(.93);opacity:0;pointer-events:none;
+ transition:transform .42s cubic-bezier(.16,.8,.2,1),opacity .32s ease;line-height:normal;}
+#world .world-desserts__card.is-visible {transform:translate(-50%,-50%) scale(1);opacity:1;}
+#world .world-desserts__card-art {height:68%;position:relative;flex:none;min-height:0;}
+#world .world-desserts__card-photo {width:100%;height:100%;object-fit:cover;display:block;}
+#world .world-desserts__card-overlay {position:absolute;inset:0;background:linear-gradient(90deg,rgba(45,15,16,.7) 0%,rgba(45,14,13,.23) 68%,transparent 100%);}
+#world .world-desserts__card-heading {position:absolute;left:18px;bottom:15px;right:30px;}
+#world .world-desserts__card-region {font:750 12px/1.3 system-ui,sans-serif;letter-spacing:.085em;color:#fff9ed;margin:0 0 6px;text-shadow:0 2px 6px #0009;}
+#world .world-desserts__card-title {font:italic 600 clamp(18px,1.85vw,26px)/1.09 "Libre Bodoni",Georgia,serif;letter-spacing:-.045em;color:#fff9ed;margin:0;text-shadow:0 3px 8px #0008;}
+#world .world-desserts__card-seal {position:absolute;right:15px;bottom:14px;display:grid;place-items:center;width:26px;height:26px;border:1px solid #fff4dc;border-radius:50%;color:#fff5de;font:400 15px/1 Georgia,serif;}
+#world .world-desserts__card-notes {padding:9px 15px 8px;flex:1;display:flex;flex-direction:column;justify-content:center;}
+#world .world-desserts__card-desc {font:500 9.5px/1.45 "Apple SD Gothic Neo","Malgun Gothic",sans-serif;word-break:keep-all;color:#764d44;margin:0;}
+#world .world-desserts__card-footer {color:#b28a67;display:block;margin-top:4px;text-align:right;font:650 7px/1 system-ui,sans-serif;letter-spacing:.08em;}
+#world .world-desserts__status {position:absolute;z-index:3;right:7%;bottom:4%;display:flex;align-items:center;gap:9px;line-height:1;margin:0;
+ font:700 9px/1.3 system-ui,sans-serif;letter-spacing:.12em;color:#9c6e65;}
+#world .world-desserts__status-indicator {width:5px;height:5px;border-radius:50%;background:#c58d4f;}
+@keyframes world-destination-pulse {50%{background:rgba(243,188,71,.35);transform:translate(-50%,-50%) scale(1.2)} }
+@media (min-width:1441px) {#world .world-desserts__card {height:clamp(164px,12vw,183px)} }
+@media (min-width:981px) and (max-width:1250px) {
+ #world .world-desserts__copy {left:5.4%;top:9%;width:26%;}
+ #world .world-desserts__title {font-size:clamp(48px,5.3vw,66px);}
+
+ #world .world-desserts__description {font-size:12px;line-height:1.65;}
+ #world .world-desserts__explore {margin-top:16px;min-height:37px;font-size:10px;}
+ #world .world-desserts__card {height:183px;width:27%;}
+ #world .world-desserts__card-notes {padding:8px 11px;}
+ #world .world-desserts__node-name {font-size:clamp(17px,2.2vw,26px);}
+}
+@media (max-width:980px) {
+ body.dessert-subpage #world.world-desserts {height:820px;aspect-ratio:auto;}
+ #world .world-desserts__copy {top:39px;left:7%;width:86%;position:absolute;}
+
+ #world .world-desserts__title {font-size:clamp(52px,8vw,73px);margin:7px 0 12px;line-height:.88;}
+
+ #world .world-desserts__description br{display:none;}
+ #world .world-desserts__description {font-size:12px;line-height:1.7;max-width:550px;}
+ #world .world-desserts__explore {margin-top:14px;width:270px;min-height:38px;font-size:11px;}
+
+ #world .world-desserts__universe {top:275px;height:520px;left:50%;width:100%;transform:translateX(-50%);}
+ #world .world-desserts__node-name {font-size:clamp(14px,2.5vw,23px);}
+ #world .world-desserts__hub {width:11.4%;}
+ #world .world-desserts__hub-monogram {font-size:12px;}
+ #world .world-desserts__hub-caption {font-size:10px;}
+ #world .world-desserts__card {width:280px;height:180px;}
+ #world .world-desserts__card-title {font-size:21px;}
+ #world .world-desserts__status {bottom:5%;right:5%;font-size:9px;}
+}
+@media (max-width:600px) {
+ body.dessert-subpage #world.world-desserts {height:825px;}
+ #world .world-desserts__copy {top:24px;left:24px;width:calc(100% - 48px);}
+
+ #world .world-desserts__title {font-size:clamp(48px,13vw,69px);margin:4px 0 12px;}
+
+ #world .world-desserts__description {font-size:11px;line-height:1.6;}
+ #world .world-desserts__explore {width:255px;font-size:10px;min-height:35px;padding:6px 12px;}
+ #world .world-desserts__universe {top:278px;height:510px;width:135%;left:50%;}
+ #world .world-desserts__node {width:36px;height:43px;}
+ #world .world-desserts__pin {width:19px;height:28px;}
+ #world .world-desserts__node-name {font-size:clamp(14px,3vw,17px);}
+ #world .world-desserts__node--usa .world-desserts__node-name {right:62%;}
+ #world .world-desserts__node--japan-korea .world-desserts__node-name {left:83%;}
+ #world .world-desserts__hub {width:12%;}
+ #world .world-desserts__hub-monogram {font-size:9px;}
+ #world .world-desserts__hub-caption {font-size:8px;}
+ #world .world-desserts__card {position:absolute;top:auto!important;left:50%!important;bottom:12px;width:min(330px,72%);height:177px;}
+ #world .world-desserts__card.is-visible {transform:translate(-50%,0) scale(1);}
+ #world .world-desserts__card-notes {padding:8px 10px;}
+ #world .world-desserts__card-region {font-size:10px;}
+ #world .world-desserts__card-title {font-size:19px;}
+ #world .world-desserts__card-desc {font-size:9px;line-height:1.36;}
+ #world .world-desserts__card-footer {font-size:6px;}
+ #world .world-desserts__status {bottom:3px;right:20%;font-size:7px;}
+}
+@media (prefers-reduced-motion:reduce) {
+ #world .world-desserts__card, #world .world-desserts__explore, #world .world-desserts__node:before {transition:none!important;animation:none!important;}
+}
+
+
+
+/* ===============================================================
+   CON03 — LAYERS OF DESSERT / individual photo carousel
+   Original warm editorial layout, center-forward stacked photos.
+   No shared team header/footer changes.
+   =============================================================== */
+body.dessert-subpage #gallery.layer-showcase {
+  --layer-ink: #4b1e2c;
+  --layer-gold: #b99164;
+  position:relative; isolation:isolate;
+  min-height: 945px;
+  width:100%; margin:0; padding:0;
+  overflow:visible; line-height:normal; color:var(--layer-ink);
+  background:linear-gradient(180deg,#feebc7 0%,#fff2e8 24%,#fff3ec 76%,#f8eae2 100%);
+  font-family:"Libre Bodoni",Georgia,serif;
+}
+#gallery.layer-showcase::before {
+  content:"";position:absolute;left:50%;top:0;bottom:0;width:100vw;
+  transform:translateX(-50%);pointer-events:none;z-index:-2;
+  background:linear-gradient(180deg,#feebc7 0%,#fff2e8 24%,#fff3ec 76%,#f8eae2 100%);
+}
+#gallery .layer-showcase__paper {
+  position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 48% 36% at 50% 36%,#fffaf5c0 0%,transparent 85%),
+    radial-gradient(ellipse 30% 45% at 9% 58%,#f3e3d8a1 0%,transparent 95%);
+}
+#gallery .layer-showcase__inner {
+  width:min(1440px,100%); margin:0 auto; position:relative;z-index:2;
+  padding:94px clamp(24px,5vw,76px) 162px;
+}
+#gallery .layer-showcase__heading{text-align:center;position:relative;}
+
+
+#gallery .layer-showcase__heading h2{font:400 clamp(46px,5.3vw,75px)/1.02 "Libre Bodoni",Georgia,serif;
+ letter-spacing:-.052em;color:#4c1829;margin:0 0 13px;}
+#gallery .layer-showcase__heading h2 em{color:#aa756d;font-weight:400;}
+#gallery .layer-showcase__lead{font:700 clamp(17px,1.65vw,22px)/1.45 "Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+ margin:0 0 7px;letter-spacing:-.04em;word-break:keep-all;color:#4f3030;}
+#gallery .layer-showcase__sub{font:450 clamp(12px,1.08vw,14px)/1.75 "Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+ margin:0;color:#93786f;word-break:keep-all;}
+#gallery .layer-showcase__viewport{position:relative;margin:42px auto 10px;width:100%;}
+#gallery .layer-showcase__stage {position:relative; width:100%;height:460px;
+  --gallery-shift:clamp(200px,23vw,325px);
+  outline-offset:-2px;touch-action:pan-y;user-select:none;cursor:grab;}
+#gallery .layer-showcase__stage.is-dragging{cursor:grabbing;}
+#gallery .layer-showcase__stage:focus-visible{outline:2px solid #a9885c;border-radius:15px;}
+#gallery .layer-showcase__card {
+ display:block;position:absolute;top:50%;left:50%;width:clamp(320px,41vw,545px);height:clamp(290px,30vw,386px);
+ padding:0;border:1px solid rgba(184,152,129,.6);border-radius:19px;background:#fff6ec;
+ box-shadow:0 20px 48px rgba(92,48,54,.14),0 0 0 5px rgba(255,253,249,.56);
+ overflow:hidden;cursor:pointer;isolation:isolate;backface-visibility:hidden;
+ transform:translate(-50%,-50%) scale(.74);
+ transition:transform .64s cubic-bezier(.18,.81,.22,1),opacity .58s ease,filter .58s ease,box-shadow .58s ease;
+ will-change:transform;outline-offset:6px;opacity:.7;filter:saturate(.75);
+ text-align:left;font:inherit;color:inherit;
+}
+#gallery .layer-showcase__card:focus-visible{outline:3px solid #af805b;}
+#gallery .layer-showcase__card[data-position="-2"]{transform:translate(-50%,-50%) translateX(calc(-1.68 * var(--gallery-shift))) scale(.67);z-index:1;opacity:.72;filter:saturate(.72) blur(1px);}
+#gallery .layer-showcase__card[data-position="-1"]{transform:translate(-50%,-50%) translateX(calc(-.91 * var(--gallery-shift))) scale(.82);z-index:2;opacity:.94;filter:saturate(.85);}
+#gallery .layer-showcase__card[data-position="0"]{transform:translate(-50%,-50%) scale(1);z-index:5;opacity:1;filter:none;
+ box-shadow:0 30px 72px rgba(71,32,45,.20),0 0 0 6px rgba(255,252,248,.85);}
+#gallery .layer-showcase__card[data-position="1"]{transform:translate(-50%,-50%) translateX(calc(.91 * var(--gallery-shift))) scale(.82);z-index:2;opacity:.94;filter:saturate(.85);}
+#gallery .layer-showcase__card[data-position="2"]{transform:translate(-50%,-50%) translateX(calc(1.68 * var(--gallery-shift))) scale(.67);z-index:1;opacity:.72;filter:saturate(.72) blur(1px);}
+#gallery .layer-showcase__photo{position:absolute;inset:0;display:block;overflow:hidden;}
+#gallery .layer-showcase__photo img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;}
+#gallery .layer-showcase__card-shine{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,transparent 45%,rgba(47,17,21,.22) 70%,rgba(40,13,18,.75) 100%);}
+#gallery .layer-showcase__card-footer{position:absolute;z-index:2;bottom:0;left:0;right:0;display:flex;align-items:end;justify-content:space-between;gap:12px;padding:22px 24px 22px;color:#fff9f0;text-shadow:0 2px 8px #0006;}
+#gallery .layer-showcase__card-text{display:flex;flex-direction:column;gap:6px;}
+#gallery .layer-showcase__card-category{font:650 9px/1.3 system-ui,sans-serif;letter-spacing:.18em;opacity:.85;}
+#gallery .layer-showcase__card-name{font:italic 500 clamp(28px,3.05vw,41px)/1.05 "Libre Bodoni",Georgia,serif;letter-spacing:-.04em;}
+#gallery .layer-showcase__card-arrow{width:44px;height:44px;flex:none;display:grid;place-items:center;border:1px solid #fff8ecaa;border-radius:50%;font:400 25px/1 Georgia,serif;transition:transform .25s,background .25s;}
+#gallery .layer-showcase__card[data-position="0"]:hover .layer-showcase__card-arrow{transform:translate(2px,-2px);background:#fff6ed2a;}
+#gallery .layer-showcase__card[data-position]:not([data-position="0"]) .layer-showcase__card-footer{opacity:.8;}
+#gallery .layer-showcase__arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:7;display:grid;place-items:center;
+ width:47px;height:47px;background:#fff9efbb;border:1px solid #d5b9a6;border-radius:50%;color:#5b2334;
+ cursor:pointer;font:400 38px/1 Georgia,serif;transition:background .25s,transform .25s,box-shadow .25s;}
+#gallery .layer-showcase__arrow--prev{left:-5px;}#gallery .layer-showcase__arrow--next{right:-5px;}
+#gallery .layer-showcase__arrow:hover{background:#fff;transform:translateY(-50%) scale(1.06);box-shadow:0 5px 24px #4a28301e;}
+#gallery .layer-showcase__arrow:focus-visible{outline:2px solid #a77856;outline-offset:3px;}
+#gallery .layer-showcase__controls{display:flex;justify-content:center;align-items:center;gap:16px;max-width:1000px;margin:31px auto 0;}
+
+
+
+
+#gallery .layer-showcase__count{display:flex;align-items:center;justify-content:center;gap:12px;font:650 12px/1 system-ui,sans-serif;color:#8e6e65;letter-spacing:.11em;margin:0;}
+#gallery .layer-showcase__count-line{width:35px;height:1px;background:#baa18f;}
+#gallery .layer-showcase__caption{min-height:24px;color:#a08074;line-height:1.5;font-size:12px;text-align:center;margin:16px 0 0;word-break:keep-all;}
+@media(max-width:980px){
+ body.dessert-subpage #gallery.layer-showcase{min-height:845px;}
+ #gallery .layer-showcase__inner{padding:78px 24px 140px;}
+ #gallery .layer-showcase__stage{--gallery-shift:clamp(160px,25vw,235px);height:390px;}
+ #gallery .layer-showcase__card{width:clamp(290px,48vw,450px);height:330px;}
+ #gallery .layer-showcase__card[data-position="-2"],#gallery .layer-showcase__card[data-position="2"]{opacity:.45;}
+ #gallery .layer-showcase__arrow--prev{left:0;}#gallery .layer-showcase__arrow--next{right:0;}
+}
+@media(max-width:630px){
+ body.dessert-subpage #gallery.layer-showcase{min-height:715px;}
+ #gallery .layer-showcase__inner{padding:61px 14px 121px;}
+ #gallery .layer-showcase__heading h2{font-size:clamp(41px,10vw,55px);}
+
+ #gallery .layer-showcase__lead{font-size:14px;}
+ #gallery .layer-showcase__sub{font-size:11px;}
+ #gallery .layer-showcase__viewport{margin-top:23px;}
+ #gallery .layer-showcase__stage{--gallery-shift:clamp(120px,28vw,170px);height:345px;}
+ #gallery .layer-showcase__card{width:min(78vw,344px);height:300px;border-radius:15px;}
+ #gallery .layer-showcase__card[data-position="-1"],#gallery .layer-showcase__card[data-position="1"]{opacity:.49;filter:blur(1px);}
+ #gallery .layer-showcase__card[data-position="-2"],#gallery .layer-showcase__card[data-position="2"]{opacity:0;pointer-events:none;}
+ #gallery .layer-showcase__arrow{width:33px;height:33px;font-size:25px;background:#fff9eadd;}
+ #gallery .layer-showcase__arrow--prev{left:-2px;}#gallery .layer-showcase__arrow--next{right:-2px;}
+ #gallery .layer-showcase__card-footer{padding:17px;}
+ #gallery .layer-showcase__card-name{font-size:30px;}
+ #gallery .layer-showcase__card-arrow{width:33px;height:33px;font-size:22px;}
+ #gallery .layer-showcase__controls{justify-content:center;gap:10px;margin-top:22px;}
+
+ #gallery .layer-showcase__count{justify-content:center;}
+}
+@media(prefers-reduced-motion:reduce){#gallery .layer-showcase__card{transition:none!important;}}
+
+/* Full-bleed edge backgrounds for all subpage containers. Restore the
+   original ivory/peach/sage palette, never stretch the content itself. */
+body.dessert-subpage{background:#f9eee5;overflow-x:clip;}
+body.dessert-subpage .page-shell{overflow:visible;}
+body.dessert-subpage #collection.collection-editorial{overflow:visible;background:linear-gradient(180deg,#fbede5,#f8f0e7 23%,#f8f0e7 80%,#fff0d4);}
+#collection.collection-editorial::before{content:"";position:absolute;inset:0 auto 0 50%;width:100vw;transform:translateX(-50%);z-index:-1;pointer-events:none;background:linear-gradient(180deg,#fbede5,#f8f0e7 23%,#f8f0e7 80%,#fff0d4);}
+body.dessert-subpage #world.world-desserts{overflow:visible;}
+#world.world-desserts::before{content:"";position:absolute;inset:0 auto 0 50%;width:100vw;transform:translateX(-50%);z-index:-2;pointer-events:none;background:linear-gradient(180deg,#fff0d4,#feebc7 25%,#feebc7 80%,#feebc7);}
+
+
+/* ===============================================================
+   CON04 / WAVE V10 — ONE GREEN DIV, ONE CONTINUOUS COLOR
+   No overlapping wave layers, pseudo-element strips or image backdrop.
+   The top edge of the entire sage-green div morphs gently over time.
+   =============================================================== */
+
+body.dessert-subpage #dispatch.sweet-dispatch{
+  --dispatch-green:#758364;
+  position:relative;
+  isolation:isolate;
+  width:100vw;
+  max-width:none;
+  margin-left:calc(50% - 50vw);
+  min-height:236px;
+  padding:21px 0 18px;
+  overflow:visible;
+  line-height:1.5;
+  color:#f9f2de;
+  background:transparent;
+  font-family:"Libre Bodoni",Georgia,serif;
+}
+#dispatch.sweet-dispatch::before,
+#dispatch.sweet-dispatch::after{content:none!important;}
+/* This is the ONLY green background element. Its bottom never moves. */
+#dispatch .sweet-dispatch__surface{
+  position:absolute;
+  z-index:0;
+  left:0;right:0;
+  top:-56px;
+  height:calc(100% + 56px);
+  pointer-events:none;
+  background:var(--dispatch-green);
+  clip-path:polygon(0% 49px,12% 39px,25% 23px,40% 40px,52% 50px,67% 32px,80% 20px,93% 43px,100% 47px,100% 100%,0% 100%);
+  animation:dispatch-single-wave 12s ease-in-out infinite;
+  will-change:clip-path;
+}
+@keyframes dispatch-single-wave{
+  0%,100%{
+    clip-path:polygon(0% 49px,12% 39px,25% 23px,40% 40px,52% 50px,67% 32px,80% 20px,93% 43px,100% 47px,100% 100%,0% 100%);
+  }
+  50%{
+    clip-path:polygon(0% 38px,12% 20px,25% 44px,40% 52px,52% 33px,67% 16px,80% 38px,93% 48px,100% 36px,100% 100%,0% 100%);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #dispatch .sweet-dispatch__surface{animation:none;will-change:auto;}
+}
+#dispatch .sweet-dispatch__inner{
+  width:min(1440px,100%);
+  margin:0 auto;
+  padding:0 clamp(26px,5.1vw,75px);
+  display:grid;
+  grid-template-columns:minmax(210px,.9fr) 1px minmax(500px,2.6fr);
+  gap:clamp(20px,2.8vw,46px);
+  align-items:center;
+  position:relative;
+  z-index:1;
+}
+
+#dispatch .sweet-dispatch__brand h2{
+  margin:0;color:#fff7e8;
+  font:400 clamp(40px,4vw,60px)/.94 "Libre Bodoni",Georgia,serif;
+  letter-spacing:-.065em;
+}
+#dispatch .sweet-dispatch__brand h2 em{font-style:italic;font-weight:400;}
+
+
+#dispatch .sweet-dispatch__divider{
+  width:1px;height:124px;background:#f8eed787;justify-self:center;
+}
+
+
+
+#dispatch .sweet-dispatch__topics{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  justify-items:center;gap:clamp(12px,1.9vw,32px);align-items:start;
+}
+#dispatch .sweet-dispatch__topic{
+  color:#fff9ef;text-align:center;text-decoration:none;display:flex;
+  flex-direction:column;align-items:center;width:100%;min-width:0;
+  gap:4px;outline-offset:8px;
+}
+#dispatch .sweet-dispatch__photo{
+  width:clamp(104px,9.1vw,134px);height:clamp(104px,9.1vw,134px);
+  max-width:100%;position:relative;display:block;overflow:hidden;
+  border:3px solid #f1e6c9;border-radius:50%;background:#efe2ca;
+  box-shadow:0 0 0 1px #fff7e86e,0 7px 14px #24351e29;
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;
+}
+#dispatch .sweet-dispatch__photo img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .5s;
+}
+#dispatch .sweet-dispatch__topic:hover .sweet-dispatch__photo,
+#dispatch .sweet-dispatch__topic:focus-visible .sweet-dispatch__photo{
+  transform:translateY(-5px);box-shadow:0 2px 0 #fff7e844,0 13px 21px #2033193f;
+}
+#dispatch .sweet-dispatch__topic:hover .sweet-dispatch__photo img,
+#dispatch .sweet-dispatch__topic:focus-visible .sweet-dispatch__photo img{
+  transform:scale(1.06);
+}
+#dispatch .sweet-dispatch__topic-name{
+  display:block;white-space:nowrap;margin-top:5px;letter-spacing:.06em;
+  font:700 clamp(10px,.88vw,13px)/1.25 system-ui,sans-serif;
+}
+#dispatch .sweet-dispatch__topic-sub{
+  display:block;color:#f5efdebd;
+  font:450 10px/1.4 "Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+/* Floating TOP button: same .top1 convention as team component, scoped to subpage. */
+body.dessert-subpage > button.top1{
+  position:fixed;z-index:160;right:clamp(16px,2.2vw,34px);bottom:clamp(16px,2.2vw,34px);
+  width:48px;height:48px;display:grid;place-items:center;
+  border:1px solid #ffefdfb0;border-radius:50%;
+  color:#fff5df;background:#4d2632e9;
+  box-shadow:0 6px 22px #24182049;font-size:25px;cursor:pointer;
+  opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .25s,transform .25s,visibility .25s,background .25s;
+}
+body.dessert-subpage > button.top1.is-visible{
+  opacity:1;visibility:visible;transform:translateY(0);
+}
+body.dessert-subpage > button.top1:hover{background:#733444;transform:translateY(-3px);}
+body.dessert-subpage > button.top1:focus-visible{outline:3px solid #dcb47f;outline-offset:3px;}
+@media(max-width:1180px){
+  #dispatch .sweet-dispatch__inner{grid-template-columns:minmax(180px,.85fr) 1px minmax(400px,2.6fr);gap:20px;padding:0 25px;}
+  #dispatch .sweet-dispatch__photo{width:clamp(90px,12vw,126px);height:clamp(90px,12vw,126px);}
+}
+@media(max-width:800px){
+  body.dessert-subpage #dispatch.sweet-dispatch{padding:40px 0 25px;min-height:0;}
+  #dispatch .sweet-dispatch__inner{grid-template-columns:1fr;gap:20px 16px;text-align:center;}
+  #dispatch .sweet-dispatch__brand{justify-self:center;}
+  #dispatch .sweet-dispatch__brand h2{font-size:44px;}
+
+  #dispatch .sweet-dispatch__divider{display:none;}
+
+  #dispatch .sweet-dispatch__topics{grid-column:1;gap:12px;}
+  #dispatch .sweet-dispatch__photo{width:min(22vw,132px);height:min(22vw,132px);}
+}
+@media(max-width:500px){
+  body.dessert-subpage #dispatch.sweet-dispatch{padding:38px 0 22px;}
+  #dispatch .sweet-dispatch__inner{grid-template-columns:1fr;gap:13px;padding:0 16px;}
+  #dispatch .sweet-dispatch__brand h2{font-size:42px;}
+
+
+  #dispatch .sweet-dispatch__topic-name{font-size:9px;white-space:normal;}
+  #dispatch .sweet-dispatch__topic-sub{font-size:9px;}
+  #dispatch .sweet-dispatch__photo{width:min(26vw,114px);height:min(26vw,114px);}
+  body.dessert-subpage > button.top1{width:42px;height:42px;font-size:23px;}
+}
+@media(prefers-reduced-motion:reduce){
+  #dispatch .sweet-dispatch__photo,#dispatch .sweet-dispatch__photo img{transition:none!important;}
+  body.dessert-subpage > button.top1{transition:none!important;}
+}
+
+
+/* SUBPAGE-ONLY CURSOR / TEAM FORK IMAGE — ../img/cur_2.png */
+body.dessert-subpage .cursor{
+  position:fixed;
+  left:0;top:0;
+  z-index:9999;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  opacity:0;
+  visibility:hidden;
+  line-height:0;
+}
+body.dessert-subpage .cursor img{
+  display:block;
+  width:100px;
+  height:100px;
+  object-fit:contain;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+@media (pointer:fine) and (hover:hover){
+  body.dessert-subpage.has-fork-cursor,
+  body.dessert-subpage.has-fork-cursor *{cursor:none!important;}
+  body.dessert-subpage.has-fork-cursor .cursor.is-active{
+    opacity:1;
+    visibility:visible;
+  }
+}
+@media (pointer:coarse), (hover:none){
+  body.dessert-subpage .cursor{display:none!important;}
+}
+
+/* V12: Scroll-triggered upward entrance. Never transforms carousel cards themselves. */
+body.dessert-subpage .reveal-pending {
+  opacity:0;
+  translate:0 25px;
+}
+body.dessert-subpage .reveal-visible {
+  opacity:1;
+  translate:0 0;
+}
+body.dessert-subpage #collection .collection-editorial__heading,
+body.dessert-subpage #collection .collection-editorial__viewport,
+body.dessert-subpage #world .world-desserts__copy,
+body.dessert-subpage #gallery .layer-showcase__heading,
+body.dessert-subpage #gallery .layer-showcase__viewport,
+body.dessert-subpage #dispatch .sweet-dispatch__inner {
+  transition:opacity .78s cubic-bezier(.2,.72,.22,1), translate .78s cubic-bezier(.2,.72,.22,1);
+}
+/* Layout bands used by team: phone / tablet / desktop. */
+/* Do not let the five-card arrangement create sideways page scrolling. */
+#gallery .layer-showcase__viewport { overflow:clip; }
+html:has(body.dessert-subpage) { overflow-x:clip; }
+@media (max-width:768px) {
+  body.dessert-subpage .page-shell {width:100%;max-width:100%;}
+  /* Keep the flight stage inside the narrow viewport. */
+  #world .world-desserts__universe {width:100%;left:50%;transform:translateX(-50%);}
+  #world .world-desserts__node-name {max-width:92px;overflow-wrap:anywhere;}
+  body.dessert-subpage #collection.collection-editorial,
+  body.dessert-subpage #world.world-desserts,
+  body.dessert-subpage #gallery.layer-showcase {scroll-margin-top:calc(var(--subpage-header-height,80px) + 10px);}
+  body.dessert-subpage #dispatch .sweet-dispatch__topics {min-width:0;}
+}
+@media (min-width:769px) and (max-width:1199px) {
+  body.dessert-subpage .page-shell {width:100%;max-width:1440px;}
+  /* Keep the eastern country name inside the map. */
+  #hero .hero-origin__point[data-origin="japan-korea"] .hero-origin__point-label {left:auto;right:25px;}
+  body.dessert-subpage #collection.collection-editorial,
+  body.dessert-subpage #world.world-desserts,
+  body.dessert-subpage #gallery.layer-showcase {scroll-margin-top:calc(var(--subpage-header-height,80px) + 12px);}
+}
+@media (min-width:1200px) {
+  body.dessert-subpage .page-shell {width:100%;max-width:1440px;}
+  body.dessert-subpage #collection.collection-editorial,
+  body.dessert-subpage #world.world-desserts,
+  body.dessert-subpage #gallery.layer-showcase {scroll-margin-top:calc(var(--subpage-header-height,80px) + 16px);}
+}
+@media (prefers-reduced-motion:reduce) {
+  body.dessert-subpage .reveal-pending,body.dessert-subpage .reveal-visible {opacity:1!important;translate:none!important;}
+  body.dessert-subpage #collection .collection-editorial__heading,
+  body.dessert-subpage #collection .collection-editorial__viewport,
+  body.dessert-subpage #world .world-desserts__copy,
+  body.dessert-subpage #gallery .layer-showcase__heading,
+  body.dessert-subpage #gallery .layer-showcase__viewport,
+  body.dessert-subpage #dispatch .sweet-dispatch__inner {transition:none!important;}
+}

@@ -1,4 +1,11 @@
 $(function () {
+  /*마우스*/
+  $(document).on("mousemove", function (e) {
+    $(".cursor").css({
+      left: `${e.clientX}px`,
+      top: `${e.clientY}px`,
+    });
+  });
   // con01 꿀과 과일 최초의 디저트
   $(".honey").on("mouseenter", function () {
     $(".honey img").css({
@@ -449,11 +456,41 @@ $(function () {
       $("#con03 .con03_txt").removeClass("active");
     }
   });
-  /*마우스*/
-  $(document).on("mousemove", function (e) {
-    $(".cursor").css({
-      left: `${e.clientX}px`,
-      top: `${e.clientY}px`,
-    });
+  // headerfooter start
+  // 메뉴바
+  $(".menu_bar").on("click", function () {
+    $(".menu_open").addClass("on");
+    // 바 없애기
+    $(".menu_openbar").show();
+  });
+  $(".menu_openbar").on("click", function () {
+    $(".menu_open").removeClass("on");
+    $(".menu_openbar").hide();
+  });
+  //  headerfooter end
+  // 모바일 con01 setInterval
+  $(function () {
+    let i = 0;
+    let total = $(".con01_mob > div").length;
+    let stop;
+
+    start();
+
+    function fade() {
+      $(".con01_mob > div").stop().fadeOut(1000);
+      $(".con01_mob > div").eq(i).stop().fadeIn(1000);
+    }
+
+    function start() {
+      stop = setInterval(function () {
+        if (i == total - 1) {
+          i = 0;
+        } else {
+          i++;
+        }
+
+        fade();
+      }, 1500);
+    }
   });
 });

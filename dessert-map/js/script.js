@@ -354,14 +354,23 @@
 
     card.style.opacity = String(opacity);
 
-    card.style.transform = reduceMotion.matches
-      ? "translate(-50%, -50%) scale(1)"
-      : `
-          translate(-50%, -50%)
-          translate3d(${dx}px, ${dy}px, 0)
-          rotate(${rotation * (intro + outro * 0.5)}deg)
-          scale(${scale})
-        `;
+    // Mobile: show the card BELOW the uncut map, not off-screen.
+    // Desktop/tablet: preserve the original radial movement exactly.
+    const mobile = window.innerWidth <= 768;
+    if (mobile) {
+      const rise = reduceMotion.matches ? 0 : 18 * (1 - intro) + 22 * outro;
+      const mobileScale = reduceMotion.matches ? 1 : 0.92 + intro * 0.08;
+      card.style.transform = `translate(-50%, 0) translate3d(0, ${rise}px, 0) scale(${mobileScale})`;
+    } else {
+      card.style.transform = reduceMotion.matches
+        ? "translate(-50%, -50%) scale(1)"
+        : `
+            translate(-50%, -50%)
+            translate3d(${dx}px, ${dy}px, 0)
+            rotate(${rotation * (intro + outro * 0.5)}deg)
+            scale(${scale})
+          `;
+    }
 
     card.setAttribute("aria-hidden", opacity <= 0.01 ? "true" : "false");
 
@@ -387,12 +396,31 @@
   }
 
   // ========================================
-  // 11. 이벤트
+  // 11. 반응형 헤더 높이 (읽기만, 팀 CSS 수정 없음)
+  // ========================================
+  function syncHeaderOffset() {
+    if (window.innerWidth >= 1200) {
+      section.style.removeProperty("--origin-header-offset");
+      return;
+    }
+    const header = document.querySelector("body > header");
+    if (!header) return;
+    const position = window.getComputedStyle(header).position;
+    if (position !== "fixed" && position !== "sticky") return;
+    const height = Math.round(header.getBoundingClientRect().height);
+    if (height > 0) section.style.setProperty("--origin-header-offset", `${height}px`);
+  }
+
+  syncHeaderOffset();
+
+  // ========================================
+  // 12. 이벤트
   // ========================================
 
   window.addEventListener("scroll", requestRender, { passive: true });
 
   window.addEventListener("resize", () => {
+    syncHeaderOffset();
     applyMapBackgroundColor();
     requestRender();
   });
