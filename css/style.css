@@ -15,6 +15,126 @@ ul {
 
 /*모바일*/
 @media (max-width: 768px) {
+
+    /* header */
+    header {
+        width: 100%;
+        display: flex;
+        background-color: #2d1b24;
+        color: #f6dcd5;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+
+    header img {
+        width: 200px;
+    }
+
+    header .menu,
+    .menu_icon {
+        display: none;
+    }
+
+    header .menu_bar,
+    header .menu_openbar {
+        font-size: 30px;
+        position: fixed;
+        right: 5%;
+        top: 30px;
+        transform: translateY(-50%);
+        color: #f8eecc;
+        cursor: pointer;
+    }
+
+
+    header .menu_bar {
+        display: block;
+        z-index: 10001;
+    }
+
+    /* 숨겨진 메뉴창 */
+    header .menu_open {
+        width: 100%;
+        height: 100vh;
+        background-color: #2d1b24;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10000;
+
+        transform: translateX(100%);
+        transition: transform 0.6s ease;
+        visibility: hidden;
+    }
+
+    header .menu_openbar {
+        display: none;
+        z-index: 10002;
+    }
+
+    header .menu_open ul {
+        padding-top: 20%;
+    }
+
+    header .menu_open li {
+        color: #f6dcd5;
+        font-size: 30px;
+        text-align: center;
+        margin: 10% auto;
+    }
+
+    /* header제이쿼리 */
+
+
+    header .menu_open {
+        transform: translateX(100%);
+        transition: all 1s ease;
+        visibility: hidden;
+    }
+
+    header .menu_open.on {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    /* 메뉴 hover */
+    header .menu_open li {
+        transition: all 0.2s ease;
+    }
+
+    header .menu_open li:hover {
+        animation: bounce 0.9s ease;
+        color: #f8eecc;
+    }
+
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+
+        30% {
+            transform: translateY(-15px);
+        }
+
+        50% {
+            transform: translateY(0);
+        }
+
+        70% {
+            transform: translateY(-7px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
     #con01 .container {
         width: 100%;
         max-width: 100%;
@@ -313,6 +433,62 @@ ul {
 
 /*테블릿*/
 @media (min-width: 769px) and (max-width: 1199px) {
+
+    /* header */
+    header {
+        width: 100%;
+        display: flex;
+        background-color: #2d1b24;
+        color: #f6dcd5;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px;
+        position: fixed;
+        z-index: 100;
+    }
+
+    header h1 {
+        color: #f8eecc;
+    }
+
+    header .menu {
+        display: flex;
+        font-size: 14px;
+        gap: 25px;
+    }
+
+    header .menu_icon {
+        display: flex;
+        gap: 15px;
+        font-size: 16px;
+
+        margin-right: 20px;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    header .menu li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    header .menu li:hover {
+        color: #f8eecc;
+        border-bottom: 1px solid white;
+    }
+
+    header .menu_icon li:hover {
+        color: #f8eecc;
+    }
+
+    /* header미디어쿼리 */
+    .menu_bar,
+    .menu_open,
+    .menu_openbar {
+        display: none;
+    }
+
     #con01 .container {
         width: 90%;
         max-width: 1100px;
@@ -563,6 +739,65 @@ ul {
 
 /*pc*/
 @media (min-width: 1200px) {
+
+    /* header */
+    header {
+        width: 100%;
+        display: flex;
+        background-color: #2d1b24;
+        color: #f6dcd5;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px;
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    header h1 {
+        color: #f8eecc;
+    }
+
+    header .menu {
+        display: flex;
+        font-size: 18px;
+        gap: 35px;
+    }
+
+    header .menu_icon {
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+
+        margin-right: 20px;
+    }
+
+    header img {
+        width: 250px;
+    }
+
+    header .menu li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    header .menu li:hover {
+        color: #f8eecc;
+        border-bottom: 1px solid white;
+    }
+
+    header .menu_icon li:hover {
+        color: #f8eecc;
+    }
+
+    /* header 미디어쿼리 */
+    .menu_bar,
+    .menu_open,
+    .menu_openbar {
+        display: none;
+    }
+
     #con01 .container {
         display: flex;
         justify-content: space-between;
