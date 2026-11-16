@@ -81,10 +81,9 @@ footer {
   header .menu_openbar {
     font-size: 30px;
     position: fixed;
-    position: absolute;
     right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
+    top: 30px;
+    transform: translateY(-50%);
     color: #f8eecc;
     cursor: pointer;
   }
@@ -122,7 +121,7 @@ footer {
     color: #f6dcd5;
     font-size: 30px;
     text-align: center;
-    margin: 10% auto;
+    margin: 50px auto;
   }
 
   /* header제이쿼리 */

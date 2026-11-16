@@ -1,4 +1,3 @@
-
 $(function () {
   /*top 버튼 */
   $(".top1").on("click", function () {
@@ -10,7 +9,7 @@ $(function () {
   $(document).on("mousemove", function (e) {
     $(".cursor").css({
       left: `${e.clientX}px`,
-      top: `${e.clientY}px`
+      top: `${e.clientY}px`,
     });
   });
   // headerfooter start
@@ -52,43 +51,38 @@ $(function () {
 
   /*section03 이미지 슬라이드*/
   $(function () {
-
     let track = $(".section03 .all .right .track");
 
     function slideLeft() {
-
       let width = track.find("ul:first").outerWidth(true);
 
-      track.animate({
-        marginLeft: -width
-      }, 9000, "linear", function () {
+      track.animate(
+        {
+          marginLeft: -width,
+        },
+        9000,
+        "linear",
+        function () {
+          track.find("ul:first").appendTo(track);
 
-        track.find("ul:first").appendTo(track);
+          track.css("marginLeft", "0");
 
-        track.css("marginLeft", "0");
-
-        slideLeft();
-
-      });
-
+          slideLeft();
+        },
+      );
     }
 
     slideLeft();
-
   });
   /*section03 이미지 마우스 올려두었을 때 상세내용*/
   $(".section03 .all .right li").on("mouseenter", function () {
-
     $(".section03 .all .right li .txt").removeClass("on");
 
     $(this).find(".txt").addClass("on");
-
   });
 
   $(".section03 .all .right li").on("mouseleave", function () {
-
     $(this).find(".txt").removeClass("on");
-
   });
   /* section04 scroll */
 
@@ -109,50 +103,53 @@ $(function () {
     scrollTrigger: {
       trigger: ".section04",
       start: "top 40%",
-      toggleActions: "play none none none"
-    }
+      toggleActions: "play none none none",
+    },
   });
 
   // 프레즐 등장
-  tl04.fromTo(".section04 .pretzel",
+  tl04.fromTo(
+    ".section04 .pretzel",
     {
       autoAlpha: 0,
-      scale: 0.15
+      scale: 0.15,
     },
     {
       autoAlpha: 1,
       scale: 0.15,
       duration: 1.5,
-      ease: "power2.out"
-    }
+      ease: "power2.out",
+    },
   );
 
   // 도넛 등장
-  tl04.fromTo(".section04 .donuts",
+  tl04.fromTo(
+    ".section04 .donuts",
     {
       autoAlpha: 0,
-      scale: 0.1
+      scale: 0.1,
     },
     {
       autoAlpha: 1,
       scale: 0.1,
       duration: 1.6,
-      ease: "power2.out"
-    }
+      ease: "power2.out",
+    },
   );
 
   // 크로와상 등장
-  tl04.fromTo(".section04 .croissant",
+  tl04.fromTo(
+    ".section04 .croissant",
     {
       autoAlpha: 0,
-      scale: 0.1
+      scale: 0.1,
     },
     {
       autoAlpha: 1,
       scale: 0.1,
       duration: 1.7,
-      ease: "power2.out"
-    }
+      ease: "power2.out",
+    },
   );
 
   // 이미지 둥둥 떠다니기
@@ -163,7 +160,7 @@ $(function () {
     repeat: -1,
     yoyo: true,
     ease: "power1.inOut",
-    delay: 1.5
+    delay: 1.5,
   });
 
   gsap.to(".section04 .donuts", {
@@ -172,7 +169,7 @@ $(function () {
     repeat: -1,
     yoyo: true,
     ease: "power1.inOut",
-    delay: 1.5
+    delay: 1.5,
   });
 
   gsap.to(".section04 .croissant", {
@@ -181,9 +178,8 @@ $(function () {
     repeat: -1,
     yoyo: true,
     ease: "power1.inOut",
-    delay: 1.5
+    delay: 1.5,
   });
-
 
   /* section05 scroll */
 
@@ -201,23 +197,19 @@ $(function () {
 
   // More 클릭
   $(".section05 .bg1 ul li .more").click(function () {
-
     let i = $(this).closest("li").index();
 
     $(".section05 .bg2 ul li").removeClass("on");
     $(".section05 .bg2 ul li").eq(i).addClass("on");
 
     $(".section05 .bg2").fadeIn();
-
   });
 
   // X 버튼 클릭
   $(".section05 .bg2 ul li .button").click(function () {
-
     $(".section05 .bg2").fadeOut();
 
     $(".section05 .bg2 ul li").removeClass("on");
-
   });
   /* section06 scroll */
 
@@ -249,7 +241,6 @@ $(function () {
     clearInterval(stop);
 
     stop = setInterval(function () {
-
       if (i == total - 1) {
         i = 0;
       } else {
@@ -257,30 +248,35 @@ $(function () {
       }
 
       active();
-
     }, 2000);
   }
 
   // 하단 이미지에 마우스를 올렸을 때
   $(".section06 .panel2 li").mouseenter(function () {
-
     i = $(this).index();
 
     clearInterval(stop);
 
     active();
-
   });
 
   // 마우스를 벗어났을 때
   $(".section06 .panel2 li").mouseleave(function () {
-
     start();
-
+  });
+  // headerfooter start
+  // 메뉴 열기
+  $(".menu_bar").on("click", function () {
+    $(".menu_open").addClass("on");
+    $(".menu_bar").hide();
+    $(".menu_openbar").show();
   });
 
-})
-
-
-
-
+  // 메뉴 닫기
+  $(".menu_openbar").on("click", function () {
+    $(".menu_open").removeClass("on");
+    $(".menu_openbar").hide();
+    $(".menu_bar").show();
+  });
+  //  headerfooter end
+});

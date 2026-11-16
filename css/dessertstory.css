@@ -106,7 +106,7 @@ h5,
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: 11;
+    z-index: 1111;
   }
   header .menu_openbar {
     font-size: 30px;
