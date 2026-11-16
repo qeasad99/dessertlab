@@ -246,7 +246,7 @@ h5,
   }
 
   .con01_mob ul li p {
-    font-size: 80%;
+    font-size: 60%;
     text-align: center;
   }
   /* setinterval */
@@ -498,12 +498,12 @@ h5,
   }
   /*  con03 모바일 케이크 글자 나타내기 */
   #con03 .con03_mobhidden01 {
-    position: absolute;
     display: none;
 
-    top: 20%;
+    position: absolute;
+    top: 50%;
     left: 15%;
-    transform: translate(-15%, -20%);
+    transform: translate(-15%, -50%);
   }
   #con03 .con03_mobhidden01 img {
     width: 100px;
@@ -514,15 +514,15 @@ h5,
     filter: saturate(100%);
   }
   #con03 .con03_mobhidden01 p:nth-of-type(1) {
-    margin-bottom: 5%;
     color: white;
     font-size: 120%;
     font-weight: bold;
   }
   #con03 .con03_mobhidden01 p:nth-of-type(2) {
-    margin-top: 20%;
+    margin-top: 5%;
     font-weight: bold;
     color: #752f52;
+    line-height: 200%;
   }
   /* con03 모바일 타르트 글자 숨기기 */
   #con03 .con03_hidden02 p {
@@ -536,9 +536,9 @@ h5,
     display: none;
 
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 15%;
-    transform: translate(-15%, -20%);
+    transform: translate(-15%, -50%);
   }
   #con03 .con03_mobhidden02 img {
     width: 100px;
@@ -549,15 +549,15 @@ h5,
     filter: saturate(100%);
   }
   #con03 .con03_mobhidden02 p:nth-of-type(1) {
-    margin-bottom: 5%;
     color: white;
     font-weight: bold;
     font-size: 120%;
   }
   #con03 .con03_mobhidden02 p:nth-of-type(2) {
-    margin-top: 20%;
+    margin-top: 5%;
     font-weight: bold;
     color: #752f52;
+    line-height: 200%;
   }
 
   /* con03 모바일 쿠키 글자  */
@@ -575,9 +575,9 @@ h5,
     display: none;
 
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 15%;
-    transform: translate(-15%, -20%);
+    transform: translate(-15%, -50%);
   }
   #con03 .con03_mobhidden03 img {
     width: 100px;
@@ -588,15 +588,15 @@ h5,
     filter: saturate(100%);
   }
   #con03 .con03_mobhidden03 p:nth-of-type(1) {
-    margin-bottom: 5%;
     color: white;
     font-weight: bold;
     font-size: 120%;
   }
   #con03 .con03_mobhidden03 p:nth-of-type(2) {
-    margin-top: 20%;
+    margin-top: 5%;
     font-weight: bold;
     color: #752f52;
+    line-height: 200%;
   }
   /* con03 모바일 페이스트리 글자  */
   #con03 .con03_hidden04 p {
@@ -609,9 +609,9 @@ h5,
   #con03 .con03_mobhidden04 {
     position: absolute;
     display: none;
-    top: 20%;
+    top: 50%;
     left: 15%;
-    transform: translate(-15%, -20%);
+    transform: translate(-15%, -50%);
   }
   #con03 .con03_mobhidden04 img {
     width: 100px;
@@ -621,16 +621,17 @@ h5,
     opacity: 100%;
     filter: saturate(100%);
   }
+
   #con03 .con03_mobhidden04 p:nth-of-type(1) {
-    margin-bottom: 5%;
     font-weight: bold;
     color: white;
     font-size: 120%;
   }
   #con03 .con03_mobhidden04 p:nth-of-type(2) {
-    margin-top: 20%;
+    margin-top: 5%;
     font-weight: bold;
     color: #752f52;
+    line-height: 200%;
   }
   /* con03 scroll 스크롤 */
   #con03 .con03_txt {
