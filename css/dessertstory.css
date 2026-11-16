@@ -329,14 +329,14 @@ h5,
     padding-top: 50px;
   }
   #con02 ul li {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     margin: 20px auto;
   }
   #con02 li {
     border: 1px solid white;
     border-radius: 25px;
     background-color: #879179;
-    width: 400px;
+    width: 70%;
     height: 200px;
   }
   #con02 li img {
@@ -499,7 +499,7 @@ h5,
   /*  con03 모바일 케이크 글자 나타내기 */
   #con03 .con03_mobhidden01 {
     display: none;
-
+    height: 150px;
     position: absolute;
     top: 50%;
     left: 15%;
@@ -534,7 +534,7 @@ h5,
   /*  con03 모바일 타르트 글자 나타내기 */
   #con03 .con03_mobhidden02 {
     display: none;
-
+    height: 150px;
     position: absolute;
     top: 50%;
     left: 15%;
@@ -558,6 +558,91 @@ h5,
     font-weight: bold;
     color: #752f52;
     line-height: 200%;
+  }
+
+  /* con03 모바일 쿠키 글자  */
+  #con03 .con03_hidden03 p {
+    display: none;
+  }
+  #con03 .con03_hidden03 img {
+    display: none;
+  }
+  #con03 .con03_hidden03 i {
+    display: none;
+  }
+  /*  con03 모바일 쿠키 글자 나타내기 */
+  #con03 .con03_mobhidden03 {
+    display: none;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-15%, -50%);
+  }
+  #con03 .con03_mobhidden03 img {
+    width: 100px;
+    height: 20px;
+    object-fit: none;
+    border-radius: 0px;
+    opacity: 100%;
+    filter: saturate(100%);
+  }
+  #con03 .con03_mobhidden03 p:nth-of-type(1) {
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+  }
+  #con03 .con03_mobhidden03 p:nth-of-type(2) {
+    margin-top: 5%;
+    font-weight: bold;
+    color: #752f52;
+    line-height: 200%;
+  }
+  /* con03 모바일 페이스트리 글자  */
+  #con03 .con03_hidden04 p {
+    display: none;
+  }
+  #con03 .con03_hidden04 img {
+    display: none;
+  }
+  /*  con03 모바일 페이스트리 글자 나타내기 */
+  #con03 .con03_mobhidden04 {
+    display: none;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-15%, -50%);
+  }
+  #con03 .con03_mobhidden04 img {
+    width: 100px;
+    height: 20px;
+    object-fit: none;
+    border-radius: 0px;
+    opacity: 100%;
+    filter: saturate(100%);
+  }
+
+  #con03 .con03_mobhidden04 p:nth-of-type(1) {
+    font-weight: bold;
+    color: white;
+    font-size: 120%;
+  }
+  #con03 .con03_mobhidden04 p:nth-of-type(2) {
+    margin-top: 5%;
+    font-weight: bold;
+    color: #752f52;
+    line-height: 200%;
+  }
+  /* con03 scroll 스크롤 */
+  #con03 .con03_txt {
+    transform: translateY(0px);
+    opacity: 0;
+    transition: 1s;
+  }
+  #con03 .con03_txt.active {
+    transform: translateY(0px);
+    opacity: 1;
   }
 
   /* con03 모바일 쿠키 글자  */

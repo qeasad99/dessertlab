@@ -57,9 +57,10 @@ a {
   header .menu_openbar {
     font-size: 30px;
     position: fixed;
+    position: absolute;
     right: 5%;
-    top: 30px;
-    transform: translateY(-50%);
+    top: 50%;
+    transform: translate(-5%, -50%);
     color: #f8eecc;
     cursor: pointer;
   }
