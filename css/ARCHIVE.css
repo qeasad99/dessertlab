@@ -3607,3 +3607,12 @@ footer {
     color: #f8eecc;
   }
 }
+
+/* ARCHIVE TOP 버튼 — 태블릿 전용 */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .top1 {
+    font-size: 30px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
