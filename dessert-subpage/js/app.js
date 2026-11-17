@@ -743,7 +743,7 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   if (topButton) {
     const updateTopButton = () => {
-      const show = window.scrollY > 360;
+      const show = true;
       topButton.classList.toggle("is-visible", show);
       topButton.setAttribute("aria-hidden", String(!show));
       topButton.tabIndex = show ? 0 : -1;
