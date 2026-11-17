@@ -40,19 +40,9 @@ a {
   line-height: 0;
 }
 
-
-
-
 [hidden] {
   display: none !important;
 }
-
-
-
-
-
-
-
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -189,7 +179,6 @@ body.dessert-subpage #hero.hero-origin::after {
   padding: 93px 0 48px clamp(34px, 5.4vw, 88px);
 }
 
-
 #hero .hero-origin__title {
   margin: 0;
   color: var(--hero-ink);
@@ -241,7 +230,7 @@ body.dessert-subpage #hero.hero-origin::after {
   animation: hero-detail-rise 0.95s 0.8s ease-out both;
 }
 
-#hero .hero-origin__cta>span:first-child {
+#hero .hero-origin__cta > span:first-child {
   display: grid;
   place-items: center;
   width: 58px;
@@ -261,8 +250,8 @@ body.dessert-subpage #hero.hero-origin::after {
     box-shadow 0.3s;
 }
 
-#hero .hero-origin__cta:hover>span:first-child,
-#hero .hero-origin__cta:focus-visible>span:first-child {
+#hero .hero-origin__cta:hover > span:first-child,
+#hero .hero-origin__cta:focus-visible > span:first-child {
   background: var(--hero-ink);
   color: #fff4e5;
   transform: translate(4px, -3px);
@@ -285,11 +274,13 @@ body.dessert-subpage #hero.hero-origin::after {
   left: 47%;
   transform: translateX(-50%);
   border-radius: 50%;
-  background: radial-gradient(circle at 42% 38%,
-      rgba(255, 255, 255, 0.5),
-      rgba(241, 199, 182, 0.2) 60%,
-      rgba(238, 170, 164, 0.08) 76%,
-      transparent 77%);
+  background: radial-gradient(
+    circle at 42% 38%,
+    rgba(255, 255, 255, 0.5),
+    rgba(241, 199, 182, 0.2) 60%,
+    rgba(238, 170, 164, 0.08) 76%,
+    transparent 77%
+  );
   border: 1px solid rgba(167, 76, 82, 0.055);
   box-shadow:
     inset 0 0 55px rgba(184, 110, 104, 0.06),
@@ -564,7 +555,6 @@ body.dessert-subpage #hero.hero-origin::after {
 }
 
 @keyframes hero-pin-pulse {
-
   0%,
   100% {
     box-shadow: 0 0 0 rgba(215, 164, 60, 0);
@@ -635,7 +625,7 @@ body.dessert-subpage #hero.hero-origin::after {
     margin-bottom: 9px;
   }
 
-  #hero .hero-origin__cta>span:first-child {
+  #hero .hero-origin__cta > span:first-child {
     width: 42px;
     height: 42px;
     font-size: 22px;
@@ -688,7 +678,6 @@ body.dessert-subpage #hero.hero-origin::after {
     bottom: 32px;
     left: 38px;
   }
-
 }
 
 @media (max-width: 550px) {
@@ -758,11 +747,9 @@ body.dessert-subpage #hero.hero-origin::after {
     right: 22px;
     bottom: 126px;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   #hero .hero-origin__title,
   #hero .hero-origin__cta,
   #hero .hero-origin__intro,
@@ -803,9 +790,16 @@ body.dessert-subpage #collection.collection-editorial {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: .68;
-  background: radial-gradient(ellipse 95% 65% at 70% 15%, #fffaf0 0%, transparent 75%),
-    repeating-linear-gradient(0deg, transparent 0px, transparent 3px, rgba(122, 70, 57, .018) 4px, transparent 5px);
+  opacity: 0.68;
+  background:
+    radial-gradient(ellipse 95% 65% at 70% 15%, #fffaf0 0%, transparent 75%),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(122, 70, 57, 0.018) 4px,
+      transparent 5px
+    );
 }
 
 #collection .collection-editorial__inner {
@@ -813,7 +807,6 @@ body.dessert-subpage #collection.collection-editorial {
   width: min(1180px, calc(100% - 90px));
   margin: 0 auto;
 }
-
 
 #collection .collection-editorial__heading {
   display: grid;
@@ -823,10 +816,12 @@ body.dessert-subpage #collection.collection-editorial {
   padding: 28px 0 30px;
 }
 
-
 #collection .collection-editorial__heading h2 {
-  font: 500 clamp(42px, 5.2vw, 73px)/.98 "Libre Bodoni", Georgia, serif;
-  letter-spacing: -.045em;
+  font:
+    500 clamp(42px, 5.2vw, 73px)/0.98 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.045em;
   margin: 0;
 }
 
@@ -843,8 +838,10 @@ body.dessert-subpage #collection.collection-editorial {
 }
 
 #collection .collection-editorial__intro p {
-  font: 400 12px/1.9 system-ui, sans-serif;
-  letter-spacing: -.015em;
+  font:
+    400 12px/1.9 system-ui,
+    sans-serif;
+  letter-spacing: -0.015em;
   word-break: keep-all;
   color: #81695f;
   margin: 0;
@@ -856,11 +853,6 @@ body.dessert-subpage #collection.collection-editorial {
   background: #cfb39d;
   flex: none;
 }
-
-
-
-
-
 
 #collection .collection-editorial__viewport {
   overflow: hidden;
@@ -876,19 +868,19 @@ body.dessert-subpage #collection.collection-editorial {
 }
 
 #collection .collection-editorial__grid.is-exiting-next {
-  animation: collection-slide-out-next .20s ease both;
+  animation: collection-slide-out-next 0.2s ease both;
 }
 
 #collection .collection-editorial__grid.is-exiting-prev {
-  animation: collection-slide-out-prev .20s ease both;
+  animation: collection-slide-out-prev 0.2s ease both;
 }
 
 #collection .collection-editorial__grid.is-entering-next {
-  animation: collection-slide-in-next .42s cubic-bezier(.19, .7, .25, 1) both;
+  animation: collection-slide-in-next 0.42s cubic-bezier(0.19, 0.7, 0.25, 1) both;
 }
 
 #collection .collection-editorial__grid.is-entering-prev {
-  animation: collection-slide-in-prev .42s cubic-bezier(.19, .7, .25, 1) both;
+  animation: collection-slide-in-prev 0.42s cubic-bezier(0.19, 0.7, 0.25, 1) both;
 }
 
 #collection .collection-editorial__card {
@@ -918,7 +910,7 @@ body.dessert-subpage #collection.collection-editorial {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform .78s cubic-bezier(.16, .75, .3, 1);
+  transition: transform 0.78s cubic-bezier(0.16, 0.75, 0.3, 1);
 }
 
 #collection .collection-editorial__card.is-flipped .collection-editorial__card-inner {
@@ -933,7 +925,7 @@ body.dessert-subpage #collection.collection-editorial {
   border-radius: 12px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  box-shadow: 0 7px 19px rgba(89, 45, 34, .055);
+  box-shadow: 0 7px 19px rgba(89, 45, 34, 0.055);
   background: #fff9f0;
 }
 
@@ -952,27 +944,36 @@ body.dessert-subpage #collection.collection-editorial {
 }
 
 #collection .collection-editorial__number {
-  font: italic 400 38px/1 "Libre Bodoni", serif;
+  font:
+    italic 400 38px/1 "Libre Bodoni",
+    serif;
   color: #cbb7a6;
-  letter-spacing: -.08em;
+  letter-spacing: -0.08em;
 }
 
 #collection .collection-editorial__country {
   margin: 23px 0 7px;
-  font: 700 10px/1.35 system-ui, sans-serif;
-  letter-spacing: .14em;
+  font:
+    700 10px/1.35 system-ui,
+    sans-serif;
+  letter-spacing: 0.14em;
   color: #ab7e66;
 }
 
 #collection .collection-editorial__dish {
   margin: 0;
-  font: 500 clamp(22px, 2.6vw, 36px)/1.08 "Libre Bodoni", Georgia, serif;
-  letter-spacing: -.035em;
+  font:
+    500 clamp(22px, 2.6vw, 36px)/1.08 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.035em;
   word-break: normal;
 }
 
 #collection .collection-editorial__short {
-  font: 400 11px/1.65 system-ui, sans-serif;
+  font:
+    400 11px/1.65 system-ui,
+    sans-serif;
   color: #997e70;
   margin: 10px 0 auto;
   word-break: keep-all;
@@ -981,8 +982,10 @@ body.dessert-subpage #collection.collection-editorial {
 #collection .collection-editorial__flipcue {
   margin-top: 8px;
   color: #a37e68;
-  font: 600 8px/1.4 system-ui, sans-serif;
-  letter-spacing: .13em;
+  font:
+    600 8px/1.4 system-ui,
+    sans-serif;
+  letter-spacing: 0.13em;
 }
 
 #collection .collection-editorial__photo-wrap {
@@ -996,10 +999,13 @@ body.dessert-subpage #collection.collection-editorial {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform .8s cubic-bezier(.2, .75, .2, 1);
+  transition: transform 0.8s cubic-bezier(0.2, 0.75, 0.2, 1);
 }
 
-#collection .collection-editorial__card:not(.is-flipped):hover .collection-editorial__photo-wrap img {
+#collection
+  .collection-editorial__card:not(.is-flipped):hover
+  .collection-editorial__photo-wrap
+  img {
   transform: scale(1.06);
 }
 
@@ -1007,7 +1013,7 @@ body.dessert-subpage #collection.collection-editorial {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(255, 249, 240, .12), transparent 48%);
+  background: linear-gradient(90deg, rgba(255, 249, 240, 0.12), transparent 48%);
   pointer-events: none;
 }
 
@@ -1018,12 +1024,12 @@ body.dessert-subpage #collection.collection-editorial {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 250, 239, .8);
+  border: 1px solid rgba(255, 250, 239, 0.8);
   display: grid;
   place-items: center;
   font: 400 24px/1 serif;
   color: #fffaf3;
-  background: rgba(76, 23, 41, .68);
+  background: rgba(76, 23, 41, 0.68);
   box-shadow: 0 2px 10px #0002;
 }
 
@@ -1041,18 +1047,25 @@ body.dessert-subpage #collection.collection-editorial {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font: 700 10px/1.3 system-ui, sans-serif;
-  letter-spacing: .14em;
+  font:
+    700 10px/1.3 system-ui,
+    sans-serif;
+  letter-spacing: 0.14em;
   color: #e5bea3;
 }
 
 #collection .collection-editorial__back h3 {
-  font: 500 31px/1.12 "Libre Bodoni", Georgia, serif;
+  font:
+    500 31px/1.12 "Libre Bodoni",
+    Georgia,
+    serif;
   margin: 20px 0 11px;
 }
 
 #collection .collection-editorial__back p {
-  font: 400 12px/1.8 system-ui, sans-serif;
+  font:
+    400 12px/1.8 system-ui,
+    sans-serif;
   max-width: 440px;
   margin: 0;
   color: #f4dcd5;
@@ -1067,13 +1080,17 @@ body.dessert-subpage #collection.collection-editorial {
   justify-content: space-between;
   align-items: end;
   gap: 18px;
-  font: 500 10px/1.6 system-ui, sans-serif;
+  font:
+    500 10px/1.6 system-ui,
+    sans-serif;
   color: #e8bfa6;
 }
 
 #collection .collection-editorial__ingredients b {
-  font: 700 9px/1.4 system-ui, sans-serif;
-  letter-spacing: .11em;
+  font:
+    700 9px/1.4 system-ui,
+    sans-serif;
+  letter-spacing: 0.11em;
   color: #cea485;
   display: block;
   margin-bottom: 5px;
@@ -1102,7 +1119,10 @@ body.dessert-subpage #collection.collection-editorial {
   color: #6b3542;
   font: 400 20px/1 serif;
   cursor: pointer;
-  transition: background .22s, color .22s, transform .22s;
+  transition:
+    background 0.22s,
+    color 0.22s,
+    transform 0.22s;
 }
 
 #collection .collection-editorial__navarrow:hover {
@@ -1136,9 +1156,14 @@ body.dessert-subpage #collection.collection-editorial {
   border-radius: 50%;
   background: transparent;
   color: #926e62;
-  font: 600 12px/1 "Libre Bodoni", Georgia, serif;
+  font:
+    600 12px/1 "Libre Bodoni",
+    Georgia,
+    serif;
   cursor: pointer;
-  transition: background .22s, color .22s;
+  transition:
+    background 0.22s,
+    color 0.22s;
 }
 
 #collection .collection-editorial__pages button.is-current {
@@ -1151,48 +1176,47 @@ body.dessert-subpage #collection.collection-editorial {
   color: #582338;
 }
 
-
 @keyframes collection-slide-out-next {
   to {
     opacity: 0;
-    transform: translateX(-32px)
+    transform: translateX(-32px);
   }
 }
 
 @keyframes collection-slide-out-prev {
   to {
     opacity: 0;
-    transform: translateX(32px)
+    transform: translateX(32px);
   }
 }
 
 @keyframes collection-slide-in-next {
   from {
     opacity: 0;
-    transform: translateX(36px)
+    transform: translateX(36px);
   }
 
   to {
     opacity: 1;
-    transform: none
+    transform: none;
   }
 }
 
 @keyframes collection-slide-in-prev {
   from {
     opacity: 0;
-    transform: translateX(-36px)
+    transform: translateX(-36px);
   }
 
   to {
     opacity: 1;
-    transform: none
+    transform: none;
   }
 }
 
-@media(max-width:900px) {
+@media (max-width: 900px) {
   #collection .collection-editorial__inner {
-    width: min(100% - 40px, 700px)
+    width: min(100% - 40px, 700px);
   }
 
   #collection .collection-editorial__heading {
@@ -1213,7 +1237,7 @@ body.dessert-subpage #collection.collection-editorial {
   }
 
   #collection .collection-editorial__dish {
-    font-size: clamp(22px, 3vw, 29px)
+    font-size: clamp(22px, 3vw, 29px);
   }
 
   #collection .collection-editorial__short {
@@ -1238,7 +1262,7 @@ body.dessert-subpage #collection.collection-editorial {
   }
 }
 
-@media(max-width:680px) {
+@media (max-width: 680px) {
   body.dessert-subpage #collection.collection-editorial {
     padding: 56px 0 35px;
   }
@@ -1283,11 +1307,9 @@ body.dessert-subpage #collection.collection-editorial {
   #collection .collection-editorial__pagination {
     gap: 9px;
   }
-
-
 }
 
-@media(max-width:385px) {
+@media (max-width: 385px) {
   #collection .collection-editorial__card {
     height: 218px;
   }
@@ -1301,7 +1323,7 @@ body.dessert-subpage #collection.collection-editorial {
   }
 }
 
-@media(prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   #collection .collection-editorial__card-inner {
     transition: none !important;
   }
@@ -1314,7 +1336,6 @@ body.dessert-subpage #collection.collection-editorial {
     transition: none !important;
   }
 }
-
 
 /* ==============================================================
    CON02 / WORLD DESSERTS — interactive radial map
@@ -1344,9 +1365,9 @@ body.dessert-subpage #world.world-desserts {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 56% 74% at 64% 46%, rgba(250, 202, 112, .31), transparent 84%),
-    radial-gradient(ellipse 50% 80% at 92% 55%, rgba(246, 188, 102, .18), transparent 83%),
-    radial-gradient(ellipse 41% 52% at 10% 8%, rgba(255, 255, 246, .48), transparent 88%),
+    radial-gradient(ellipse 56% 74% at 64% 46%, rgba(250, 202, 112, 0.31), transparent 84%),
+    radial-gradient(ellipse 50% 80% at 92% 55%, rgba(246, 188, 102, 0.18), transparent 83%),
+    radial-gradient(ellipse 41% 52% at 10% 8%, rgba(255, 255, 246, 0.48), transparent 88%),
     linear-gradient(109deg, #fff0d4 0%, #feebc7 49%, #fbe3b6 100%);
 }
 
@@ -1354,7 +1375,7 @@ body.dessert-subpage #world.world-desserts {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: .14;
+  opacity: 0.14;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.19'/%3E%3C/svg%3E");
 }
@@ -1370,8 +1391,11 @@ body.dessert-subpage #world.world-desserts {
 
 #world .world-desserts__title {
   margin: 9px 0 24px;
-  font: 500 clamp(52px, 5.15vw, 77px)/.86 "Libre Bodoni", Georgia, serif;
-  letter-spacing: -.068em;
+  font:
+    500 clamp(52px, 5.15vw, 77px)/0.86 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.068em;
   color: #4f1426;
   white-space: nowrap;
 }
@@ -1382,9 +1406,12 @@ body.dessert-subpage #world.world-desserts {
 }
 
 #world .world-desserts__description {
-  font: 500 clamp(11px, 1.17vw, 16px)/1.8 "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font:
+    500 clamp(11px, 1.17vw, 16px)/1.8 "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    sans-serif;
   margin: 0;
-  letter-spacing: -.05em;
+  letter-spacing: -0.05em;
   word-break: keep-all;
 }
 
@@ -1399,18 +1426,26 @@ body.dessert-subpage #world.world-desserts {
   padding: 9px 15px 9px 19px;
   border: 1px solid #bd857c;
   border-radius: 50px;
-  background: rgba(255, 252, 236, .33);
+  background: rgba(255, 252, 236, 0.33);
   color: #5c1c2b;
   cursor: pointer;
   text-align: left;
-  box-shadow: 0 2px 0 rgba(151, 72, 58, .04);
-  transition: background .25s, transform .25s, box-shadow .25s;
-  font: 700 clamp(11px, 1.1vw, 15px)/1.4 "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-  letter-spacing: -.045em;
+  box-shadow: 0 2px 0 rgba(151, 72, 58, 0.04);
+  transition:
+    background 0.25s,
+    transform 0.25s,
+    box-shadow 0.25s;
+  font:
+    700 clamp(11px, 1.1vw, 15px)/1.4 "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    sans-serif;
+  letter-spacing: -0.045em;
 }
 
 #world .world-desserts__explore span:last-child {
-  font: 400 24px/1 Georgia, serif;
+  font:
+    400 24px/1 Georgia,
+    serif;
 }
 
 #world .world-desserts__explore:hover {
@@ -1423,7 +1458,6 @@ body.dessert-subpage #world.world-desserts {
   outline: 2px solid #a86227;
   outline-offset: 4px;
 }
-
 
 #world .world-desserts__universe {
   position: absolute;
@@ -1443,12 +1477,12 @@ body.dessert-subpage #world.world-desserts {
 
 #world .world-desserts__orbit {
   fill: none;
-  stroke: rgba(255, 255, 249, .72);
+  stroke: rgba(255, 255, 249, 0.72);
   stroke-width: 2.4;
 }
 
 #world .world-desserts__orbit--outer {
-  stroke: rgba(255, 255, 249, .48);
+  stroke: rgba(255, 255, 249, 0.48);
 }
 
 #world .world-desserts__spoke {
@@ -1456,7 +1490,7 @@ body.dessert-subpage #world.world-desserts {
   stroke: #98534e;
   stroke-width: 4.1;
   stroke-dasharray: 6 11;
-  opacity: .88;
+  opacity: 0.88;
 }
 
 #world .world-desserts__active-route {
@@ -1466,7 +1500,7 @@ body.dessert-subpage #world.world-desserts {
   stroke-linecap: round;
   filter: drop-shadow(0 1px 3px #d68d3d65);
   opacity: 0;
-  transition: opacity .16s;
+  transition: opacity 0.16s;
 }
 
 #world .world-desserts__active-route.is-visible {
@@ -1484,7 +1518,10 @@ body.dessert-subpage #world.world-desserts {
   border-radius: 50%;
   border: 3px solid #4b0a1d;
   background: #590b22;
-  box-shadow: 0 0 0 3px #fff4ce, 0 0 0 7px #782b38, 0 6px 20px #4b0c242c;
+  box-shadow:
+    0 0 0 3px #fff4ce,
+    0 0 0 7px #782b38,
+    0 6px 20px #4b0c242c;
   display: grid;
   place-items: center;
 }
@@ -1492,7 +1529,7 @@ body.dessert-subpage #world.world-desserts {
 #world .world-desserts__hub-inner {
   width: 83%;
   height: 83%;
-  border: 1px solid rgba(255, 225, 184, .48);
+  border: 1px solid rgba(255, 225, 184, 0.48);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -1510,7 +1547,9 @@ body.dessert-subpage #world.world-desserts {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font: 700 clamp(9px, 1.1vw, 17px)/1 Georgia, serif;
+  font:
+    700 clamp(9px, 1.1vw, 17px)/1 Georgia,
+    serif;
 }
 
 #world .world-desserts__hub-rule {
@@ -1521,8 +1560,10 @@ body.dessert-subpage #world.world-desserts {
 }
 
 #world .world-desserts__hub-caption {
-  font: 700 clamp(8px, .96vw, 14px)/1.27 system-ui, sans-serif;
-  letter-spacing: .045em;
+  font:
+    700 clamp(8px, 0.96vw, 14px)/1.27 system-ui,
+    sans-serif;
+  letter-spacing: 0.045em;
 }
 
 #world .world-desserts__node {
@@ -1540,7 +1581,7 @@ body.dessert-subpage #world.world-desserts {
   color: #6c2330;
   display: grid;
   place-items: center;
-  transition: filter .2s;
+  transition: filter 0.2s;
 }
 
 #world .world-desserts__node:before {
@@ -1548,12 +1589,12 @@ body.dessert-subpage #world.world-desserts {
   position: absolute;
   inset: 50%;
   border-radius: 50%;
-  background: rgba(241, 175, 53, .22);
+  background: rgba(241, 175, 53, 0.22);
   transform: translate(-50%, -50%);
   width: 48px;
   height: 48px;
   opacity: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 #world .world-desserts__node:hover:before,
@@ -1593,8 +1634,11 @@ body.dessert-subpage #world.world-desserts {
   bottom: calc(100% + 1px);
   left: 50%;
   transform: translateX(-50%);
-  font: 600 clamp(15px, 2.1vw, 31px)/1.03 "Libre Bodoni", Georgia, serif;
-  letter-spacing: -.055em;
+  font:
+    600 clamp(15px, 2.1vw, 31px)/1.03 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.055em;
   color: #4b1425;
   white-space: nowrap;
   pointer-events: none;
@@ -1603,9 +1647,9 @@ body.dessert-subpage #world.world-desserts {
 
 #world .world-desserts__node-name small {
   display: block;
-  font-size: .67em;
+  font-size: 0.67em;
   font-style: italic;
-  letter-spacing: -.03em;
+  letter-spacing: -0.03em;
 }
 
 #world .world-desserts__node--usa .world-desserts__node-name {
@@ -1677,7 +1721,7 @@ body.dessert-subpage #world.world-desserts {
 #world .world-desserts__plane path {
   fill: #73203a;
   stroke: #fff2c7;
-  stroke-width: .7;
+  stroke-width: 0.7;
 }
 
 #world .world-desserts__card {
@@ -1693,12 +1737,17 @@ body.dessert-subpage #world.world-desserts {
   border: 3px solid #fff5e5;
   background: #fff5e1;
   color: #4c1827;
-  box-shadow: 0 0 0 1px #b78869, 0 16px 36px rgba(82, 39, 29, .23), 0 3px 0 rgba(124, 61, 38, .08);
+  box-shadow:
+    0 0 0 1px #b78869,
+    0 16px 36px rgba(82, 39, 29, 0.23),
+    0 3px 0 rgba(124, 61, 38, 0.08);
   overflow: hidden;
-  transform: translate(-50%, -43%) scale(.93);
+  transform: translate(-50%, -43%) scale(0.93);
   opacity: 0;
   pointer-events: none;
-  transition: transform .42s cubic-bezier(.16, .8, .2, 1), opacity .32s ease;
+  transition:
+    transform 0.42s cubic-bezier(0.16, 0.8, 0.2, 1),
+    opacity 0.32s ease;
   line-height: normal;
 }
 
@@ -1724,7 +1773,12 @@ body.dessert-subpage #world.world-desserts {
 #world .world-desserts__card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(45, 15, 16, .7) 0%, rgba(45, 14, 13, .23) 68%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(45, 15, 16, 0.7) 0%,
+    rgba(45, 14, 13, 0.23) 68%,
+    transparent 100%
+  );
 }
 
 #world .world-desserts__card-heading {
@@ -1735,16 +1789,21 @@ body.dessert-subpage #world.world-desserts {
 }
 
 #world .world-desserts__card-region {
-  font: 750 12px/1.3 system-ui, sans-serif;
-  letter-spacing: .085em;
+  font:
+    750 12px/1.3 system-ui,
+    sans-serif;
+  letter-spacing: 0.085em;
   color: #fff9ed;
   margin: 0 0 6px;
   text-shadow: 0 2px 6px #0009;
 }
 
 #world .world-desserts__card-title {
-  font: italic 600 clamp(18px, 1.85vw, 26px)/1.09 "Libre Bodoni", Georgia, serif;
-  letter-spacing: -.045em;
+  font:
+    italic 600 clamp(18px, 1.85vw, 26px)/1.09 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.045em;
   color: #fff9ed;
   margin: 0;
   text-shadow: 0 3px 8px #0008;
@@ -1761,7 +1820,9 @@ body.dessert-subpage #world.world-desserts {
   border: 1px solid #fff4dc;
   border-radius: 50%;
   color: #fff5de;
-  font: 400 15px/1 Georgia, serif;
+  font:
+    400 15px/1 Georgia,
+    serif;
 }
 
 #world .world-desserts__card-notes {
@@ -1773,7 +1834,10 @@ body.dessert-subpage #world.world-desserts {
 }
 
 #world .world-desserts__card-desc {
-  font: 500 9.5px/1.45 "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font:
+    500 9.5px/1.45 "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    sans-serif;
   word-break: keep-all;
   color: #764d44;
   margin: 0;
@@ -1784,8 +1848,10 @@ body.dessert-subpage #world.world-desserts {
   display: block;
   margin-top: 4px;
   text-align: right;
-  font: 650 7px/1 system-ui, sans-serif;
-  letter-spacing: .08em;
+  font:
+    650 7px/1 system-ui,
+    sans-serif;
+  letter-spacing: 0.08em;
 }
 
 #world .world-desserts__status {
@@ -1798,8 +1864,10 @@ body.dessert-subpage #world.world-desserts {
   gap: 9px;
   line-height: 1;
   margin: 0;
-  font: 700 9px/1.3 system-ui, sans-serif;
-  letter-spacing: .12em;
+  font:
+    700 9px/1.3 system-ui,
+    sans-serif;
+  letter-spacing: 0.12em;
   color: #9c6e65;
 }
 
@@ -1812,18 +1880,18 @@ body.dessert-subpage #world.world-desserts {
 
 @keyframes world-destination-pulse {
   50% {
-    background: rgba(243, 188, 71, .35);
-    transform: translate(-50%, -50%) scale(1.2)
+    background: rgba(243, 188, 71, 0.35);
+    transform: translate(-50%, -50%) scale(1.2);
   }
 }
 
-@media (min-width:1441px) {
+@media (min-width: 1441px) {
   #world .world-desserts__card {
-    height: clamp(164px, 12vw, 183px)
+    height: clamp(164px, 12vw, 183px);
   }
 }
 
-@media (min-width:981px) and (max-width:1250px) {
+@media (min-width: 981px) and (max-width: 1250px) {
   #world .world-desserts__copy {
     left: 5.4%;
     top: 9%;
@@ -1859,7 +1927,7 @@ body.dessert-subpage #world.world-desserts {
   }
 }
 
-@media (max-width:980px) {
+@media (max-width: 980px) {
   body.dessert-subpage #world.world-desserts {
     height: 820px;
     aspect-ratio: auto;
@@ -1875,7 +1943,7 @@ body.dessert-subpage #world.world-desserts {
   #world .world-desserts__title {
     font-size: clamp(52px, 8vw, 73px);
     margin: 7px 0 12px;
-    line-height: .88;
+    line-height: 0.88;
   }
 
   #world .world-desserts__description br {
@@ -1935,7 +2003,7 @@ body.dessert-subpage #world.world-desserts {
   }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
   body.dessert-subpage #world.world-desserts {
     height: 825px;
   }
@@ -2045,8 +2113,7 @@ body.dessert-subpage #world.world-desserts {
   }
 }
 
-@media (prefers-reduced-motion:reduce) {
-
+@media (prefers-reduced-motion: reduce) {
   #world .world-desserts__card,
   #world .world-desserts__explore,
   #world .world-desserts__node:before {
@@ -2054,8 +2121,6 @@ body.dessert-subpage #world.world-desserts {
     animation: none !important;
   }
 }
-
-
 
 /* ===============================================================
    CON03 — LAYERS OF DESSERT / individual photo carousel
@@ -2096,7 +2161,8 @@ body.dessert-subpage #gallery.layer-showcase {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: radial-gradient(ellipse 48% 36% at 50% 36%, #fffaf5c0 0%, transparent 85%),
+  background:
+    radial-gradient(ellipse 48% 36% at 50% 36%, #fffaf5c0 0%, transparent 85%),
     radial-gradient(ellipse 30% 45% at 9% 58%, #f3e3d8a1 0%, transparent 95%);
 }
 
@@ -2113,10 +2179,12 @@ body.dessert-subpage #gallery.layer-showcase {
   position: relative;
 }
 
-
 #gallery .layer-showcase__heading h2 {
-  font: 400 clamp(46px, 5.3vw, 75px)/1.02 "Libre Bodoni", Georgia, serif;
-  letter-spacing: -.052em;
+  font:
+    400 clamp(46px, 5.3vw, 75px)/1.02 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.052em;
   color: #4c1829;
   margin: 0 0 13px;
 }
@@ -2127,15 +2195,21 @@ body.dessert-subpage #gallery.layer-showcase {
 }
 
 #gallery .layer-showcase__lead {
-  font: 700 clamp(17px, 1.65vw, 22px)/1.45 "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font:
+    700 clamp(17px, 1.65vw, 22px)/1.45 "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    sans-serif;
   margin: 0 0 7px;
-  letter-spacing: -.04em;
+  letter-spacing: -0.04em;
   word-break: keep-all;
   color: #4f3030;
 }
 
 #gallery .layer-showcase__sub {
-  font: 450 clamp(12px, 1.08vw, 14px)/1.75 "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font:
+    450 clamp(12px, 1.08vw, 14px)/1.75 "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    sans-serif;
   margin: 0;
   color: #93786f;
   word-break: keep-all;
@@ -2175,20 +2249,26 @@ body.dessert-subpage #gallery.layer-showcase {
   width: clamp(320px, 41vw, 545px);
   height: clamp(290px, 30vw, 386px);
   padding: 0;
-  border: 1px solid rgba(184, 152, 129, .6);
+  border: 1px solid rgba(184, 152, 129, 0.6);
   border-radius: 19px;
   background: #fff6ec;
-  box-shadow: 0 20px 48px rgba(92, 48, 54, .14), 0 0 0 5px rgba(255, 253, 249, .56);
+  box-shadow:
+    0 20px 48px rgba(92, 48, 54, 0.14),
+    0 0 0 5px rgba(255, 253, 249, 0.56);
   overflow: hidden;
   cursor: pointer;
   isolation: isolate;
   backface-visibility: hidden;
-  transform: translate(-50%, -50%) scale(.74);
-  transition: transform .64s cubic-bezier(.18, .81, .22, 1), opacity .58s ease, filter .58s ease, box-shadow .58s ease;
+  transform: translate(-50%, -50%) scale(0.74);
+  transition:
+    transform 0.64s cubic-bezier(0.18, 0.81, 0.22, 1),
+    opacity 0.58s ease,
+    filter 0.58s ease,
+    box-shadow 0.58s ease;
   will-change: transform;
   outline-offset: 6px;
-  opacity: .7;
-  filter: saturate(.75);
+  opacity: 0.7;
+  filter: saturate(0.75);
   text-align: left;
   font: inherit;
   color: inherit;
@@ -2199,17 +2279,17 @@ body.dessert-subpage #gallery.layer-showcase {
 }
 
 #gallery .layer-showcase__card[data-position="-2"] {
-  transform: translate(-50%, -50%) translateX(calc(-1.68 * var(--gallery-shift))) scale(.67);
+  transform: translate(-50%, -50%) translateX(calc(-1.68 * var(--gallery-shift))) scale(0.67);
   z-index: 1;
-  opacity: .72;
-  filter: saturate(.72) blur(1px);
+  opacity: 0.72;
+  filter: saturate(0.72) blur(1px);
 }
 
 #gallery .layer-showcase__card[data-position="-1"] {
-  transform: translate(-50%, -50%) translateX(calc(-.91 * var(--gallery-shift))) scale(.82);
+  transform: translate(-50%, -50%) translateX(calc(-0.91 * var(--gallery-shift))) scale(0.82);
   z-index: 2;
-  opacity: .94;
-  filter: saturate(.85);
+  opacity: 0.94;
+  filter: saturate(0.85);
 }
 
 #gallery .layer-showcase__card[data-position="0"] {
@@ -2217,21 +2297,23 @@ body.dessert-subpage #gallery.layer-showcase {
   z-index: 5;
   opacity: 1;
   filter: none;
-  box-shadow: 0 30px 72px rgba(71, 32, 45, .20), 0 0 0 6px rgba(255, 252, 248, .85);
+  box-shadow:
+    0 30px 72px rgba(71, 32, 45, 0.2),
+    0 0 0 6px rgba(255, 252, 248, 0.85);
 }
 
 #gallery .layer-showcase__card[data-position="1"] {
-  transform: translate(-50%, -50%) translateX(calc(.91 * var(--gallery-shift))) scale(.82);
+  transform: translate(-50%, -50%) translateX(calc(0.91 * var(--gallery-shift))) scale(0.82);
   z-index: 2;
-  opacity: .94;
-  filter: saturate(.85);
+  opacity: 0.94;
+  filter: saturate(0.85);
 }
 
 #gallery .layer-showcase__card[data-position="2"] {
-  transform: translate(-50%, -50%) translateX(calc(1.68 * var(--gallery-shift))) scale(.67);
+  transform: translate(-50%, -50%) translateX(calc(1.68 * var(--gallery-shift))) scale(0.67);
   z-index: 1;
-  opacity: .72;
-  filter: saturate(.72) blur(1px);
+  opacity: 0.72;
+  filter: saturate(0.72) blur(1px);
 }
 
 #gallery .layer-showcase__photo {
@@ -2254,7 +2336,12 @@ body.dessert-subpage #gallery.layer-showcase {
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent 45%, rgba(47, 17, 21, .22) 70%, rgba(40, 13, 18, .75) 100%);
+  background: linear-gradient(
+    180deg,
+    transparent 45%,
+    rgba(47, 17, 21, 0.22) 70%,
+    rgba(40, 13, 18, 0.75) 100%
+  );
 }
 
 #gallery .layer-showcase__card-footer {
@@ -2279,14 +2366,19 @@ body.dessert-subpage #gallery.layer-showcase {
 }
 
 #gallery .layer-showcase__card-category {
-  font: 650 9px/1.3 system-ui, sans-serif;
-  letter-spacing: .18em;
-  opacity: .85;
+  font:
+    650 9px/1.3 system-ui,
+    sans-serif;
+  letter-spacing: 0.18em;
+  opacity: 0.85;
 }
 
 #gallery .layer-showcase__card-name {
-  font: italic 500 clamp(28px, 3.05vw, 41px)/1.05 "Libre Bodoni", Georgia, serif;
-  letter-spacing: -.04em;
+  font:
+    italic 500 clamp(28px, 3.05vw, 41px)/1.05 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.04em;
 }
 
 #gallery .layer-showcase__card-arrow {
@@ -2297,8 +2389,12 @@ body.dessert-subpage #gallery.layer-showcase {
   place-items: center;
   border: 1px solid #fff8ecaa;
   border-radius: 50%;
-  font: 400 25px/1 Georgia, serif;
-  transition: transform .25s, background .25s;
+  font:
+    400 25px/1 Georgia,
+    serif;
+  transition:
+    transform 0.25s,
+    background 0.25s;
 }
 
 #gallery .layer-showcase__card[data-position="0"]:hover .layer-showcase__card-arrow {
@@ -2306,8 +2402,10 @@ body.dessert-subpage #gallery.layer-showcase {
   background: #fff6ed2a;
 }
 
-#gallery .layer-showcase__card[data-position]:not([data-position="0"]) .layer-showcase__card-footer {
-  opacity: .8;
+#gallery
+  .layer-showcase__card[data-position]:not([data-position="0"])
+  .layer-showcase__card-footer {
+  opacity: 0.8;
 }
 
 #gallery .layer-showcase__arrow {
@@ -2324,8 +2422,13 @@ body.dessert-subpage #gallery.layer-showcase {
   border-radius: 50%;
   color: #5b2334;
   cursor: pointer;
-  font: 400 38px/1 Georgia, serif;
-  transition: background .25s, transform .25s, box-shadow .25s;
+  font:
+    400 38px/1 Georgia,
+    serif;
+  transition:
+    background 0.25s,
+    transform 0.25s,
+    box-shadow 0.25s;
 }
 
 #gallery .layer-showcase__arrow--prev {
@@ -2356,17 +2459,16 @@ body.dessert-subpage #gallery.layer-showcase {
   margin: 31px auto 0;
 }
 
-
-
-
 #gallery .layer-showcase__count {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  font: 650 12px/1 system-ui, sans-serif;
+  font:
+    650 12px/1 system-ui,
+    sans-serif;
   color: #8e6e65;
-  letter-spacing: .11em;
+  letter-spacing: 0.11em;
   margin: 0;
 }
 
@@ -2386,7 +2488,7 @@ body.dessert-subpage #gallery.layer-showcase {
   word-break: keep-all;
 }
 
-@media(max-width:980px) {
+@media (max-width: 980px) {
   body.dessert-subpage #gallery.layer-showcase {
     min-height: 845px;
   }
@@ -2407,7 +2509,7 @@ body.dessert-subpage #gallery.layer-showcase {
 
   #gallery .layer-showcase__card[data-position="-2"],
   #gallery .layer-showcase__card[data-position="2"] {
-    opacity: .45;
+    opacity: 0.45;
   }
 
   #gallery .layer-showcase__arrow--prev {
@@ -2419,7 +2521,7 @@ body.dessert-subpage #gallery.layer-showcase {
   }
 }
 
-@media(max-width:630px) {
+@media (max-width: 630px) {
   body.dessert-subpage #gallery.layer-showcase {
     min-height: 715px;
   }
@@ -2457,7 +2559,7 @@ body.dessert-subpage #gallery.layer-showcase {
 
   #gallery .layer-showcase__card[data-position="-1"],
   #gallery .layer-showcase__card[data-position="1"] {
-    opacity: .49;
+    opacity: 0.49;
     filter: blur(1px);
   }
 
@@ -2507,7 +2609,7 @@ body.dessert-subpage #gallery.layer-showcase {
   }
 }
 
-@media(prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   #gallery .layer-showcase__card {
     transition: none !important;
   }
@@ -2555,7 +2657,6 @@ body.dessert-subpage #world.world-desserts {
   background: linear-gradient(180deg, #fff0d4, #feebc7 25%, #feebc7 80%, #feebc7);
 }
 
-
 /* ===============================================================
    CON04 / WAVE V10 — ONE GREEN DIV, ONE CONTINUOUS COLOR
    No overlapping wave layers, pseudo-element strips or image backdrop.
@@ -2593,24 +2694,59 @@ body.dessert-subpage #dispatch.sweet-dispatch {
   height: calc(100% + 56px);
   pointer-events: none;
   background: var(--dispatch-green);
-  clip-path: polygon(0% 49px, 12% 39px, 25% 23px, 40% 40px, 52% 50px, 67% 32px, 80% 20px, 93% 43px, 100% 47px, 100% 100%, 0% 100%);
+  clip-path: polygon(
+    0% 49px,
+    12% 39px,
+    25% 23px,
+    40% 40px,
+    52% 50px,
+    67% 32px,
+    80% 20px,
+    93% 43px,
+    100% 47px,
+    100% 100%,
+    0% 100%
+  );
   animation: dispatch-single-wave 12s ease-in-out infinite;
   will-change: clip-path;
 }
 
 @keyframes dispatch-single-wave {
-
   0%,
   100% {
-    clip-path: polygon(0% 49px, 12% 39px, 25% 23px, 40% 40px, 52% 50px, 67% 32px, 80% 20px, 93% 43px, 100% 47px, 100% 100%, 0% 100%);
+    clip-path: polygon(
+      0% 49px,
+      12% 39px,
+      25% 23px,
+      40% 40px,
+      52% 50px,
+      67% 32px,
+      80% 20px,
+      93% 43px,
+      100% 47px,
+      100% 100%,
+      0% 100%
+    );
   }
 
   50% {
-    clip-path: polygon(0% 38px, 12% 20px, 25% 44px, 40% 52px, 52% 33px, 67% 16px, 80% 38px, 93% 48px, 100% 36px, 100% 100%, 0% 100%);
+    clip-path: polygon(
+      0% 38px,
+      12% 20px,
+      25% 44px,
+      40% 52px,
+      52% 33px,
+      67% 16px,
+      80% 38px,
+      93% 48px,
+      100% 36px,
+      100% 100%,
+      0% 100%
+    );
   }
 }
 
-@media(prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: reduce) {
   #dispatch .sweet-dispatch__surface {
     animation: none;
     will-change: auto;
@@ -2622,7 +2758,7 @@ body.dessert-subpage #dispatch.sweet-dispatch {
   margin: 0 auto;
   padding: 0 clamp(26px, 5.1vw, 75px);
   display: grid;
-  grid-template-columns: minmax(210px, .9fr) 1px minmax(500px, 2.6fr);
+  grid-template-columns: minmax(210px, 0.9fr) 1px minmax(500px, 2.6fr);
   gap: clamp(20px, 2.8vw, 46px);
   align-items: center;
   position: relative;
@@ -2632,8 +2768,11 @@ body.dessert-subpage #dispatch.sweet-dispatch {
 #dispatch .sweet-dispatch__brand h2 {
   margin: 0;
   color: #fff7e8;
-  font: 400 clamp(40px, 4vw, 60px)/.94 "Libre Bodoni", Georgia, serif;
-  letter-spacing: -.065em;
+  font:
+    400 clamp(40px, 4vw, 60px)/0.94 "Libre Bodoni",
+    Georgia,
+    serif;
+  letter-spacing: -0.065em;
 }
 
 #dispatch .sweet-dispatch__brand h2 em {
@@ -2641,15 +2780,12 @@ body.dessert-subpage #dispatch.sweet-dispatch {
   font-weight: 400;
 }
 
-
 #dispatch .sweet-dispatch__divider {
   width: 1px;
   height: 124px;
   background: #f8eed787;
   justify-self: center;
 }
-
-
 
 #dispatch .sweet-dispatch__topics {
   display: grid;
@@ -2682,8 +2818,12 @@ body.dessert-subpage #dispatch.sweet-dispatch {
   border: 3px solid #f1e6c9;
   border-radius: 50%;
   background: #efe2ca;
-  box-shadow: 0 0 0 1px #fff7e86e, 0 7px 14px #24351e29;
-  transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s;
+  box-shadow:
+    0 0 0 1px #fff7e86e,
+    0 7px 14px #24351e29;
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 0.35s;
 }
 
 #dispatch .sweet-dispatch__photo img {
@@ -2691,13 +2831,15 @@ body.dessert-subpage #dispatch.sweet-dispatch {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 #dispatch .sweet-dispatch__topic:hover .sweet-dispatch__photo,
 #dispatch .sweet-dispatch__topic:focus-visible .sweet-dispatch__photo {
   transform: translateY(-5px);
-  box-shadow: 0 2px 0 #fff7e844, 0 13px 21px #2033193f;
+  box-shadow:
+    0 2px 0 #fff7e844,
+    0 13px 21px #2033193f;
 }
 
 #dispatch .sweet-dispatch__topic:hover .sweet-dispatch__photo img,
@@ -2709,18 +2851,23 @@ body.dessert-subpage #dispatch.sweet-dispatch {
   display: block;
   white-space: nowrap;
   margin-top: 5px;
-  letter-spacing: .06em;
-  font: 700 clamp(10px, .88vw, 13px)/1.25 system-ui, sans-serif;
+  letter-spacing: 0.06em;
+  font:
+    700 clamp(10px, 0.88vw, 13px)/1.25 system-ui,
+    sans-serif;
 }
 
 #dispatch .sweet-dispatch__topic-sub {
   display: block;
   color: #f5efdebd;
-  font: 450 10px/1.4 "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font:
+    450 10px/1.4 "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    sans-serif;
 }
 
 /* Floating TOP button: same .top1 convention as team component, scoped to subpage. */
-body.dessert-subpage>button.top1 {
+body.dessert-subpage > button.top1 {
   position: fixed;
   z-index: 160;
   right: clamp(16px, 2.2vw, 34px);
@@ -2739,28 +2886,32 @@ body.dessert-subpage>button.top1 {
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
-  transition: opacity .25s, transform .25s, visibility .25s, background .25s;
+  transition:
+    opacity 0.25s,
+    transform 0.25s,
+    visibility 0.25s,
+    background 0.25s;
 }
 
-body.dessert-subpage>button.top1.is-visible {
+body.dessert-subpage > button.top1.is-visible {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-body.dessert-subpage>button.top1:hover {
+body.dessert-subpage > button.top1:hover {
   background: #733444;
   transform: translateY(-3px);
 }
 
-body.dessert-subpage>button.top1:focus-visible {
+body.dessert-subpage > button.top1:focus-visible {
   outline: 3px solid #dcb47f;
   outline-offset: 3px;
 }
 
-@media(max-width:1180px) {
+@media (max-width: 1180px) {
   #dispatch .sweet-dispatch__inner {
-    grid-template-columns: minmax(180px, .85fr) 1px minmax(400px, 2.6fr);
+    grid-template-columns: minmax(180px, 0.85fr) 1px minmax(400px, 2.6fr);
     gap: 20px;
     padding: 0 25px;
   }
@@ -2771,7 +2922,7 @@ body.dessert-subpage>button.top1:focus-visible {
   }
 }
 
-@media(max-width:800px) {
+@media (max-width: 800px) {
   body.dessert-subpage #dispatch.sweet-dispatch {
     padding: 40px 0 25px;
     min-height: 0;
@@ -2806,7 +2957,7 @@ body.dessert-subpage>button.top1:focus-visible {
   }
 }
 
-@media(max-width:500px) {
+@media (max-width: 500px) {
   body.dessert-subpage #dispatch.sweet-dispatch {
     padding: 38px 0 22px;
   }
@@ -2820,7 +2971,6 @@ body.dessert-subpage>button.top1:focus-visible {
   #dispatch .sweet-dispatch__brand h2 {
     font-size: 42px;
   }
-
 
   #dispatch .sweet-dispatch__topic-name {
     font-size: 9px;
@@ -2836,25 +2986,23 @@ body.dessert-subpage>button.top1:focus-visible {
     height: min(26vw, 114px);
   }
 
-  body.dessert-subpage>button.top1 {
+  body.dessert-subpage > button.top1 {
     width: 42px;
     height: 42px;
     font-size: 23px;
   }
 }
 
-@media(prefers-reduced-motion:reduce) {
-
+@media (prefers-reduced-motion: reduce) {
   #dispatch .sweet-dispatch__photo,
   #dispatch .sweet-dispatch__photo img {
     transition: none !important;
   }
 
-  body.dessert-subpage>button.top1 {
+  body.dessert-subpage > button.top1 {
     transition: none !important;
   }
 }
-
 
 /* SUBPAGE-ONLY CURSOR / TEAM FORK IMAGE — ../img/cur_2.png */
 body.dessert-subpage .cursor {
@@ -2862,7 +3010,7 @@ body.dessert-subpage .cursor {
   left: 0;
   top: 0;
   z-index: 9999;
-  transform: translate(-50%, -50%);
+  transform: translate(-25%, -15%);
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
@@ -2878,8 +3026,7 @@ body.dessert-subpage .cursor img {
   -webkit-user-drag: none;
 }
 
-@media (pointer:fine) and (hover:hover) {
-
+@media (min-width: 769px) and (pointer: fine) and (hover: hover) {
   body.dessert-subpage.has-fork-cursor,
   body.dessert-subpage.has-fork-cursor * {
     cursor: none !important;
@@ -2891,8 +3038,7 @@ body.dessert-subpage .cursor img {
   }
 }
 
-@media (pointer:coarse),
-(hover:none) {
+@media (pointer: coarse), (hover: none) {
   body.dessert-subpage .cursor {
     display: none !important;
   }
@@ -2915,7 +3061,9 @@ body.dessert-subpage #world .world-desserts__copy,
 body.dessert-subpage #gallery .layer-showcase__heading,
 body.dessert-subpage #gallery .layer-showcase__viewport,
 body.dessert-subpage #dispatch .sweet-dispatch__inner {
-  transition: opacity .78s cubic-bezier(.2, .72, .22, 1), translate .78s cubic-bezier(.2, .72, .22, 1);
+  transition:
+    opacity 0.78s cubic-bezier(0.2, 0.72, 0.22, 1),
+    translate 0.78s cubic-bezier(0.2, 0.72, 0.22, 1);
 }
 
 /* Layout bands used by team: phone / tablet / desktop. */
@@ -2928,7 +3076,7 @@ html:has(body.dessert-subpage) {
   overflow-x: clip;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   body.dessert-subpage .page-shell {
     width: 100%;
     max-width: 100%;
@@ -2957,7 +3105,7 @@ html:has(body.dessert-subpage) {
   }
 }
 
-@media (min-width:769px) and (max-width:1199px) {
+@media (min-width: 769px) and (max-width: 1199px) {
   body.dessert-subpage .page-shell {
     width: 100%;
     max-width: 1440px;
@@ -2976,7 +3124,7 @@ html:has(body.dessert-subpage) {
   }
 }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   body.dessert-subpage .page-shell {
     width: 100%;
     max-width: 1440px;
@@ -2989,8 +3137,7 @@ html:has(body.dessert-subpage) {
   }
 }
 
-@media (prefers-reduced-motion:reduce) {
-
+@media (prefers-reduced-motion: reduce) {
   body.dessert-subpage .reveal-pending,
   body.dessert-subpage .reveal-visible {
     opacity: 1 !important;
@@ -3004,5 +3151,38 @@ html:has(body.dessert-subpage) {
   body.dessert-subpage #gallery .layer-showcase__viewport,
   body.dessert-subpage #dispatch .sweet-dispatch__inner {
     transition: none !important;
+  }
+}
+@media (max-width: 768px) {
+  body.dessert-subpage .cursor {
+    display: none !important;
+  }
+}
+
+/* TOP 버튼 — 팀원 원본 디자인 적용 */
+body.dessert-subpage > button.top1,
+body.dessert-subpage > button.top1:hover,
+body.dessert-subpage > button.top1:focus-visible {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  color: #2d1b24 !important;
+}
+
+body.dessert-subpage > button.top1 i {
+  font-size: 30px;
+  color: inherit;
+}
+
+@media (min-width: 1200px) {
+  body.dessert-subpage > button.top1 i {
+    font-size: 50px;
   }
 }
