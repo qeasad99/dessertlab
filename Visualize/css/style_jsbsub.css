@@ -63,6 +63,7 @@ a {
 
   header .menu li {
     border-bottom: 1px solid rgba(0, 0, 0, 0);
+    font-family: "Libre Bodoni";
   }
 
   header .menu li:hover {
@@ -169,7 +170,6 @@ a {
   }
 
   @keyframes txt {
-
     0%,
     33.5% {
       color: #3a2412;
@@ -286,14 +286,14 @@ a {
 
   /*-================ con02 =================-*/
   #con02 {
-    background-image: linear-gradient(rgba(149, 158, 127, 0.7), rgba(149, 158, 127, 0.7)), url(../img/con02_bg.png);
+    background-image:
+      linear-gradient(rgba(149, 158, 127, 0.7), rgba(149, 158, 127, 0.7)), url(../img/con02_bg.png);
     background-position: center center;
     background-size: contain;
     background-color: #959e7f;
     width: 100%;
     margin: 0px auto;
   }
-
 
   #con02 .wrap {
     max-width: 1200px;
@@ -315,12 +315,12 @@ a {
     transition: 1s;
   }
 
-  #con02 .txtbox>p {
+  #con02 .txtbox > p {
     font-weight: bold;
     font-size: 1.5rem;
   }
 
-  #con02 .txtbox>h3 {
+  #con02 .txtbox > h3 {
     font-size: 4.5rem;
     font-family: "Libre Bodoni", serif;
   }
@@ -416,10 +416,12 @@ a {
     width: 100%;
     padding: 60px 35px 35px;
     /* 아래에서 위로 자연스럽게 어두워지는 그라데이션 */
-    background: linear-gradient(to top,
-        rgba(20, 12, 6, 0.9) 0%,
-        rgba(20, 12, 6, 0.5) 60%,
-        transparent 100%);
+    background: linear-gradient(
+      to top,
+      rgba(20, 12, 6, 0.9) 0%,
+      rgba(20, 12, 6, 0.5) 60%,
+      transparent 100%
+    );
     color: #fff;
   }
 
@@ -790,6 +792,7 @@ a {
   }
 
   footer .footer_menu {
+    font-family: "Libre Bodoni";
     display: flex;
     gap: 40px;
     color: #f6dcd5;
@@ -1026,7 +1029,6 @@ a {
   }
 
   @keyframes txt {
-
     0%,
     33.5% {
       color: #3a2412;
@@ -1170,7 +1172,8 @@ a {
 
   /*-================ con02 =================-*/
   #con02 {
-    background-image: linear-gradient(rgba(149, 158, 127, 0.7), rgba(149, 158, 127, 0.7)), url(../img/con02_bg.png);
+    background-image:
+      linear-gradient(rgba(149, 158, 127, 0.7), rgba(149, 158, 127, 0.7)), url(../img/con02_bg.png);
     background-position: center center;
     background-size: contain;
     background-color: #959e7f;
@@ -1200,12 +1203,12 @@ a {
     margin-bottom: 10px;
   }
 
-  #con02 .txtbox>p {
+  #con02 .txtbox > p {
     font-weight: bold;
     font-size: 1.5rem;
   }
 
-  #con02 .txtbox>h3 {
+  #con02 .txtbox > h3 {
     font-size: 4.5rem;
     font-family: "Libre Bodoni", serif;
   }
@@ -1302,10 +1305,12 @@ a {
     width: 100%;
     padding: 60px 35px 35px;
     /* 아래에서 위로 자연스럽게 어두워지는 그라데이션 */
-    background: linear-gradient(to top,
-        rgba(20, 12, 6, 0.9) 0%,
-        rgba(20, 12, 6, 0.5) 60%,
-        transparent 100%);
+    background: linear-gradient(
+      to top,
+      rgba(20, 12, 6, 0.9) 0%,
+      rgba(20, 12, 6, 0.5) 60%,
+      transparent 100%
+    );
     color: #fff;
   }
 
@@ -1977,7 +1982,6 @@ a {
   }
 
   @keyframes txt {
-
     0%,
     33.5% {
       color: #3a2412;
@@ -2094,7 +2098,8 @@ a {
 
   /*-================ con02 =================-*/
   #con02 {
-    background-image: linear-gradient(rgba(149, 158, 127, 0.7), rgba(149, 158, 127, 0.7)), url(../img/con02_bg.png);
+    background-image:
+      linear-gradient(rgba(149, 158, 127, 0.7), rgba(149, 158, 127, 0.7)), url(../img/con02_bg.png);
     background-position: center center;
     background-size: contain;
     background-color: #959e7f;
@@ -2124,12 +2129,12 @@ a {
     margin-bottom: 10px;
   }
 
-  #con02 .txtbox>p {
+  #con02 .txtbox > p {
     font-weight: bold;
     font-size: 1.5rem;
   }
 
-  #con02 .txtbox>h3 {
+  #con02 .txtbox > h3 {
     font-size: 3.5rem;
     font-family: "Libre Bodoni", serif;
   }
@@ -2226,10 +2231,12 @@ a {
     width: 100%;
     padding: 40px 20px 20px;
     /* 아래에서 위로 자연스럽게 어두워지는 그라데이션 */
-    background: linear-gradient(to top,
-        rgba(20, 12, 6, 0.9) 0%,
-        rgba(20, 12, 6, 0.5) 60%,
-        transparent 100%);
+    background: linear-gradient(
+      to top,
+      rgba(20, 12, 6, 0.9) 0%,
+      rgba(20, 12, 6, 0.5) 60%,
+      transparent 100%
+    );
     color: #fff;
   }
 
@@ -2640,7 +2647,6 @@ a {
 }
 
 @media (max-width: 500px) {
-
   /*-================ con02 =================-*/
   #con02 {
     background-color: #959e7f;
@@ -2670,12 +2676,12 @@ a {
     margin-bottom: 10px;
   }
 
-  #con02 .txtbox>p {
+  #con02 .txtbox > p {
     font-weight: bold;
     font-size: 1rem;
   }
 
-  #con02 .txtbox>h3 {
+  #con02 .txtbox > h3 {
     font-size: 2.3rem;
     font-family: "Libre Bodoni", serif;
   }
@@ -2773,10 +2779,12 @@ a {
     width: 100%;
     padding: 40px 20px 20px;
     /* 아래에서 위로 자연스럽게 어두워지는 그라데이션 */
-    background: linear-gradient(to top,
-        rgba(20, 12, 6, 0.9) 0%,
-        rgba(20, 12, 6, 0.5) 60%,
-        transparent 100%);
+    background: linear-gradient(
+      to top,
+      rgba(20, 12, 6, 0.9) 0%,
+      rgba(20, 12, 6, 0.5) 60%,
+      transparent 100%
+    );
     color: #fff;
   }
 
